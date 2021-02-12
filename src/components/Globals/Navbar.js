@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import "../../styles/navbar.scss"
-import logo from "../../assets/img/logo.png"
+import logo from "../../assets/img/SRLogo.png"
 
 const Navbar = () => {
   return (

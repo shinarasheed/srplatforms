@@ -63,6 +63,8 @@ body {
   // this overflow line might cause issues later
   overflow-x: hidden;
 }
+@import "./base.scss";
+
 .layout {
   height: 100vh;
   display: flex;
