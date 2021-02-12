@@ -3,4 +3,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem 8rem;
+}
+
+.nav__brand {
+  margin-right: 10rem;
+}
+
+.nav__list {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.nav__list a {
+  text-transform: capitalize;
+  color: #fff;
 }

@@ -1,29 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
 
-// import Header from "./Header"
-import Navbar from "../components/Globals/Navbar"
 import "../styles/layout.scss"
+import Navbar from "../components/Globals/Navbar"
+import Footer from "../components/Globals/Footer"
 
 const Layout = ({ children }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
-    <>
-      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
+    <section className="layout">
       <Navbar />
       <main>{children}</main>
-      <footer>footer</footer>
-    </>
+      <Footer />
+    </section>
   )
 }
 

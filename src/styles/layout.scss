@@ -63,3 +63,9 @@ body {
   // this overflow line might cause issues later
   overflow-x: hidden;
 }
+.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
