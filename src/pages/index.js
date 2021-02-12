@@ -1,14 +1,12 @@
 import React from "react"
-// import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>IndexPage</h1>
-  </Layout>
-)
+const index = () => {
+  return (
+    <Layout>
+      <div>hello world</div>
+    </Layout>
+  )
+}
 
-export default IndexPage
+export default index
