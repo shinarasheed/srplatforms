@@ -1,0 +1,59 @@
+.indexSecondSection {
+  background-image: url("../assets/img/servicebanner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 22rem 3rem 15rem;
+  color: #fff;
+}
+
+.indexSecondSection h5 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.indexSecondSection p {
+  font-size: 1.6rem;
+}
+
+.indexSecondSection p:not(:last-of-type) {
+  margin-bottom: 3rem;
+}
+
+.indexSecondSection p:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.indexSecondSection a {
+  color: #fff;
+  background-color: #0d3a64;
+  padding: 1.5rem 2.5rem;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.indexSecondSection img {
+  border-radius: 50%;
+}
+
+.indexThirdSection {
+  width: 70vw;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+.indexSecondSection .servicesImages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.indexThirdSection .service:not(:last-of-type) {
+  margin-right: 1rem;
+}
