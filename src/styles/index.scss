@@ -213,6 +213,10 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 3rem;
+
+  @media screen and(max-width:760px) {
+    flex-direction: column;
+  }
 }
 
 .indexSixthSection .safety__policy-text {
@@ -222,6 +226,10 @@
 
   &:first-of-type {
     margin-right: 30px;
+    @media screen and(max-width:760px) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
   }
 
   & p {

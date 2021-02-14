@@ -7,7 +7,7 @@ import logo from "../../assets/img/SRLogo.png"
 const Navbar = () => {
   return (
     <nav className="nav">
-      <Link className="nav__brand">
+      <Link to="/" className="nav__brand">
         <img src={logo} alt="srplatforms logo" />
       </Link>
 

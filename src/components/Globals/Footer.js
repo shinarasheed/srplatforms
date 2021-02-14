@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <section className="footer__items">
-        <Link className="footer__logo">
+        <Link to="/" className="footer__logo">
           <img src={logo} alt="srplatforms logo" />
         </Link>
         <div className="footer__links-container">
