@@ -56,6 +56,14 @@ import gallery6 from "../assets/img/gallery1.jpg"
 import gallery7 from "../assets/img/ga6.jpg"
 import gallery8 from "../assets/img/ga7.png"
 
+// about values
+
+import value1 from "../assets/img/int &ACCNT.png"
+import value2 from "../assets/img/commitment.png"
+import value3 from "../assets/img/TEAM.png"
+import value4 from "../assets/img/safety-icon.png"
+import value5 from "../assets/img/qlty & innovation.png"
+
 export const servicesData = [
   {
     img: service1,
@@ -228,5 +236,33 @@ export const gallery = [
   },
   {
     gallery: gallery8,
+  },
+]
+
+export const valuesData = [
+  {
+    icon: value1,
+    text: "Integrity & Accountability",
+  },
+
+  {
+    icon: value2,
+    text: "Commitment to Clients",
+  },
+
+  {
+    icon: value3,
+    text: "Teamwork",
+  },
+]
+
+export const valuesData2 = [
+  {
+    icon: value4,
+    text: "Safety",
+  },
+  {
+    icon: value5,
+    text: "Quality & Innovation",
   },
 ]
