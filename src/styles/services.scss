@@ -16,3 +16,101 @@
     font-size: 2rem;
   }
 }
+
+.servicesSecondSection {
+  background-color: $color-primary;
+  display: flex;
+  // should improve on this
+  flex-wrap: wrap;
+  padding: 4rem 5rem 4rem 4rem;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+.servicesSecondSection .statement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  margin-right: 5rem;
+
+  & h5 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.servicesThirdSection {
+  background-image: url("../assets/img/support.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 1948px;
+
+  & h5 {
+    text-align: center;
+    color: $color-primary;
+    font-size: 2.5rem;
+  }
+}
+
+.servicesSecondSection .offers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 2rem;
+  @media screen and(max-width:768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.servicesFourthSection {
+  background-image: url("../assets/img/support.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 1948px;
+  position: relative;
+}
+
+.servicesFourthSection::after {
+  display: block;
+  content: "";
+  //those two properties must be defined
+  //it is either we add content or not
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.servicesFourthSection article {
+  border: 2px solid #ddd;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.servicesFourthSection .milestones {
+  display: flex;
+}
+
+.servicesFourthSection .milestones .left {
+  background-image: url("../assets/img/1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 617px;
+  flex: 2;
+}
+
+.servicesFourthSection .milestones .right {
+  flex: 3;
+}

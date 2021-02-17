@@ -64,6 +64,14 @@ import value3 from "../assets/img/TEAM.png"
 import value4 from "../assets/img/safety-icon.png"
 import value5 from "../assets/img/qlty & innovation.png"
 
+//offers
+import offer1 from "../assets/img/serv1.png"
+import offer2 from "../assets/img/serv2.png"
+import offer3 from "../assets/img/serv3.png"
+import offer4 from "../assets/img/serv4.png"
+import offer5 from "../assets/img/serv5.png"
+import offer6 from "../assets/img/serv6.png"
+
 export const servicesData = [
   {
     img: service1,
@@ -264,5 +272,26 @@ export const valuesData2 = [
   {
     icon: value5,
     text: "Quality & Innovation",
+  },
+]
+
+export const offers = [
+  {
+    img: offer1,
+  },
+  {
+    img: offer2,
+  },
+  {
+    img: offer3,
+  },
+  {
+    img: offer4,
+  },
+  {
+    img: offer5,
+  },
+  {
+    img: offer6,
   },
 ]
