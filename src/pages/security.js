@@ -8,8 +8,8 @@ const security = () => {
   return (
     <Layout>
       <section className="securitybanner">
-        <div>
-          <h4>Innovative</h4>
+        <div className="bannerText">
+          <p>Innovative</p>
           <h5>
             Armed Escort Services in <br /> Nigeria
           </h5>
@@ -19,7 +19,7 @@ const security = () => {
             <br /> security services.
           </p>
 
-          <Link>Learn More</Link>
+          <Link to="/">Learn More</Link>
         </div>
       </section>
       <section className="securityFirstSection">

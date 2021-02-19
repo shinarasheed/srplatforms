@@ -9,6 +9,44 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  p {
+    color: #5b5b5b;
+  }
+
+  p:nth-of-type(1) {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  p:nth-of-type(2) {
+    font-weight: 600;
+    margin-bottom: 4rem;
+    line-height: 1.7;
+    font-size: 1.3rem;
+  }
+
+  h5 {
+    color: $color-primary;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+
+  a {
+    color: $color-white !important;
+    background-color: $color-primary;
+    padding: 8px 15px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  & .bannerText {
+    margin-top: 25rem;
+    margin-left: 10px;
+  }
 }
 
 .securityFirstSection {
