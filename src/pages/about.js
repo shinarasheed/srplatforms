@@ -87,7 +87,11 @@ const about = () => {
               src={require("../assets/img/member1.png")}
               alt="member"
             />
-            <img src={require("../assets/img/member2.png")} alt="member" />
+            <img
+              loading="lazy"
+              src={require("../assets/img/member2.png")}
+              alt="member"
+            />
           </div>
         </div>
       </section>

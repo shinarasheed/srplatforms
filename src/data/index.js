@@ -72,6 +72,18 @@ import offer4 from "../assets/img/serv4.png"
 import offer5 from "../assets/img/serv5.png"
 import offer6 from "../assets/img/serv6.png"
 
+//main services
+import mainservice1 from "../assets/img/mainservice1.png"
+import mainservice2 from "../assets/img/mainservice2.png"
+import mainservice3 from "../assets/img/mainservice3.png"
+import mainservice4 from "../assets/img/mainservice4.png"
+
+//stats
+import stats1 from "../assets/img/Group 21.png"
+import stats2 from "../assets/img/Group 22.png"
+import stats3 from "../assets/img/Group 23.png"
+import stats4 from "../assets/img/Group 24.png"
+
 export const servicesData = [
   {
     img: service1,
@@ -293,5 +305,47 @@ export const offers = [
   },
   {
     img: offer6,
+  },
+]
+
+export const mainService = [
+  {
+    img: mainservice1,
+    text: "Maritime Security",
+  },
+  {
+    img: mainservice2,
+    text: "Marine Logistics",
+  },
+  {
+    img: mainservice3,
+    text: "Offshore Support Vessels",
+  },
+  {
+    img: mainservice4,
+    text: "Training and Consultancy",
+  },
+]
+
+export const stats = [
+  {
+    img: stats1,
+    number: 10,
+    text: "vessels",
+  },
+  {
+    img: stats2,
+    number: 80,
+    text: "Security Transits",
+  },
+  {
+    img: stats3,
+    number: 50,
+    text: "Ports Covered",
+  },
+  {
+    img: stats4,
+    number: 5,
+    text: "Years Of Experience",
   },
 ]

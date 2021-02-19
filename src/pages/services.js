@@ -20,7 +20,7 @@ const services = () => {
         <div className="offers">
           {offers.map((offer, index) => (
             <div key={index}>
-              <img src={offer.img} alt="offer" />
+              <img loading="lazy" src={offer.img} alt="offer" />
             </div>
           ))}
         </div>
