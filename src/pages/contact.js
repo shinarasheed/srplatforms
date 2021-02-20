@@ -2,6 +2,8 @@ import React from "react"
 
 import "../styles/contact.scss"
 import Layout from "../components/layout"
+import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa"
+import { FiClock } from "react-icons/fi"
 const contact = () => {
   return (
     <Layout>
@@ -15,13 +17,13 @@ const contact = () => {
             </div>
             <span className="ml-2">inTouch</span>
           </div>
-          <div>
+          <div className="text">
             <p>
               You can contact us any way that is convenient for you. We are
-              available 24/7 via <br /> fax or email. You can also use a quick
-              contact form below or visit our office <br /> personally. Email us
-              with any questions or inquires or use our contact data. We <br />
-              would be happy to answer your questions.
+              available 24/7 via fax or email. You can also use a quick contact
+              form below or visit our office personally. Email us with any
+              questions or inquires or use our contact data. We would be happy
+              to answer your questions.
             </p>
           </div>
         </section>
@@ -59,6 +61,50 @@ const contact = () => {
             <button type="submit">Submit Message</button>
           </form>
         </section>
+      </section>
+
+      <section className="contactSecondSection">
+        <div className="itemsWrapper">
+          <div className="item">
+            <div className="iconWrapper">
+              <FaMapMarkerAlt className="icon" />
+            </div>
+            <div className="description">
+              <h5>Address</h5>
+              <ul>
+                <li>5A2 2nd Street, Osborne</li>
+                <li>Foreshore Estate, Ikoyi Lagos,</li>
+                <li>Nigeria</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="iconWrapper">
+              <FaPhoneAlt className="icon" />
+            </div>
+            <div className="description">
+              <h5>Phones</h5>
+              <ul>
+                <li>+234 -1-4531960</li>
+                <li>+2348066377819</li>
+                <li>+2348051492298</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="iconWrapper">
+              <FiClock className="icon" />
+            </div>
+            <div className="description">
+              <h5>Opening Hours</h5>
+              <ul>
+                <li>24 Hours, 7days a Week</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
     </Layout>
   )

@@ -34,6 +34,13 @@
     height: 5px;
     background-color: $color-primary;
   }
+
+  .text {
+    padding-right: 6rem;
+    @media screen and(max-width:768px) {
+      padding-right: 0;
+    }
+  }
 }
 
 .contactContactForm .formControl {
@@ -72,4 +79,64 @@
   background-color: $color-primary;
   padding: 12px 15px;
   font-size: 14px;
+}
+
+.contactSecondSection {
+  background-color: $color-primary;
+  padding: 7rem 2rem;
+  @media screen and(max-width:760px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  .itemsWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    color: $color-white;
+    @media screen and(max-width:760px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.contactSecondSection .item {
+  display: flex;
+  @media screen and(max-width:375px) {
+    flex-direction: column;
+  }
+
+  h5 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+
+  li {
+    font-size: 1.3rem;
+  }
+
+  .icon {
+    color: $color-primary;
+    font-size: 30px;
+  }
+
+  .iconWrapper {
+    background-color: $color-white;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and(max-width:375px) {
+      margin-right: 0;
+    }
+  }
+
+  .description {
+    margin-top: 20px;
+    @media screen and(max-width:375px) {
+      margin-bottom: 20px;
+    }
+  }
 }
