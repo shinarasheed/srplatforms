@@ -1,23 +1,26 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import "../styles/csr.scss"
 import Layout from "../components/layout"
 import { StyledCsr } from "../components/Globals/styledComponents"
+import HeroSection from "../components/Globals/MainHero"
 
-const csr = () => {
+const csr = ({ data }) => {
   return (
     <Layout>
-      <section className="csrBanner">
-        <div className="bannerText">
-          <h5>
-            Corporate <br /> Social <br /> Responsibility
-          </h5>
-          <p>
-            Contributing to the advancement and development of <br /> human kind
-            and society through best practices
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        className="csrBanner"
+        img={data.backgroundImg.childImageSharp.fluid}
+      >
+        <h5>
+          Corporate <br /> Social <br /> Responsibility
+        </h5>
+        <p>
+          Contributing to the advancement and development of <br /> human kind
+          and society through best practices
+        </p>
+      </HeroSection>
       <section className="csrFirstSection">
         <h5>Our Objective</h5>
         <h5>
@@ -153,5 +156,17 @@ const csr = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    backgroundImg: file(relativePath: { eq: "rr.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
 
 export default csr

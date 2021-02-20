@@ -1,19 +1,24 @@
 import React from "react"
-import Layout from "../components/layout"
+import { graphql } from "gatsby"
 
+import Layout from "../components/layout"
 import "../styles/about.scss"
 import { valuesData, valuesData2 } from "../data/index"
-const about = () => {
+import HeroSection from "../components/Globals/MainHero"
+const about = ({ data }) => {
   return (
     <Layout>
-      <section className="about__banner">
+      <HeroSection
+        className="aboutBanner"
+        img={data.backgroundImg.childImageSharp.fluid}
+      >
         <h5>ECOLOGICAL FRIENDLY ENVIRONMENT</h5>
         <p>
           To Conduct our business with the highest standard of ethics <br />{" "}
           adherance to the law, Corporate governance and Industry <br /> best
           pratices
         </p>
-      </section>
+      </HeroSection>
       <section className="aboutFirstSection d-flex justify-content-between">
         <div className="aboutSlide"></div>
         <div>
@@ -98,5 +103,17 @@ const about = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    backgroundImg: file(relativePath: { eq: "bg4.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
 
 export default about

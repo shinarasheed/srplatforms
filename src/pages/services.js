@@ -1,18 +1,24 @@
 import React from "react"
-import Layout from "../components/layout"
+import { graphql } from "gatsby"
 
+import Layout from "../components/layout"
 import "../styles/services.scss"
 import { offers } from "../data/index"
-const services = () => {
+import HeroSection from "../components/Globals/MainHero"
+
+const services = ({ data }) => {
   return (
     <Layout>
-      <section className="services__banner">
+      <HeroSection
+        className="servicesBanner"
+        img={data.backgroundImg.childImageSharp.fluid}
+      >
         <h5>DYNAMIC RESOURCEFUL CREW</h5>
         <p>
           Adding value to the upstream sector of oil and <br /> gas and ensuring
           the safe delivery of Petroleum services.
         </p>
-      </section>
+      </HeroSection>
       <section className="servicesSecondSection">
         <div className="statement">
           <h5>WHAT WE OFFER</h5>
@@ -143,5 +149,17 @@ const services = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    backgroundImg: file(relativePath: { eq: "bg5.png" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
 
 export default services

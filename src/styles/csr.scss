@@ -1,17 +1,7 @@
 @import "./colors.scss";
 
 .csrBanner {
-  background-image: url("../assets/img/rr.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 275px;
-}
-
-.csrBanner .bannerText {
   display: flex;
   align-items: center;
 
