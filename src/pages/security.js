@@ -90,8 +90,8 @@ const security = () => {
       <section className="securityFourthSection">
         <div className="stats">
           <div>
-            {stats.map(stat => (
-              <div className="stat">
+            {stats.map((stat, index) => (
+              <div key={index} className="stat">
                 <img src={stat.img} alt="statistics" />
                 <div>
                   <span>{stat.number}</span>

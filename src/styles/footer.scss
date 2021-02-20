@@ -91,3 +91,9 @@
     padding: 0 4rem 2rem 4rem;
   }
 }
+
+.footer__address {
+  @media screen and(max-width:960px) {
+    margin-top: 2rem;
+  }
+}

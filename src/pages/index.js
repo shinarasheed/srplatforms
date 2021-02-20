@@ -55,12 +55,18 @@ const index = () => {
           {servicesData.map((service, index) => (
             <div key={index} className="service">
               <img src={service.img} alt="service" />
+              <div className="serviceText">
+                <p>{service.text}</p>
+              </div>
             </div>
           ))}
         </div>
-        <Link className="text-center" to="/">
-          Read More
-        </Link>
+
+        <div className="readMore">
+          <Link className="text-center" to="/">
+            Read More
+          </Link>
+        </div>
       </section>
       <section className="indexFourthSection">
         <article className="description">
