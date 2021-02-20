@@ -26,6 +26,11 @@
   align-items: center;
   padding: 8rem 5rem;
   color: #fff;
+  @media screen and(max-width:960px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8rem 0 2rem 3rem;
+  }
 }
 
 .footer__items a {
@@ -34,12 +39,18 @@
 
 .footer__logo {
   margin-right: 10rem;
+  @media screen and(max-width:960px) {
+    margin-right: 0;
+  }
 }
 
 .footer__links-container {
   display: flex;
   flex: 1;
   justify-content: space-around;
+  @media screen and(max-width:960px) {
+    flex-direction: column;
+  }
 }
 
 .footer__links li:not(:last-child) {
@@ -75,4 +86,7 @@
   color: #fff;
   position: relative;
   z-index: 2;
+  @media screen and(max-width:960px) {
+    padding: 0 4rem 2rem 4rem;
+  }
 }

@@ -43,11 +43,11 @@ const index = () => {
         </article>
       </section>
       <section className="indexThirdSection">
-        <div>
+        <div className="title">
           <h5>
-            Foremost Indigenous Company with Expertise in <br /> Marine/Offshore
-            Support Services to the oil & Gas <br /> Industry Using Innovative
-            service Delivery
+            Foremost Indigenous Company with Expertise in Marine/Offshore
+            Support Services to the oil & Gas Industry Using Innovative service
+            Delivery
           </h5>
         </div>
         <div className="servicesImages">
@@ -117,50 +117,46 @@ const index = () => {
           <div className="safety__policy-text">
             <p>
               Our Safety, Health, Environment and Quality (SHE-Q) culture aims
-              for an <br /> incident-free working environment because safety
-              management is a priority <br /> to us.
+              for an incident-free working environment because safety management
+              is a priority to us.
             </p>
             <p>
               We conduct a continuous review, internal audit and development of
-              our <br /> SHE-Q policies and procedures to ensure that the
-              highest standards are <br /> met at all times.
+              our SHE-Q policies and procedures to ensure that the highest
+              standards are met at all times.
             </p>
             <p>
               We have implemented several in-house safety policies in line with
-              our <br /> Safety Management Systems which includes; our safety
-              policy, security <br /> policy, alcohol and drug policy to mention
-              a few.
+              our Safety Management Systems which includes; our safety policy,
+              security policy, alcohol and drug policy to mention a few.
             </p>
             <p>
               Our seasoned in-house safety officers/managers have increased the
-              safety <br /> awareness and inculcated a safety culture in all
-              staff and contractors of <br /> SR PLATFORMS LIMITED.
+              safety awareness and inculcated a safety culture in all staff and
+              contractors of SR PLATFORMS LIMITED.
             </p>
           </div>
           <div className="safety__policy-text">
             <p>
               Our safety leadership campaigns are based on sound safety values
-              and <br />
-              rules designed to make people aware of their own responsibilities{" "}
-              <br />
-              regarding safety.
+              and rules designed to make people aware of their own
+              responsibilities regarding safety.
             </p>
             <p>
               We encourage them to take action if operations appear unsafe and
-              to <br />
-              approach others if they feel at risk.
+              to approach others if they feel at risk.
             </p>
             <p>
               Health and safety risks differ from project to project and from
-              location to <br /> location, so it is essential to have the right
-              tools at hand to assess them, <br /> take appropriate measures and
-              communicate the solutions to all involved.
+              location to location, so it is essential to have the right tools
+              at hand to assess them, take appropriate measures and communicate
+              the solutions to all involved.
             </p>
             <p>
               Our Management Systems set clear standards that emphasize exactly
-              what <br /> we expect from our Team with regard to safety, health,
-              consideration for <br /> the environment and the quality of what
-              we deliver as a team.
+              what we expect from our Team with regard to safety, health,
+              consideration for the environment and the quality of what we
+              deliver as a team.
             </p>
           </div>
         </article>
