@@ -56,8 +56,9 @@
     background-size: cover;
     background-position: center center;
     height: 500px;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   & .title {
@@ -72,6 +73,10 @@
   p {
     font-size: 2.5rem;
     color: $color-white;
+    width: 50%;
+    @media screen and(max-width:768px) {
+      width: 80%;
+    }
   }
 }
 
@@ -88,6 +93,9 @@
 
 .securitySecondSection .body {
   display: flex;
+  @media screen and(max-width:768px) {
+    flex-direction: column;
+  }
 }
 
 .securitySecondSection .securityImg {
@@ -102,13 +110,16 @@
 .securitySecondSection .locations {
   display: flex;
   align-items: center;
-}
-
-.securitySecondSection .locations {
   background-color: $color-primary;
   flex: 3;
   color: $color-white;
   padding: 4rem 10rem;
+
+  & > div {
+    @media screen and(max-width:768px) {
+      margin: 0 auto;
+    }
+  }
 }
 
 .securitySecondSection .locations h4 {
@@ -122,6 +133,10 @@
   grid-template-rows: repeat(3, 1fr);
   row-gap: 3rem;
   font-size: 1.3rem;
+  @media screen and(max-width:768px) {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
 }
 
 .securitySecondSection .locations ul li::before {
@@ -169,23 +184,6 @@
     height: 202px;
     border-radius: 5px;
   }
-
-  & .service {
-    position: relative;
-  }
-
-  & .service .text {
-    color: $color-white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.7rem;
-  }
 }
 
 .securityFourthSection {
@@ -232,13 +230,13 @@
 
   & > div {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
+    width: 174px;
+    height: 174px;
   }
 
   span {
@@ -270,6 +268,9 @@
 
 .securityFifthSection .text {
   display: flex;
+  @media screen and(max-width:768px) {
+    flex-direction: column-reverse;
+  }
 
   img {
     width: 100%;
@@ -278,6 +279,7 @@
 
 .securityFifthSection .textImg {
   flex: 2;
+  display: flex;
 }
 
 .securityFifthSection .textStatement {
@@ -288,6 +290,10 @@
   justify-content: center;
   align-items: center;
   color: $color-white;
+  padding: 4rem 10rem;
+  @media screen and(max-width:768px) {
+    padding: 4rem 5rem;
+  }
 
   p {
     font-size: 2rem;
@@ -324,6 +330,10 @@
 
   & .testimonials {
     display: flex;
+
+    @media screen and(max-width:768px) {
+      flex-direction: column;
+    }
   }
 
   & .testimonial {
@@ -331,6 +341,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    @media screen and(max-width:768px) {
+      margin-top: 3rem;
+    }
   }
 
   & .testimonialText {
@@ -362,6 +376,12 @@
     place-items: center;
     grid-template-columns: repeat(2, 1fr);
     padding: 0 20rem 6rem 20rem;
+
+    @media screen and(max-width:768px) {
+      grid-template-columns: 1fr;
+      row-gap: 4rem;
+      padding: 0;
+    }
   }
 
   & .partnership {
@@ -369,5 +389,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media screen and(max-width:768px) {
+      margin-top: 4rem;
+    }
   }
 }

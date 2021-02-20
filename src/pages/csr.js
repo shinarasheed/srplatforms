@@ -13,13 +13,15 @@ const csr = ({ data }) => {
         className="csrBanner"
         img={data.backgroundImg.childImageSharp.fluid}
       >
-        <h5>
-          Corporate <br /> Social <br /> Responsibility
-        </h5>
-        <p>
-          Contributing to the advancement and development of <br /> human kind
-          and society through best practices
-        </p>
+        <div className="text">
+          <h5>
+            Corporate <br /> Social <br /> Responsibility
+          </h5>
+          <p>
+            Contributing to the advancement and development of <br /> human kind
+            and society through best practices
+          </p>
+        </div>
       </HeroSection>
       <section className="csrFirstSection">
         <h5>Our Objective</h5>
@@ -117,7 +119,7 @@ const csr = ({ data }) => {
               immensely to the elimination of youth <br /> unemployment by
               equipping them with marketable skills, <br /> provide platforms
               for income generating ventures and <br /> build capacity of the
-              beneficiaries to enable them meet <br />] their daily needs.
+              beneficiaries to enable them meet <br /> their daily needs.
             </p>
           </div>
         </div>

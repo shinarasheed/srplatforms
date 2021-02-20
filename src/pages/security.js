@@ -28,11 +28,10 @@ const security = () => {
         </div>
         <div className="body">
           <p>
-            SRPlatforms will help to add value to the upstream sector of the{" "}
-            <br /> oil and gas industry in Nigeria and beyond through ensuring
-            the <br /> safe delivery of petroleum products and services ranging
-            from <br /> Completions and Sub-Sea Services to Vessel Chartering
-            services
+            SRPlatforms will help to add value to the upstream sector of the oil
+            and gas industry in Nigeria and beyond through ensuring the safe
+            delivery of petroleum products and services ranging from Completions
+            and Sub-Sea Services to Vessel Chartering services
           </p>
         </div>
       </section>
@@ -80,7 +79,7 @@ const security = () => {
           {mainService.map((service, index) => (
             <div className="service" key={index}>
               <img src={service.img} alt={service.text} />
-              <div>
+              <div className="serviceText">
                 <p className="text">{service.text}</p>
               </div>
             </div>
@@ -117,26 +116,24 @@ const security = () => {
             <div>
               <p>
                 SR PLATFORMS LIMITED provides fully-licensed armed escort
-                service <br />
-                for merchant vessels navigating high risk routes off Nigeria.
+                service for merchant vessels navigating high risk routes off
+                Nigeria.
               </p>
               <p>
                 Our approved partner has signed a Memorandum of Understaing
-                (MOU)
-                <br />
-                with the Nigerian Navy, and we also hold all neccesary approvals
-                and <br /> permits from the Nigerian Maritime Security and
+                (MOU) with the Nigerian Navy, and we also hold all neccesary
+                approvals and permits from the Nigerian Maritime Security and
                 Administrative Agency.{" "}
               </p>
               <p>
                 SR PLATFORMS LIMITED has invested heavily in Acquisition of four
-                fully <br /> Ballistic security vessels to make the Waterways of
+                fully Ballistic security vessels to make the Waterways of
                 Nigeria safer.
               </p>
               <p>
                 We have well trained crew and with the partnership of the
-                Nigerian Navy, <br /> We guarantee safe sailing within the Gulf
-                of Guinea.
+                Nigerian Navy, We guarantee safe sailing within the Gulf of
+                Guinea.
               </p>
             </div>
           </div>

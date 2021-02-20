@@ -17,6 +17,10 @@ export const StyledCsr = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 768px) {
+      padding: 4rem 1rem;
+    }
   }
 
   img {
