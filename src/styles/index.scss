@@ -16,12 +16,19 @@
 .indexSecondSection {
   background-image: url("../assets/img/servicebanner.jpg");
   @include backgroundProperties();
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 22rem 3rem 15rem;
   color: $color-white;
+  padding: 3rem 15rem 3rem 15rem;
+  column-gap: 20rem;
+
+  @media screen and(max-width:768px) {
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 3rem 4rem;
+  }
 }
 
 .indexSecondSection h5 {
@@ -52,6 +59,10 @@
 
 .indexSecondSection img {
   border-radius: 50%;
+  width: 100%;
+  @media screen and(max-width:768px) {
+    margin-top: 40px;
+  }
 }
 
 .indexThirdSection {
@@ -95,10 +106,6 @@
 }
 .indexThirdSection img {
   width: 100%;
-}
-
-.indexThirdSection .service:not(:last-of-type) {
-  // margin-right: 1rem;
 }
 
 .indexFourthSection {
@@ -146,6 +153,10 @@
 .indexFourthSection .sellingPoints h5 {
   margin-bottom: 6rem;
   text-align: center;
+  @media screen and(max-width:425px) {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
 }
 
 .indexFourthSection .icon {
@@ -164,6 +175,9 @@
 
 .indexFourthSection .sellingPointsCol1 {
   margin-right: 4rem;
+  @media screen and(max-width:425px) {
+    margin-right: 0;
+  }
 }
 
 .indexFifthSection,

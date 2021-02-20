@@ -28,13 +28,34 @@ const services = () => {
       <section className="servicesThirdSection">
         <h5>We also undertake other services as follows:</h5>
       </section>
+      <section className="py-5 d-flex justify-content-center">
+        {" "}
+        hello world{" "}
+      </section>
       <section className="servicesFourthSection">
         <article>
-          <h5>MILESTONE</h5>
+          <div className="title">
+            <h5>MILESTONE</h5>
+          </div>
           <div className="milestones">
-            <div className="left"></div>
+            <div className="left">
+              <div className="text">
+                <div>
+                  <h5>
+                    "Well-structured <br /> operational base"
+                  </h5>
+                </div>
+                <div>
+                  <p>
+                    At SR PLATFORMS, We continue the quest of <br /> building
+                    our own world class fleet of vessel and <br /> ensure our
+                    Customer base increased steadily and <br /> progressively.
+                  </p>
+                </div>
+              </div>
+            </div>
             <div className="right">
-              <div>
+              <div className="upperRight">
                 <div>
                   <h5>SR TRADER</h5>
                   <p>
@@ -66,9 +87,58 @@ const services = () => {
                   </p>
                 </div>
               </div>
+              <div className="downRight">
+                <p>In 2019, SR PLATFORMS added to her fleet;</p>
+                <div className="vessels">
+                  <div>
+                    <h5>Mediator II</h5>
+                    <h6>A DAMEN FCS 3307 security vessel built from keel.</h6>
+                  </div>
+                  <div>
+                    <h5>Mediator IV</h5>
+                    <h6>A DAMEN FCS 4008 security vessel.</h6>
+                  </div>
+                  <div>
+                    <h5>Mediator III</h5>
+                    <h6>A DAMEN FCS 4008 security vessel.</h6>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </article>
+      </section>
+
+      <section className="servicesFifthSection">
+        <div className="projection">
+          <h5>PROJECTION</h5>
+        </div>
+        <div className="text">
+          <div className="textContent">
+            <div>
+              <h6>
+                {" "}
+                To own a world class dry-dock facility <br /> for ship repair ,
+                maintenance and <br /> spares fabrication in Nigeria.
+              </h6>
+            </div>
+
+            <div>
+              <h6>
+                To build our own world class fleet of <br /> Vessels comprising
+                of Support vessels & <br /> Supply Vessels, Multi purpose
+                vessels and <br /> Main Installation vessels.
+              </h6>
+            </div>
+          </div>
+          <div className="textContentMiddle">
+            <h6>
+              To enable true local content development <br /> in the Nigerian
+              oil and Gas Sector, through <br /> technology transfer, training
+              and tutelage.
+            </h6>
+          </div>
+        </div>
       </section>
     </Layout>
   )

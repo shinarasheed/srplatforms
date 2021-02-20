@@ -24,16 +24,16 @@ const index = () => {
             Efficiency Through <br /> Service Delivery
           </h5>
           <p>
-            SR Platforms Ltd is a wholly owned Nigerian Company, <br /> engaged
-            in marine and offshore support services.
+            SR Platforms Ltd is a wholly owned Nigerian Company, engaged in
+            marine and offshore support services.
           </p>
           <p>
-            We are the epitome of professionalism in the provision <br /> of
-            marine vessel services.
+            We are the epitome of professionalism in the provision of marine
+            vessel services.
           </p>
           <p>
-            SR Platforms will help to add value to the upstream <br /> sector of
-            the oil and gas industry in Nigeria <br /> and beyond..
+            SR Platforms will help to add value to the upstream sector of the
+            oil and gas industry in Nigeria and beyond..
           </p>
 
           <Link to="/">Read More</Link>
