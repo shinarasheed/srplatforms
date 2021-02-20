@@ -5,6 +5,7 @@ import "../styles/index.scss"
 import Layout from "../components/layout"
 import IndexHero from "../components/Home/Hero"
 import serviceImg from "../assets/img/circle.jpg"
+import CerticateSlide from "../components/slides/index"
 import {
   servicesData,
   sellingPoints1,
@@ -102,11 +103,7 @@ const index = () => {
       <section className="indexFifthSection">
         <h5 className="text-center">Certifications and Licenses</h5>
         <div className="certificates">
-          {certification.map((certificate, index) => (
-            <div key={index}>
-              <img src={certificate.certification} alt="certification" />
-            </div>
-          ))}
+          <CerticateSlide slides={certification} />
         </div>
       </section>
 
@@ -178,11 +175,7 @@ const index = () => {
       <section className="indexEightSection">
         <h5 className="text-center">A Few of our Clients</h5>
         <div className="clients">
-          {clients.map((client, index) => (
-            <div key={index}>
-              <img src={client.client} alt="client" />
-            </div>
-          ))}
+          <CerticateSlide slides={clients} />
         </div>
       </section>
     </Layout>

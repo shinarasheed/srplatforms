@@ -20,7 +20,7 @@ import { FaUsers } from "react-icons/fa"
 import { FaPaperPlane } from "react-icons/fa"
 import { FaStreetView } from "react-icons/fa"
 
-//certification and licenses
+//img and licenses
 import cert1 from "../assets/img/cert1.png"
 import cert2 from "../assets/img/cert2.png"
 import cert3 from "../assets/img/cert3.png"
@@ -162,73 +162,73 @@ export const sellingPoints2 = [
 ]
 export const certification = [
   {
-    certification: cert1,
+    img: cert1,
   },
   {
-    certification: cert2,
+    img: cert2,
   },
   {
-    certification: cert3,
+    img: cert3,
   },
   {
-    certification: cert4,
+    img: cert4,
   },
   {
-    certification: cert5,
+    img: cert5,
   },
   {
-    certification: cert6,
+    img: cert6,
   },
   {
-    certification: cert7,
+    img: cert7,
   },
   {
-    certification: cert8,
+    img: cert8,
   },
   {
-    certification: cert9,
+    img: cert9,
   },
   {
-    certification: cert10,
+    img: cert10,
   },
   {
-    certification: cert11,
+    img: cert11,
   },
 ]
 
 export const clients = [
   {
-    client: client1,
+    img: client1,
   },
   {
-    client: client2,
+    img: client2,
   },
   {
-    client: client3,
+    img: client3,
   },
   {
-    client: client4,
+    img: client4,
   },
   {
-    client: client5,
+    img: client5,
   },
   {
-    client: client6,
+    img: client6,
   },
   {
-    client: client7,
+    img: client7,
   },
   {
-    client: client8,
+    img: client8,
   },
   {
-    client: client9,
+    img: client9,
   },
   {
-    client: client10,
+    img: client10,
   },
   {
-    client: client11,
+    img: client11,
   },
 ]
 
