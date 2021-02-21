@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import "../../styles/footer.scss"
 import logo from "../../assets/img/logo.png"
-// import facebooklogo from '../../assets/img/'
+import { footerSocial } from "../constants/navlinks"
 
 const Footer = () => {
   return (
@@ -53,10 +53,14 @@ const Footer = () => {
               <li>+2348066377819 +2348051492298</li>
             </ul>
 
-            <ul>
-              <li>
-                {/* <a href="facebook" target="__blanck"><img src= alt=""/></a> */}
-              </li>
+            <ul className="footerSocial">
+              {footerSocial.map((social, index) => (
+                <li key={index}>
+                  <a href={social.link} target="_blank" rel="noreferrer">
+                    {social.icon}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

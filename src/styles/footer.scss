@@ -97,3 +97,12 @@
     margin-top: 2rem;
   }
 }
+
+.footerSocial {
+  display: flex;
+  margin-top: 4rem;
+
+  & li:not(:last-child) {
+    margin-right: 20px;
+  }
+}
