@@ -1,25 +1,22 @@
 @import "./colors.scss";
 
 .securitybanner {
-  background-image: url("../assets/img/banner2.png");
+  background-image: url("../assets/img/securitybanner2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   height: 651px;
   display: flex;
+  align-items: flex-end;
   justify-content: flex-start;
-  align-items: center;
 
   p {
     color: #5b5b5b;
-    @media screen and(max-width:768px) {
-      color: white;
-    }
   }
 
   p:nth-of-type(1) {
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 400;
   }
 
@@ -27,7 +24,8 @@
     font-weight: 600;
     margin-bottom: 4rem;
     line-height: 1.7;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    text-align: center;
   }
 
   h5 {
@@ -36,9 +34,6 @@
     font-weight: bolder;
     margin-bottom: 2rem;
     line-height: 1.4;
-    @media screen and(max-width:768px) {
-      color: white;
-    }
   }
 
   a {
@@ -50,8 +45,23 @@
   }
 
   & .bannerText {
-    margin-top: 25rem;
-    margin-left: 10px;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 

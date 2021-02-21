@@ -11,17 +11,22 @@ const security = () => {
       <SEO title="Security" description="this is the security page" />
       <section className="securitybanner">
         <div className="bannerText">
-          <p>Innovative</p>
-          <h5>
-            Armed Escort Services in <br /> Nigeria
-          </h5>
-          <p>
-            SR Platforms Ltd is one of the leading <br /> private security
-            companies providing high <br /> standard and privately contracted{" "}
-            <br /> security services.
-          </p>
+          <div>
+            <img src={require("../assets/img/wheel.png")} alt="whell" />
+          </div>
+          <div className="text">
+            <p>Innovative</p>
+            <h5>
+              Armed Escort Services in <br /> Nigeria
+            </h5>
+            <p>
+              SR Platforms Ltd is one of the leading <br /> private security
+              companies providing high <br /> standard and privately contracted{" "}
+              <br /> security services.
+            </p>
 
-          <Link to="/">Learn More</Link>
+            <Link to="/">Learn More</Link>
+          </div>
         </div>
       </section>
       <section className="securityFirstSection">
