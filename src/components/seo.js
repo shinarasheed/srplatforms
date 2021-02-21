@@ -8,6 +8,7 @@ const getData = graphql`
       siteMetadata {
         siteTitle: title
         siteDesc: description
+        keywords: keywords
         author
         siteUrl
         image
@@ -21,6 +22,7 @@ const SEO = ({ title, description }) => {
   const { site } = useStaticQuery(getData)
   const {
     siteDesc,
+    keywords,
     siteTitle,
     siteUrl,
     image,
@@ -29,6 +31,7 @@ const SEO = ({ title, description }) => {
   return (
     <Helmet htmlAttributes={{ lang: "en" }} title={`${title} | ${siteTitle}`}>
       <meta name="description" content={description || siteDesc} />
+      <meta name="keywords" content={keywords} />
       <meta name="image" content={image} />
       {/* facebook card */}
       <meta property="og:url" content={siteUrl} />
