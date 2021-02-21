@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa"
 import Links from "../constants/links"
 
 import "../../styles/navbar.scss"
-import logo from "../../assets/img/SRLogo.png"
+import logo from "../../assets/img/SRLogocroped.png"
 
 const Navbar = ({ toggle }) => {
   return (
@@ -13,10 +13,10 @@ const Navbar = ({ toggle }) => {
         <Link to="/" className="nav__brand">
           <img src={logo} alt="srplatforms logo" />
         </Link>
-        <button className="toggle-btn" onClick={toggle}>
-          <FaBars />
-        </button>
       </div>
+      <button className="toggle-btn" onClick={toggle}>
+        <FaBars />
+      </button>
       <Links styleClass="nav-links" />
     </nav>
   )

@@ -2,7 +2,7 @@ import React from "react"
 import Links from "../constants/links"
 import { IoMdClose } from "react-icons/io"
 
-import "../../styles/sidebar.scss"
+import "../../styles/navbar.scss"
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
