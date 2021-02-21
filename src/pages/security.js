@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/layout"
-import { Link } from "gatsby"
 
 import SEO from "../components/seo"
 import "../styles/security.scss"
@@ -24,8 +23,6 @@ const security = () => {
               companies providing high <br /> standard and privately contracted{" "}
               <br /> security services.
             </p>
-
-            <Link to="/">Learn More</Link>
           </div>
         </div>
       </section>
