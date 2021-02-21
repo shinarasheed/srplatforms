@@ -63,48 +63,52 @@ const contact = () => {
         </section>
       </section>
 
-      <section className="contactSecondSection">
-        <div className="itemsWrapper">
-          <div className="item">
-            <div className="iconWrapper">
-              <FaMapMarkerAlt className="icon" />
+      <section className="bendSection">
+        <div className="topbend"></div>
+        <section className="contactSecondSection">
+          <div className="itemsWrapper">
+            <div className="item">
+              <div className="iconWrapper">
+                <FaMapMarkerAlt className="icon" />
+              </div>
+              <div className="description">
+                <h5>Address</h5>
+                <ul>
+                  <li>5A2 2nd Street, Osborne</li>
+                  <li>Foreshore Estate, Ikoyi Lagos,</li>
+                  <li>Nigeria</li>
+                </ul>
+              </div>
             </div>
-            <div className="description">
-              <h5>Address</h5>
-              <ul>
-                <li>5A2 2nd Street, Osborne</li>
-                <li>Foreshore Estate, Ikoyi Lagos,</li>
-                <li>Nigeria</li>
-              </ul>
-            </div>
-          </div>
 
-          <div className="item">
-            <div className="iconWrapper">
-              <FaPhoneAlt className="icon" />
+            <div className="item">
+              <div className="iconWrapper">
+                <FaPhoneAlt className="icon" />
+              </div>
+              <div className="description">
+                <h5>Phones</h5>
+                <ul>
+                  <li>+234 -1-4531960</li>
+                  <li>+2348066377819</li>
+                  <li>+2348051492298</li>
+                </ul>
+              </div>
             </div>
-            <div className="description">
-              <h5>Phones</h5>
-              <ul>
-                <li>+234 -1-4531960</li>
-                <li>+2348066377819</li>
-                <li>+2348051492298</li>
-              </ul>
-            </div>
-          </div>
 
-          <div className="item">
-            <div className="iconWrapper">
-              <FiClock className="icon" />
-            </div>
-            <div className="description">
-              <h5>Opening Hours</h5>
-              <ul>
-                <li>24 Hours, 7days a Week</li>
-              </ul>
+            <div className="item">
+              <div className="iconWrapper">
+                <FiClock className="icon" />
+              </div>
+              <div className="description">
+                <h5>Opening Hours</h5>
+                <ul>
+                  <li>24 Hours, 7days a Week</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+        <div className="bottombend"></div>
       </section>
     </Layout>
   )

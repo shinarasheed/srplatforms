@@ -140,3 +140,27 @@
     }
   }
 }
+
+.bendSection {
+  position: relative;
+}
+
+.topbend {
+  height: 60px;
+  background: #0d3a64;
+  position: absolute;
+  width: 64%;
+  top: -24px;
+  right: 0px;
+  transform: skew(-34deg);
+}
+
+.bottombend {
+  height: 60px;
+  background: #0d3a64;
+  position: absolute;
+  width: 64%;
+  bottom: 30px;
+  left: 0px;
+  transform: skew(-34deg);
+}
