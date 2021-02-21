@@ -297,21 +297,32 @@ export const valuesData2 = [
 export const offers = [
   {
     img: offer1,
+    text:
+      "With Specialized Security patrol Vessels we provide uninterrupted services with great precision and expertise. This area is one of our core- expertise as majority of the vessels in our Fleet constitutes Fast Support Intervention Vessel (FSIV) . We have been able to innovate and develop ways to effectively deploy , monitor and manage this range of vessels .",
   },
   {
     img: offer2,
+    text:
+      "A fast, efficient crew transfer vessel that acts as cost efficient alternative to aviation transport advances the modern offshore support vessel model and offers a more cost efficient, comfortable, flexible, and safe option to helicopter transportation. Or Crew Boats' passenger lounge features spacious reclining seating in privacy pods (similar to first class airlines) along with full internet connectivity, a well-equipped snack bar area and feature LED lighting.",
   },
   {
     img: offer3,
+    text: "",
   },
   {
     img: offer4,
+    text:
+      "Our Selection of PSVs provides great opportunity for a stable and long term charter. Regular supply functions and cargo transport for the oil industry with stand-by functions. Well deck for maximum protection of cargo and crew. Our Capacity include mid-sized and large-sized PSVs. Experiencing a complete indulgence with the harmonising design and saving in fuel consumption from the Diesel Electric to the Diesel new built engines.",
   },
   {
     img: offer5,
+    text:
+      "We do various supply of Petroleum products to both coastal and deep offshore platforms. Our competent technical team have successfully conducted different supplies to several offshore/onshore locations.",
   },
   {
     img: offer6,
+    text:
+      "We offer our clients not only a complete range of AHTS in terms of Bollard Pull tonnage and design, but we also offer Anchor Handling and Towing System solution. Each component in the AHTS system is optimally designed and ,matched, throughout the conception of the project and the installation, commissioning and even making sure of the system reliability and durability during its life span.",
   },
 ]
 
@@ -360,23 +371,23 @@ export const stats = [
 export const otherService = [
   {
     img: otherservice1,
-    text: "Maritime Security",
+    text: "Equipment Supply and Leasing",
   },
   {
     img: otherservice2,
-    text: "Marine Logistics",
+    text: "Manpower Services",
   },
 
   {
     img: otherservice4,
-    text: "Training and Consultancy",
+    text: "OCTG Services",
   },
   {
     img: otherservice3,
-    text: "Offshore Support Vessels",
+    text: "Pipeline Security and Protection",
   },
   {
     img: otherservice5,
-    text: "Training and Consultancy",
+    text: "Technical Manpower Services",
   },
 ]
