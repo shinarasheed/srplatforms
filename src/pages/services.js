@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import SEO from "../components/seo"
 import Layout from "../components/layout"
 import "../styles/services.scss"
 import { offers } from "../data/index"
@@ -10,6 +11,7 @@ import OtherServiceSlide from "../components/slides/services"
 const services = ({ data }) => {
   return (
     <Layout>
+      <SEO title="Services" description="this is the services page" />
       <HeroSection
         className="servicesBanner"
         img={data.backgroundImg.childImageSharp.fluid}

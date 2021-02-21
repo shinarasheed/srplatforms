@@ -1,5 +1,6 @@
 import React from "react"
 
+import SEO from "../components/seo"
 import "../styles/contact.scss"
 import Layout from "../components/layout"
 import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa"
@@ -7,6 +8,7 @@ import { FiClock } from "react-icons/fi"
 const contact = () => {
   return (
     <Layout>
+      <SEO title="Contact" description="this is the contact page" />
       <section className="contactbanner"></section>
       <section className="contact">
         <section className="contactFirstSection">

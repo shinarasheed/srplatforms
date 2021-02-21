@@ -1,8 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `srplatforms`,
+    description: `srplaforms`,
+    author: `gravitytech`,
+    keywords: `
+    SR PLatforms, SR, SR Platform,SR Platform Limited, Oil and Gas, oil and gas companies in Nigeria,oil and gas companies in Lagos, Nigeria,oil and gas companies in lagos hiring, nigeria oil & gas companies, lagos oil & gas companies, 
+    southwest oil & gas companies, oil and gas safety bill, Marine,  vessels , offshore, marine vessels , offshore vessels , marine operations , drilling and production , upstream , oil servicing , petroleum , offshore support, fsiv , psv, ahts , Lhts, csv, crew boats , tug boats, surfer boats,  security boats ,security vessels , platform supports , anchor handling`,
+    twitterusername: "iamrasheedshina",
+    image: "/static/bg5.png",
+    siteUrl: "https://www.srplatforms.com/",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

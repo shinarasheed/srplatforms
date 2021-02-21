@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import SEO from "../components/seo"
 import "../styles/index.scss"
 import Layout from "../components/layout"
 import IndexHero from "../components/Home/Hero"
@@ -18,6 +19,7 @@ import {
 const index = () => {
   return (
     <Layout>
+      <SEO title="Home" description="this is the home page" />
       <IndexHero />
       <section className="indexSecondSection">
         <article>

@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import SEO from "../components/seo"
 import "../styles/csr.scss"
 import Layout from "../components/layout"
 import { StyledCsr } from "../components/Globals/styledComponents"
@@ -9,6 +10,10 @@ import HeroSection from "../components/Globals/MainHero"
 const csr = ({ data }) => {
   return (
     <Layout>
+      <SEO
+        title="CSR"
+        description="this is the coorporate social responsibility page"
+      />
       <HeroSection
         className="csrBanner"
         img={data.backgroundImg.childImageSharp.fluid}

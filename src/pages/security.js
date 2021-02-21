@@ -2,11 +2,13 @@ import React from "react"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 
+import SEO from "../components/seo"
 import "../styles/security.scss"
 import { mainService, stats } from "../data/index"
 const security = () => {
   return (
     <Layout>
+      <SEO title="Security" description="this is the security page" />
       <section className="securitybanner">
         <div className="bannerText">
           <p>Innovative</p>
