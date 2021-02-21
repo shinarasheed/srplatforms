@@ -31,8 +31,8 @@ const Links = ({ styleClass }) => {
         </Link>
       </li>
       <li>
-        <Link to="/security" className="nav__list-link">
-          Security
+        <Link to="/marinesecurity" className="nav__list-link">
+          Marine Security
         </Link>
       </li>
       <li>
