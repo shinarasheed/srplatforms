@@ -5,10 +5,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 651px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
 
   p {
     color: #5b5b5b;
@@ -19,7 +15,7 @@
     font-size: 4rem;
     font-weight: 600;
     @media screen and(max-width:768px) {
-      font-size: 3rem;
+      font-size: 2rem;
     }
   }
 
@@ -29,6 +25,9 @@
     line-height: 1.7;
     font-size: 1.4rem;
     text-align: center;
+    @media screen and(max-width:768px) {
+      font-size: 1.2rem;
+    }
   }
 
   h5 {
@@ -37,6 +36,9 @@
     font-weight: bolder;
     margin-bottom: 2rem;
     line-height: 1.4;
+    @media screen and(max-width:768px) {
+      text-align: center;
+    }
   }
 
   & .bannerText {

@@ -11,7 +11,7 @@ const MainHero = ({ home, img, className, children }) => {
 }
 
 export default styled(MainHero)`
-  min-height: ${props => (props.home ? "100vh" : "70vh")};
+  min-height: ${props => (props.home ? "85vh" : "70vh")};
   /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
   background-position: center;
   background-size: cover;
