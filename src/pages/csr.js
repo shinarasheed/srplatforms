@@ -102,7 +102,7 @@ const csr = ({ data }) => {
         </div>
       </StyledCsr>
 
-      <StyledCsr>
+      <StyledCsr home="true">
         <div className="text" style={{ background: "#ddd" }}>
           <div>
             <h5>

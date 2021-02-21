@@ -1,6 +1,25 @@
 @import "./base.scss";
 @import "./colors.scss";
 
+.carousel-control-next,
+.carousel-control-prev {
+  &:hover {
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+
+.carousel-caption {
+  h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
 .layout {
   height: 100vh;
   display: flex;

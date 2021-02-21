@@ -42,8 +42,13 @@ const Hero = () => {
             alt="banner"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <div className="text">
+              <h3>SAFETY FIRST</h3>
+              <p>
+                We conduct a continous review, <br /> internal audit and
+                development of our <br /> SHE-Q policies...
+              </p>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -53,8 +58,15 @@ const Hero = () => {
             alt="banner"
           />
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div className="text">
+              <h3>
+                SEASONED <br /> PROFESSIONALS
+              </h3>
+              <p>
+                With Seasoned Customer Ethics, <br /> Customer Control and
+                Market Expert
+              </p>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -64,10 +76,15 @@ const Hero = () => {
             alt="banner"
           />
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+            <div className="text">
+              <h3>
+                THROUGH INNOVATIVE <br /> IDEAS
+              </h3>
+              <p>
+                We Provide Best in Class <br /> Marine/Offshore Support Services
+                for <br /> the Oil and Gas industry
+              </p>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

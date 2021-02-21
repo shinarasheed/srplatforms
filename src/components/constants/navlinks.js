@@ -4,8 +4,6 @@ import { FaFacebookF } from "react-icons/fa"
 import { FaTwitter } from "react-icons/fa"
 import { FaLinkedinIn } from "react-icons/fa"
 
-export default [{}]
-
 export const footerSocial = [
   {
     icon: <FaFacebookF />,
