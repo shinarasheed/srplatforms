@@ -233,7 +233,7 @@
     display: none;
   }
 
-  img {
+  .statimg {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -298,6 +298,13 @@
 .securityFifthSection .textImg {
   flex: 2;
   display: flex;
+
+  .textimg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 .securityFifthSection .textStatement {

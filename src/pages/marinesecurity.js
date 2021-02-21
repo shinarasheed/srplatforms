@@ -1,14 +1,22 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Img from "gatsby-image"
 
+import HeroSection from "../components/Globals/MainHero"
 import SEO from "../components/seo"
 import "../styles/security.scss"
 import { mainService, stats } from "../data/index"
-const security = () => {
+
+const security = ({ data }) => {
   return (
     <Layout>
       <SEO title="Security" description="this is the security page" />
-      <section className="securitybanner">
+      <HeroSection
+        home="true"
+        className="securitybanner"
+        img={data.backgroundImg.childImageSharp.fluid}
+      >
         <div className="bannerText">
           <div>
             <img src={require("../assets/img/wheel.png")} alt="whell" />
@@ -25,7 +33,8 @@ const security = () => {
             </p>
           </div>
         </div>
-      </section>
+      </HeroSection>
+
       <section className="securityFirstSection">
         <div className="title">
           <h5 className="text-center text-uppercase">What We do</h5>
@@ -46,10 +55,7 @@ const security = () => {
         </div>
         <div className="body">
           <div className="securityImg">
-            <img
-              src={require("../assets/img/securityImg.png")}
-              alt="security"
-            />
+            <Img fluid={data.securityImg.childImageSharp.fluid} />
           </div>
           <div className="locations">
             <div>
@@ -105,7 +111,7 @@ const security = () => {
           </div>
         </div>
         <div className="statsImg">
-          <img src={require("../assets/img/statImg.png")} alt="stat" />
+          <Img className="statimg" fluid={data.statImg.childImageSharp.fluid} />
         </div>
       </section>
       <section className="securityFifthSection">
@@ -114,7 +120,10 @@ const security = () => {
         </div>
         <div className="text">
           <div className="textImg">
-            <img src={require("../assets/img/workImg.png")} alt="work" />
+            <Img
+              className="textimg"
+              fluid={data.workImg.childImageSharp.fluid}
+            />
           </div>
           <div className="textStatement">
             <div>
@@ -193,5 +202,38 @@ const security = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    workImg: file(relativePath: { eq: "workImg.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    statImg: file(relativePath: { eq: "statImg.png" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    securityImg: file(relativePath: { eq: "securityImg.png" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    backgroundImg: file(relativePath: { eq: "securitybanner2.png" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
 
 export default security

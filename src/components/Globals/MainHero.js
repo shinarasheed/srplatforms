@@ -19,4 +19,5 @@ export default styled(MainHero)`
   display: flex;
   flex-direction: column;
   justify-content: ${props => (props.home ? "center" : "flex-start")};
+  align-items: flex-start;
 `
