@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import "../styles/services.scss"
 import { offers } from "../data/index"
 import HeroSection from "../components/Globals/MainHero"
+import OtherServiceSlide from "../components/slides/services"
 
 const services = ({ data }) => {
   return (
@@ -34,9 +35,8 @@ const services = ({ data }) => {
       <section className="servicesThirdSection">
         <h5>We also undertake other services as follows:</h5>
       </section>
-      <section className="py-5 d-flex justify-content-center">
-        {" "}
-        hello world{" "}
+      <section className="servicesSlideSection">
+        <OtherServiceSlide />
       </section>
       <section className="servicesFourthSection">
         <article>
@@ -115,7 +115,7 @@ const services = ({ data }) => {
         </article>
       </section>
 
-      <section className="servicesFifthSection">
+      {/* <section className="servicesFifthSection">
         <div className="projection">
           <h5>PROJECTION</h5>
         </div>
@@ -145,7 +145,7 @@ const services = ({ data }) => {
             </h6>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   )
 }

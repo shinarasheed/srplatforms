@@ -84,6 +84,13 @@ import stats2 from "../assets/img/Group 22.png"
 import stats3 from "../assets/img/Group 23.png"
 import stats4 from "../assets/img/Group 24.png"
 
+//otherservices
+import otherservice1 from "../assets/img/equipment supply and leasing.jpg"
+import otherservice2 from "../assets/img/manpower services.jpg"
+import otherservice3 from "../assets/img/pipeline security and protection.jpg"
+import otherservice4 from "../assets/img/OCTG Services.jpg"
+import otherservice5 from "../assets/img/Technical Manpower Services.jpg"
+
 export const servicesData = [
   {
     img: service1,
@@ -347,5 +354,29 @@ export const stats = [
     img: stats4,
     number: 5,
     text: "Years Of Experience",
+  },
+]
+
+export const otherService = [
+  {
+    img: otherservice1,
+    text: "Maritime Security",
+  },
+  {
+    img: otherservice2,
+    text: "Marine Logistics",
+  },
+
+  {
+    img: otherservice4,
+    text: "Training and Consultancy",
+  },
+  {
+    img: otherservice3,
+    text: "Offshore Support Vessels",
+  },
+  {
+    img: otherservice5,
+    text: "Training and Consultancy",
   },
 ]
