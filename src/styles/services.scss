@@ -245,35 +245,83 @@
 }
 
 .servicesFifthSection .text {
-  background-image: url("../assets/img/support.jpg");
-  @include bakgroundProperties();
-  height: 400px;
-  display: flex;
+  background: url("../assets/img/support.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  height: 500px;
 
-  & .textContent {
+  & .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: #97cbfd;
-    flex: 1;
     opacity: 0.9;
-    display: flex;
-
-    & > div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex: 1;
-    }
-  }
-
-  h6 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    opacity: 1;
+    z-index: 1;
   }
 }
 
-.textContentMiddle {
-  background-color: $color-primary;
-  color: #fff;
+.servicesFifthSection .textContent {
+  height: 100%;
+  position: relative;
+  z-index: 3;
+  display: flex;
+
+  & > div {
+    flex: 1;
+  }
+
+  h6 {
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.5;
+  }
+
+  & .rightContent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    h6 {
+      margin-top: 20rem;
+      margin-right: 5rem;
+      color: $color-primary;
+    }
+  }
+
+  & .leftContent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h6 {
+      margin-left: 5rem;
+      margin-top: 10rem;
+      color: $color-primary;
+    }
+  }
+
+  & .middleContent {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: #0d3a64;
+    z-index: 2;
+    clip-path: polygon(55% 0, 100% 0%, 45% 100%, 0% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h6 {
+      color: #fff;
+    }
+  }
 }
 
 .servicesSlideSection {

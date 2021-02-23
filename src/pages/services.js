@@ -120,37 +120,38 @@ const services = ({ data }) => {
         </article>
       </section>
 
-      {/* <section className="servicesFifthSection">
+      <section className="servicesFifthSection">
         <div className="projection">
           <h5>PROJECTION</h5>
         </div>
         <div className="text">
+          <div className="overlay"></div>
           <div className="textContent">
-            <div>
+            <div className="leftContent">
               <h6>
-                {" "}
                 To own a world class dry-dock facility <br /> for ship repair ,
                 maintenance and <br /> spares fabrication in Nigeria.
               </h6>
             </div>
 
-            <div>
+            <div className="middleContent">
               <h6>
                 To build our own world class fleet of <br /> Vessels comprising
                 of Support vessels & <br /> Supply Vessels, Multi purpose
                 vessels and <br /> Main Installation vessels.
               </h6>
             </div>
-          </div>
-          <div className="textContentMiddle">
-            <h6>
-              To enable true local content development <br /> in the Nigerian
-              oil and Gas Sector, through <br /> technology transfer, training
-              and tutelage.
-            </h6>
+
+            <div className="rightContent">
+              <h6>
+                To enable true local content development <br /> in the Nigerian
+                oil and Gas Sector, through <br /> technology transfer, training
+                and tutelage.
+              </h6>
+            </div>
           </div>
         </div>
-      </section> */}
+      </section>
     </Layout>
   )
 }
