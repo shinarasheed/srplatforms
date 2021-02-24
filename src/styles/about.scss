@@ -88,8 +88,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 583px;
-  padding: 3rem 0;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+  padding-top: 3rem;
 
   & h4 {
     font-size: 4rem;
@@ -167,4 +167,62 @@
       flex-direction: column;
     }
   }
+}
+
+.aboutSixthSection {
+  @media screen and(max-width:767px) {
+    display: none;
+  }
+}
+
+.aboutSixthSection h6 {
+  font-size: 4rem;
+  padding-bottom: 3rem;
+  padding-left: 10rem;
+  color: $color-primary;
+}
+
+.aboutSixthSection .slides {
+  width: 90vw;
+  margin: 0 auto 4rem auto;
+  border: 2px dotted black;
+  height: 35rem;
+
+  h5 {
+    color: #fff;
+    font-size: 1.7rem;
+    margin-bottom: 5px;
+  }
+
+  p {
+    color: #fff;
+    font-size: 1.7rem;
+  }
+
+  .slideLeft {
+    background-color: $color-primary;
+    clip-path: polygon(0 0, 90% 0, 75% 100%, 0% 100%);
+    flex: 1;
+    height: 34.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 4rem;
+  }
+
+  .slideRight {
+    flex: 1;
+    padding: 0 4rem 0 0;
+    display: flex;
+    align-items: center;
+    p {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      color: $color-primary;
+    }
+  }
+}
+
+.slide {
+  display: flex;
 }

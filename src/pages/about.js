@@ -7,6 +7,8 @@ import "../styles/about.scss"
 import { valuesData, valuesData2 } from "../data/index"
 import HeroSection from "../components/Globals/MainHero"
 import AboutSlide from "../components/slides/about"
+import ManagementSlides from "../components/slides/managementSlides"
+
 const about = ({ data }) => {
   return (
     <Layout>
@@ -85,7 +87,15 @@ const about = ({ data }) => {
           </ul>
         </div>
       </section>
-      <section className="section aboutThirdSection"></section>
+
+      <section className="aboutSixthSection">
+        <h6>THE MANAGEMENT TEAM</h6>
+        <div className="slides">
+          <ManagementSlides />
+        </div>
+      </section>
+
+      <section className="aboutThirdSection"></section>
       <section className="aboutFourthSection">
         <div className="partners">
           <h5>Partners</h5>
