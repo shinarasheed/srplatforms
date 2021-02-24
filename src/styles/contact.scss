@@ -156,11 +156,8 @@
 }
 
 .bottombend {
-  height: 60px;
-  background: #0d3a64;
-  position: absolute;
-  width: 64%;
-  bottom: 30px;
-  left: 0px;
-  transform: skew(-34deg);
+  height: 25px;
+  background: $color-primary;
+  width: 100%;
+  clip-path: polygon(0 0, 58% 0, 57% 100%, 0% 100%);
 }

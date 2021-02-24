@@ -16,6 +16,7 @@ const csr = ({ data }) => {
       />
       <HeroSection
         className="csrBanner"
+        csr="true"
         img={data.backgroundImg.childImageSharp.fluid}
       >
         <div className="text">
