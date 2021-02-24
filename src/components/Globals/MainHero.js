@@ -18,5 +18,5 @@ export default styled(MainHero)`
   display: flex;
   flex-direction: column;
   justify-content: ${props => (props.csr ? "center" : "flex-start")};
-  align-items: ${props => (props.csr ? "center" : "flex-start")}; ;
+  align-items: ${props => (props.csr ? "center" : "flex-start")};
 `
