@@ -133,14 +133,12 @@ const security = ({ data }) => {
                 Nigeria.
               </p>
               <p>
-                Our approved partner has signed a Memorandum of Understaing
-                (MOU) with the Nigerian Navy, and we also hold all neccesary
-                approvals and permits from the Nigerian Maritime Security and
-                Administrative Agency.{" "}
+                We have partnership with the Nigerian Navy, and we also hold all
+                neccesary approvals and permits from the Nigeria Government
               </p>
               <p>
-                SR PLATFORMS LIMITED has invested heavily in Acquisition of four
-                fully Ballistic security vessels to make the Waterways of
+                SR PLATFORMS LIMITED has invested heavily in Acquisition of
+                six(6) fully Ballistic security vessels to make the Waterways of
                 Nigeria safer.
               </p>
               <p>
@@ -226,7 +224,7 @@ export const query = graphql`
         }
       }
     }
-    backgroundImg: file(relativePath: { eq: "securitybanner2.png" }) {
+    backgroundImg: file(relativePath: { eq: "securitybanner2.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp

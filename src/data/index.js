@@ -348,12 +348,12 @@ export const mainService = [
 export const stats = [
   {
     img: stats1,
-    number: 10,
+    number: 6,
     text: "vessels",
   },
   {
     img: stats2,
-    number: 80,
+    number: 300,
     text: "Security Transits",
   },
   {
@@ -363,7 +363,7 @@ export const stats = [
   },
   {
     img: stats4,
-    number: 5,
+    number: 6,
     text: "Years Of Experience",
   },
 ]

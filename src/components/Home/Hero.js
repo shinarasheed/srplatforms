@@ -3,6 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Carousel } from "react-bootstrap"
 import Image from "gatsby-image"
 
+import "../../styles/carousel.scss"
+
 const getImage = graphql`
   {
     firstSlide: file(relativePath: { eq: "banner.png" }) {
@@ -26,6 +28,13 @@ const getImage = graphql`
         }
       }
     }
+    backgroundImg: file(relativePath: { eq: "securitybanner2.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   }
 `
 
@@ -35,6 +44,32 @@ const Hero = () => {
   return (
     <>
       <Carousel>
+        {/* <Carousel.Item className="carouselBanner">
+          <Image
+            className="d-block w-100"
+            fluid={data.backgroundImg.childImageSharp.fluid}
+            alt="banner"
+          />
+          <Carousel.Caption>
+            <div>
+              <div className="bannerText">
+                <img src={require("../../assets/img/wheel.png")} alt="wheel" />
+
+                <div className="securityBannerText">
+                  <p>Innovative</p>
+                  <h5>
+                    Armed Escort Services in <br /> Nigeria
+                  </h5>
+                  <p>
+                    SR Platforms Ltd is one of the leading <br /> private
+                    security companies providing high <br /> standard and
+                    privately contracted <br /> security services.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Carousel.Caption>
+        </Carousel.Item> */}
         <Carousel.Item>
           <Image
             className="d-block w-100"
@@ -78,7 +113,7 @@ const Hero = () => {
           <Carousel.Caption>
             <div className="text">
               <h3>
-                THROUGH INNOVATIVE <br /> IDEAS
+                THROUGH <br /> INNOVATIVE IDEAS
               </h3>
               <p>
                 We Provide Best in Class <br /> Marine/Offshore Support Services
