@@ -28,7 +28,7 @@ const getImage = graphql`
         }
       }
     }
-    backgroundImg: file(relativePath: { eq: "securitybanner2.jpg" }) {
+    backgroundImg: file(relativePath: { eq: "banner3.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
@@ -44,32 +44,32 @@ const Hero = () => {
   return (
     <>
       <Carousel>
-        {/* <Carousel.Item className="carouselBanner">
+        <Carousel.Item className="carouselItem">
           <Image
             className="d-block w-100"
             fluid={data.backgroundImg.childImageSharp.fluid}
             alt="banner"
           />
-          <Carousel.Caption>
-            <div>
-              <div className="bannerText">
+          <Carousel.Caption className="carouselCaption">
+            <div className="bannerText">
+              <div className="bannerImg">
                 <img src={require("../../assets/img/wheel.png")} alt="wheel" />
+              </div>
 
-                <div className="securityBannerText">
-                  <p>Innovative</p>
-                  <h5>
-                    Armed Escort Services in <br /> Nigeria
-                  </h5>
-                  <p>
-                    SR Platforms Ltd is one of the leading <br /> private
-                    security companies providing high <br /> standard and
-                    privately contracted <br /> security services.
-                  </p>
-                </div>
+              <div className="securityBannerText">
+                <p>Innovative</p>
+                <h5>
+                  Armed Escort Services in <br /> Nigeria
+                </h5>
+                <p>
+                  SR Platforms Ltd is one of the leading <br /> private security
+                  companies providing high <br /> standard and privately
+                  contracted <br /> security services.
+                </p>
               </div>
             </div>
           </Carousel.Caption>
-        </Carousel.Item> */}
+        </Carousel.Item>
         <Carousel.Item>
           <Image
             className="d-block w-100"

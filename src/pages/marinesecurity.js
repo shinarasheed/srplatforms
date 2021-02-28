@@ -68,11 +68,14 @@ const security = ({ data }) => {
                 regions:
               </h4>
               <ul>
-                <li>Lagos</li>
-                <li>Wari</li>
-                <li>Bony</li>
+                <li>Warri</li>
+                <li>Bonny</li>
                 <li>Calabar</li>
-                <li>Portharcourt</li>
+                <li>Qua Iboe</li>
+                <li>Forcados</li>
+                <li>Escravos</li>
+                <li>Lagos</li>
+                <li>Koko</li>
                 <li>Brass</li>
               </ul>
             </div>
