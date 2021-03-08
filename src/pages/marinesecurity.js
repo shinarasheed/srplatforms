@@ -119,7 +119,7 @@ const security = ({ data }) => {
       </section>
       <section className="securityFifthSection">
         <div className="title">
-          <h5>WHY WORK WITH SRTPLATFORMS</h5>
+          <h5>WHY WORK WITH SRPLATFORMS</h5>
         </div>
         <div className="text">
           <div className="textImg">
@@ -137,7 +137,7 @@ const security = ({ data }) => {
               </p>
               <p>
                 We have partnership with the Nigerian Navy, and we also hold all
-                neccesary approvals and permits from the Nigeria Government
+                neccesary approvals and permits from the Nigerian Government
               </p>
               <p>
                 SR PLATFORMS LIMITED has invested heavily in Acquisition of

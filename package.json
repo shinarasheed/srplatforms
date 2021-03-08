@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "gravitytech",
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^4.6.0",
     "gatsby": "^2.31.1",
     "gatsby-background-image": "^1.4.1",

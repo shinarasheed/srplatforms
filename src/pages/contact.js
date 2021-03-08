@@ -31,9 +31,20 @@ const contact = () => {
         </section>
 
         <section className="contactContactForm">
-          <h5>Contact Form</h5>
+          <h5
+            data-aos="fade-down-left"
+            data-aos-delay="1000"
+            data-aos-duration="2000"
+          >
+            Contact Form
+          </h5>
           <form>
-            <div className="userDetails mb-4">
+            <div
+              data-aos="fade-down-left"
+              data-aos-delay="1000"
+              data-aos-duration="2000"
+              className="userDetails mb-4"
+            >
               <input
                 className="formControl"
                 type="text"
@@ -45,14 +56,24 @@ const contact = () => {
                 placeholder="Your Last Name"
               />
             </div>
-            <div className="mb-4">
+            <div
+              data-aos="fade-down-left"
+              data-aos-delay="1000"
+              data-aos-duration="2000"
+              className="mb-4"
+            >
               <input
                 className="formControl"
                 type="text"
                 placeholder="Your First Name"
               />
             </div>
-            <div className="mb-4">
+            <div
+              data-aos="fade-down-left"
+              data-aos-delay="1000"
+              data-aos-duration="2000"
+              className="mb-4"
+            >
               <textarea
                 placeholder="Message"
                 className="formControl"
@@ -68,7 +89,12 @@ const contact = () => {
       <section className="bendSection">
         <div className="topbend"></div>
         <section className="contactSecondSection">
-          <div className="itemsWrapper">
+          <div
+            data-aos="fade-down-left"
+            data-aos-delay="1000"
+            data-aos-duration="2000"
+            className="itemsWrapper"
+          >
             <div className="item">
               <div className="iconWrapper">
                 <FaMapMarkerAlt className="icon" />

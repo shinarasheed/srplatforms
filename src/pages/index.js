@@ -26,17 +26,17 @@ const index = () => {
           <h5>
             Efficiency Through <br /> Service Delivery
           </h5>
-          <p>
+          <p data-aos="fade-up">
             SR Platforms Ltd is a wholly owned Nigerian Company, engaged in
             marine and offshore support services.
           </p>
-          <p>
+          <p data-aos="fade-up">
             We are the epitome of professionalism in the provision of marine
             vessel services.
           </p>
-          <p>
-            SR Platforms will help to add value to the upstream sector of the
-            oil and gas industry in Nigeria and beyond..
+          <p data-aos="fade-up">
+            SR Platforms helps to add value to the upstream sector of the oil
+            and gas industry in Nigeria and beyond..
           </p>
 
           <Link to="/">Read More</Link>
@@ -47,7 +47,7 @@ const index = () => {
       </section>
       <section className="indexThirdSection">
         <div className="title">
-          <h5>
+          <h5 data-aos="fade-down">
             Foremost Indigenous Company with Expertise in Marine/Offshore
             Support Services to the oil & Gas Industry Using Innovative service
             Delivery
@@ -73,17 +73,26 @@ const index = () => {
       <section className="indexFourthSection">
         <article className="description">
           <div className="nicheServices">
-            <h5>NICHE SERVICES</h5>
-            <p>
-              At SR Platforms, we provide tools for <br /> professional services
-              delivery and operational <br /> excellence that ensures our client
-              satisfaction <br /> and value for our shareholders.
+            <h5 data-aos="fade-up">NICHE SERVICES</h5>
+            <p
+              data-aos="fade-up-left"
+              data-aos-delay="1000"
+              data-aos-duration="2000"
+            >
+              At SR Platforms, we provide tools for <br /> professional service
+              delivery and operational <br /> excellence that ensures our
+              client's satisfaction <br /> and value for our shareholders.
             </p>
           </div>
           <div className="sellingPoints">
-            <h5>OUR UNIQUE SELLING POINTS</h5>
+            <h5 data-aos="fade-up-right">OUR UNIQUE SELLING POINTS</h5>
             <div className="sellingPointsText">
-              <div className="sellingPointsCol1">
+              <div
+                data-aos="fade-up-left"
+                data-aos-delay="1000"
+                data-aos-duration="2000"
+                className="sellingPointsCol1"
+              >
                 {sellingPoints1.map((point, index) => (
                   <ul key={index} className="points">
                     <li>
@@ -93,7 +102,12 @@ const index = () => {
                   </ul>
                 ))}
               </div>
-              <div className="sellingPointsCol2">
+              <div
+                data-aos="fade-up-left"
+                data-aos-delay="1000"
+                data-aos-duration="2000"
+                className="sellingPointsCol2"
+              >
                 {sellingPoints2.map((point, index) => (
                   <ul key={index} className="points">
                     <li>
@@ -116,9 +130,11 @@ const index = () => {
       </section>
 
       <section className="indexSixthSection">
-        <h4 className="text-center">SAFETY</h4>
-        <h5 className="text-center"> Our SHE-Q Policy</h5>
-        <article className="safety__policy">
+        <div data-aos="fade-down-left">
+          <h4 className="text-center">SAFETY</h4>
+          <h5 className="text-center"> Our SHE-Q Policy</h5>
+        </div>
+        <article data-aos="fade-down-left" className="safety__policy">
           <div className="safety__policy-text">
             <p>
               Our Safety, Health, Environment and Quality (SHE-Q) culture aims
@@ -165,13 +181,15 @@ const index = () => {
             </p>
           </div>
         </article>
-        <div className="safety__section">
+        <div data-aos="fade-down-left" className="safety__section">
           <img src={require("../assets/img/safetyimage.png")} alt="safety" />
-          <h5>SAFETY FIRST BECAUSE INJURY LASTS!!!.</h5>
+          <h5 data-aos="fade-down-left">
+            SAFETY FIRST BECAUSE INJURY LASTS!!!.
+          </h5>
         </div>
       </section>
 
-      <section className="indexSeventhSection">
+      <section data-aos="fade-down-left" className="indexSeventhSection">
         {gallery.map((item, index) => (
           <div className="gallery__item" key={index}>
             <img src={item.gallery} alt="gallery" />
@@ -181,7 +199,9 @@ const index = () => {
       </section>
 
       <section className="indexEightSection">
-        <h5 className="text-center">A Few of our Clients</h5>
+        <h5 data-aos="fade-down" className="text-center">
+          A Few of our Clients
+        </h5>
         <div className="clients">
           <CerticateSlide slides={clients} />
         </div>

@@ -17,12 +17,14 @@ const about = ({ data }) => {
         className="aboutBanner"
         img={data.backgroundImg.childImageSharp.fluid}
       >
-        <h5>ECOLOGICAL FRIENDLY ENVIRONMENT</h5>
-        <p>
-          To Conduct our business with the highest standard of ethics <br />{" "}
-          adherance to the law, Corporate governance and Industry <br /> best
-          pratices
-        </p>
+        <div data-aos="fade-up-left">
+          <h5>ECOLOGICAL FRIENDLY ENVIRONMENT</h5>
+          <p>
+            To Conduct our business with the highest standard of ethics <br />{" "}
+            adherance to the law, Corporate governance and Industry <br /> best
+            pratices
+          </p>
+        </div>
       </HeroSection>
       <section className="aboutFirstSection">
         <div className="aboutSlide">
@@ -33,41 +35,45 @@ const about = ({ data }) => {
         <div className="text">
           <div>
             <h5 className="text-center">OUR COMPANY</h5>
-            <p>
-              SR Platforms Ltd is a wholly owned Nigerian Company, engaged in
-              marine and <br /> offshore support services. We are the epitome of
-              professionalism in the provision <br /> of marine vessel services.
-              SR Platforms will help to add value to the upstream <br /> sector
-              of the oil and gas industry in Nigeria and beyond through ensuring
-              the safe <br />
-              delivery of petroleum products and services ranging from
-              Completions and Sub-Sea <br /> Services to Vessel Chartering
-              services.
-            </p>
-            <p>
-              As we continue the quest of building our own world class fleet of
-              vessels, we offer <br /> a variety of vessels for shallow and deep
-              water operations such as Security Vessels, <br /> Offshore Support
-              Vessels Supply Vessels, Multi-Purpose Construction Vessels, <br />{" "}
-              Anchor Handling Tugs.
-            </p>
-            <p>
-              We also provide manpower services including Naval Architecture,
-              Sea Fastening <br /> Design, Installation and Wreck Removal.
-            </p>
+            <div data-aos="fade-up-left">
+              <p>
+                SR Platforms Ltd is a wholly owned Nigerian Company, engaged in
+                marine and <br /> offshore support services. We are the epitome
+                of professionalism in the provision <br /> of marine vessel
+                services. SR Platforms will help to add value to the upstream{" "}
+                <br /> sector of the oil and gas industry in Nigeria and beyond
+                through ensuring the safe <br />
+                delivery of petroleum products and services ranging from
+                Completions and Sub-Sea <br /> Services to Vessel Chartering
+                services.
+              </p>
+              <p>
+                As we continue the quest of building our own world class fleet
+                of vessels, we offer <br /> a variety of vessels for shallow and
+                deep water operations such as Security Vessels, <br /> Offshore
+                Support Vessels Supply Vessels, Multi-Purpose Construction
+                Vessels, <br /> Anchor Handling Tugs.
+              </p>
+              <p>
+                We also provide manpower services including Naval Architecture,
+                Sea Fastening <br /> Design, Installation and Wreck Removal.
+              </p>
+            </div>
           </div>
         </div>
       </section>
       <section className="aboutSecondSection">
         <div className="mb-5">
           <h4 className="text-center">Values</h4>
-          <h5 className="text-center">Corporate Culture</h5>
-          <p>
-            We believe that everyone is important as such, there is mutual
-            respect for all and <br /> freedom to express oneself and contribute
-            to the growth of the group and the <br /> individuals. And our
-            standards are as such:
-          </p>
+          <div data-aos="fade-up-left">
+            <h5 className="text-center">Corporate Culture</h5>
+            <p>
+              We believe that everyone is important as such, there is mutual
+              respect for all and <br /> freedom to express oneself and
+              contribute to the growth of the group and the <br /> individuals.
+              And our standards are as such:
+            </p>
+          </div>
         </div>
         <div className="values">
           <ul className="d-flex flex-column">
@@ -88,15 +94,14 @@ const about = ({ data }) => {
         </div>
       </section>
 
-      <section className="aboutSixthSection">
+      <section data-aos="fade-up-left" className="aboutSixthSection">
         <h6>THE MANAGEMENT TEAM</h6>
         <div className="slides">
           <ManagementSlides />
         </div>
       </section>
 
-      <section className="aboutThirdSection"></section>
-      <section className="aboutFourthSection">
+      <section data-aos="fade-up-left" className="aboutFourthSection">
         <div className="partners">
           <h5>Partners</h5>
           <p>SR Platforms is affiliated to other partners such as :</p>

@@ -64,7 +64,7 @@ const Hero = () => {
                 <p>
                   SR Platforms Ltd is one of the leading <br /> private security
                   companies providing high <br /> standard and privately
-                  contracted <br /> security services.
+                  contracted <br /> escort security services.
                 </p>
               </div>
             </div>

@@ -17,7 +17,7 @@ export default class AboutSlide extends Component {
     return (
       <div>
         <Slider {...settings}>
-          <div style={{ color: "white" }}>
+          <div data-aos="fade-up-left" style={{ color: "white" }}>
             <h5 style={{ textAlign: "center", marginBottom: "2rem" }}>
               OUR MISSION
             </h5>
@@ -38,7 +38,7 @@ export default class AboutSlide extends Component {
               law, <br /> corporate governance and <br /> Industry best pratices
             </p>
           </div>
-          <div style={{ color: "white" }}>
+          <div data-aos="fade-up-left" style={{ color: "white" }}>
             <h5 style={{ textAlign: "center", marginBottom: "2rem" }}>
               OUR MISSION
             </h5>

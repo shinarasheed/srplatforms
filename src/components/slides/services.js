@@ -63,7 +63,12 @@ export default class OtherServiceSlide extends Component {
       <div>
         <Slider {...settings}>
           {otherService.map((service, index) => (
-            <div style={{ border: "none" }} key={index} className="service">
+            <div
+              data-aos="fade-right"
+              style={{ border: "none" }}
+              key={index}
+              className="service"
+            >
               <img
                 style={{ width: "100%", border: "none" }}
                 src={service.img}
