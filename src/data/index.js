@@ -32,6 +32,7 @@ import cert8 from "../assets/img/cert8.png"
 import cert9 from "../assets/img/cert9.png"
 import cert10 from "../assets/img/cert10.png"
 import cert11 from "../assets/img/cert11.png"
+import cert13 from "../assets/img/accreditation2.png"
 
 //clients
 import client1 from "../assets/img/client1.png"
@@ -113,7 +114,7 @@ export const servicesData = [
   },
   {
     img: service5,
-    text: "hanchor handling tugs",
+    text: "anchor handling tugs",
   },
 
   {
@@ -200,6 +201,9 @@ export const certification = [
   },
   {
     img: cert11,
+  },
+  {
+    img: cert13,
   },
 ]
 
@@ -353,7 +357,7 @@ export const stats = [
   },
   {
     img: stats2,
-    number: 300,
+    number: 2000,
     text: "Security Transits",
   },
   {

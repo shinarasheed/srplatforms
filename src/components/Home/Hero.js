@@ -1,19 +1,14 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Carousel } from "react-bootstrap"
 import Image from "gatsby-image"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 import "../../styles/carousel.scss"
 
 const getImage = graphql`
   {
-    firstSlide: file(relativePath: { eq: "banner.png" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
     secondSlide: file(relativePath: { eq: "banner1.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1000) {
@@ -21,7 +16,7 @@ const getImage = graphql`
         }
       }
     }
-    thirdSlide: file(relativePath: { eq: "banner2.jpg" }) {
+    thirdSlide: file(relativePath: { eq: "fcs_4008.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
@@ -35,10 +30,39 @@ const getImage = graphql`
         }
       }
     }
+    bannerImg1: file(relativePath: { eq: "mediator_ii.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+
+    bannerImg2: file(relativePath: { eq: "mediator_iii.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+
+    bannerImg3: file(relativePath: { eq: "mediator_iv.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
   }
 `
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    })
+  }, [])
+
   const data = useStaticQuery(getImage)
 
   return (
@@ -64,35 +88,37 @@ const Hero = () => {
                 <p>
                   SR Platforms Ltd is one of the leading <br /> private security
                   companies providing high <br /> standard and privately
-                  contracted <br /> escort security services.
+                  contracted <br /> security services.
                 </p>
               </div>
             </div>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item>
-          <Image
-            className="d-block w-100"
-            fluid={data.firstSlide.childImageSharp.fluid}
-            alt="banner"
-          />
-          <Carousel.Caption>
-            <div className="text">
-              <h3>SAFETY FIRST</h3>
-              <p>
-                We conduct a continous review, <br /> internal audit and
-                development of our <br /> SHE-Q policies...
-              </p>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
+
         <Carousel.Item>
           <Image
             className="d-block w-100"
             fluid={data.secondSlide.childImageSharp.fluid}
             alt="banner"
           />
-          <Carousel.Caption>
+          <Carousel.Caption style={{ paddingLeft: "80px" }}>
+            <div className="text">
+              <h3>SAFETY FIRST</h3>
+              <p>
+                We conduct a continuous review, <br /> internal audit and
+                development of our <br /> SHE-Q policies...
+              </p>
+            </div>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <Image
+            className="d-block w-100"
+            fluid={data.thirdSlide.childImageSharp.fluid}
+            alt="banner"
+          />
+          <Carousel.Caption style={{ paddingLeft: "80px" }}>
             <div className="text">
               <h3>
                 SEASONED <br /> PROFESSIONALS
@@ -104,13 +130,33 @@ const Hero = () => {
             </div>
           </Carousel.Caption>
         </Carousel.Item>
+
         <Carousel.Item>
           <Image
             className="d-block w-100"
-            fluid={data.thirdSlide.childImageSharp.fluid}
+            fluid={data.bannerImg1.childImageSharp.fluid}
             alt="banner"
           />
-          <Carousel.Caption>
+          <Carousel.Caption style={{ paddingLeft: "80px" }}>
+            <div className="text">
+              <h3>
+                SEASONED <br /> PROFESSIONALS
+              </h3>
+              <p>
+                With Seasoned Customer Ethics, <br /> Customer Control and
+                Market Expert
+              </p>
+            </div>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <Image
+            className="d-block w-100"
+            fluid={data.bannerImg2.childImageSharp.fluid}
+            alt="banner"
+          />
+          <Carousel.Caption style={{ paddingLeft: "80px" }}>
             <div className="text">
               <h3>
                 THROUGH <br /> INNOVATIVE IDEAS
@@ -118,6 +164,23 @@ const Hero = () => {
               <p>
                 We Provide Best in Class <br /> Marine/Offshore Support Services
                 for <br /> the Oil and Gas industry
+              </p>
+            </div>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <Image
+            className="d-block w-100"
+            fluid={data.bannerImg3.childImageSharp.fluid}
+            alt="banner"
+          />
+          <Carousel.Caption style={{ paddingLeft: "80px" }}>
+            <div className="text">
+              <h3>SAFETY FIRST</h3>
+              <p>
+                We conduct a continuous review, <br /> internal audit and
+                development of our <br /> SHE-Q policies...
               </p>
             </div>
           </Carousel.Caption>

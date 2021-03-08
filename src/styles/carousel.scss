@@ -1,4 +1,5 @@
 @import "../styles/colors.scss";
+@import "../styles/base.scss";
 
 .bannerText {
   position: relative;
@@ -34,6 +35,7 @@
     @media screen and(max-width:768px) {
       font-size: 2rem;
       margin-bottom: 0;
+      margin-top: 4rem;
     }
   }
 
@@ -53,7 +55,6 @@
     color: $color-primary;
     font-size: 2rem;
     font-weight: bolder;
-    margin-bottom: 2rem;
     line-height: 1.4;
 
     @media screen and(max-width:768px) {
@@ -62,6 +63,66 @@
 
     @media screen and(max-width:425px) {
       font-size: 1rem;
+    }
+  }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  &:hover {
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @media screen and(max-width:425px) {
+    top: 0 !important;
+    padding-top: 10px;
+    padding-left: 20px !important;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+
+    @media screen and(max-width:425px) {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    @media screen and(max-width:425px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.carousel-caption {
+  .text {
+    background: rgb(145, 162, 172);
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    @media screen and(max-width:425px) {
+      padding: 1rem;
     }
   }
 }

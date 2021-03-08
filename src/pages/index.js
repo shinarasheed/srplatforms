@@ -26,15 +26,15 @@ const index = () => {
           <h5>
             Efficiency Through <br /> Service Delivery
           </h5>
-          <p data-aos="fade-up">
+          <p data-aos="fade-up" data-aos-duration="500">
             SR Platforms Ltd is a wholly owned Nigerian Company, engaged in
             marine and offshore support services.
           </p>
-          <p data-aos="fade-up">
+          <p data-aos="fade-up" data-aos-duration="500">
             We are the epitome of professionalism in the provision of marine
             vessel services.
           </p>
-          <p data-aos="fade-up">
+          <p data-aos="fade-up" data-aos-duration="500">
             SR Platforms helps to add value to the upstream sector of the oil
             and gas industry in Nigeria and beyond..
           </p>
@@ -77,7 +77,7 @@ const index = () => {
             <p
               data-aos="fade-up-left"
               data-aos-delay="1000"
-              data-aos-duration="2000"
+              data-aos-duration="500"
             >
               At SR Platforms, we provide tools for <br /> professional service
               delivery and operational <br /> excellence that ensures our
@@ -89,8 +89,7 @@ const index = () => {
             <div className="sellingPointsText">
               <div
                 data-aos="fade-up-left"
-                data-aos-delay="1000"
-                data-aos-duration="2000"
+                data-aos-duration="500"
                 className="sellingPointsCol1"
               >
                 {sellingPoints1.map((point, index) => (
@@ -104,8 +103,7 @@ const index = () => {
               </div>
               <div
                 data-aos="fade-up-left"
-                data-aos-delay="1000"
-                data-aos-duration="2000"
+                data-aos-duration="500"
                 className="sellingPointsCol2"
               >
                 {sellingPoints2.map((point, index) => (

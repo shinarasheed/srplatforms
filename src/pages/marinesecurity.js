@@ -181,7 +181,7 @@ const security = ({ data }) => {
         </div>
       </section>
       <section className="securitySeventhSection">
-        <h5 className="title">Accreditation</h5>
+        {/* <h5 className="title">Accreditation</h5>
         <div className="accreditation">
           <img
             src={require("../assets/img/accreditation3.png")}
@@ -191,7 +191,7 @@ const security = ({ data }) => {
             src={require("../assets/img/accreditation2.png")}
             alt="accrediation"
           />
-        </div>
+        </div> */}
         <div className="partnership">
           <h5 className="title">Partnership</h5>
           <img
@@ -227,7 +227,7 @@ export const query = graphql`
         }
       }
     }
-    backgroundImg: file(relativePath: { eq: "securitybanner2.jpg" }) {
+    backgroundImg: file(relativePath: { eq: "banner3.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp

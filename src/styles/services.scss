@@ -1,4 +1,5 @@
 @import "./colors.scss";
+@import "./base.scss";
 
 @mixin bakgroundProperties {
   background-repeat: no-repeat;
@@ -28,10 +29,22 @@
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 1rem;
+
+    @media screen and(max-width:425px) {
+      font-size: 2.5rem;
+    }
   }
 
   & p {
     font-size: 2rem;
+    padding-right: 70rem;
+    @media screen and(max-width:768px) {
+      padding-right: 30rem;
+    }
+
+    @media screen and(max-width:425px) {
+      padding-right: 5rem;
+    }
   }
 }
 

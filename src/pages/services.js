@@ -18,8 +18,8 @@ const services = ({ data }) => {
       >
         <h5 data-aos="fade-up-right">DYNAMIC RESOURCEFUL CREW</h5>
         <p data-aos="fade-up-right">
-          Adding value to the upstream sector of oil and <br /> gas and ensuring
-          the safe delivery of Petroleum services.
+          Adding value to the upstream sector of oil and gas and ensuring the
+          safe delivery of Petroleum services.
         </p>
       </HeroSection>
       <section className="servicesSecondSection">

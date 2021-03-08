@@ -1,41 +1,9 @@
 @import "./base.scss";
 @import "./colors.scss";
 
-.carousel-control-next,
-.carousel-control-prev {
-  &:hover {
-    display: flex !important;
-    align-items: center !important;
-  }
-}
-
-.carousel-caption {
-  position: absolute;
-  top: 2rem;
-  right: 0;
-  left: 0;
-  z-index: 1;
-  color: #fff;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  h3 {
-    font-size: 2rem;
-    font-weight: 800;
-  }
-
-  p {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-}
-
 .layout {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  //to get rid of the horizontal whitespace
+  overflow-x: hidden;
 }
 
 .service {
