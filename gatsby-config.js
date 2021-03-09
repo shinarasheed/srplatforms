@@ -57,9 +57,6 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Permanent Marker`,
-          },
-          {
             family: `Open Sans`,
             variants: [`300`, `400`, `600`, `700`],
           },
