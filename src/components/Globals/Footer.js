@@ -18,7 +18,7 @@ const Footer = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about-us">About Us</Link>
+              <Link to="/about">About Us</Link>
             </li>
             <li>
               <Link to="/services">Services</Link>
@@ -26,10 +26,10 @@ const Footer = () => {
           </ul>
           <ul className="footer__links">
             <li>
-              <Link to="/contact-us">Contact Us</Link>
+              <Link to="/contact">Contact Us</Link>
             </li>
             <li>
-              <Link to="/gallery">Gallery</Link>
+              <Link to="/">Gallery</Link>
             </li>
             <li>
               <Link to="/csr">CSR</Link>
