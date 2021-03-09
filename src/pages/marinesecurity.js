@@ -99,6 +99,7 @@ const security = ({ data }) => {
           ))}
         </div>
       </section>
+
       <section className="securityFourthSection">
         <div className="stats">
           <div>
@@ -114,7 +115,7 @@ const security = ({ data }) => {
           </div>
         </div>
         <div className="statsImg">
-          <Img className="statimg" fluid={data.statImg.childImageSharp.fluid} />
+          <Img className="statimg" fluid={data.crewImg.childImageSharp.fluid} />
         </div>
       </section>
       <section className="securityFifthSection">
@@ -181,17 +182,6 @@ const security = ({ data }) => {
         </div>
       </section>
       <section className="securitySeventhSection">
-        {/* <h5 className="title">Accreditation</h5>
-        <div className="accreditation">
-          <img
-            src={require("../assets/img/accreditation3.png")}
-            alt="accrediation"
-          />
-          <img
-            src={require("../assets/img/accreditation2.png")}
-            alt="accrediation"
-          />
-        </div> */}
         <div className="partnership">
           <h5 className="title">Partnership</h5>
           <img
@@ -206,21 +196,29 @@ const security = ({ data }) => {
 
 export const query = graphql`
   {
-    workImg: file(relativePath: { eq: "workImg.png" }) {
+    workImg: file(relativePath: { eq: "workImg.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    statImg: file(relativePath: { eq: "statImg.png" }) {
+    # statImg: file(relativePath: { eq: "statImg.png" }) {
+    #   childImageSharp {
+    #     fluid(quality: 90, maxWidth: 1000) {
+    #       ...GatsbyImageSharpFluid_withWebp
+    #     }
+    #   }
+    # }
+    crewImg: file(relativePath: { eq: "newcrew.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
+          src
         }
       }
     }
-    securityImg: file(relativePath: { eq: "securityImg.png" }) {
+
+    securityImg: file(relativePath: { eq: "securityImg.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp

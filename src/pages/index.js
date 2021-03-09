@@ -65,7 +65,7 @@ const index = () => {
         </div>
 
         <div className="readMore">
-          <Link className="text-center" to="/">
+          <Link className="text-center" to="/services">
             Read More
           </Link>
         </div>

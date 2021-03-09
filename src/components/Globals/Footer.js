@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import "../../styles/footer.scss"
-import logo from "../../assets/img/logo.png"
+import logo from "../../assets/img/SRLogocroped.png"
 import { footerSocial } from "../constants/navlinks"
 
 const Footer = () => {

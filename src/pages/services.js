@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -68,11 +69,11 @@ const services = ({ data }) => {
             <div className="right">
               <div className="upperRight">
                 <div data-aos="fade-right">
-                  <h5>SR TRADER</h5>
+                  <h5>MT SR Trader</h5>
                   <p>
-                    SR PLATFORMS acquired her first vessel, SR TRADER <br /> a
-                    bunkers self-propelled barge in February 2007 for <br />{" "}
-                    bunkering operations.
+                    SR PLATFORMS acquired her first vessel, Bunkery Vessel (MT
+                    SR Trader) a bunkers self-propelled barge in February 2007{" "}
+                    for bunkering operations.
                   </p>
                 </div>
                 <div>
@@ -113,13 +114,22 @@ const services = ({ data }) => {
                     <h5>Mediator III</h5>
                     <h6>A DAMEN FCS 4008 security vessel.</h6>
                   </div>
+                  <div data-aos="fade-left">
+                    <h5>Mediator V and Mediator VI</h5>
+                    <h6>New Addition</h6>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </article>
       </section>
-
+      <section
+        className="damenblog"
+        style={{ marginBottom: "4rem", marginTop: "4rem" }}
+      >
+        <Img fluid={data.damenImg.childImageSharp.fluid} />
+      </section>
       <section className="servicesFifthSection">
         <div className="projection">
           <h5>PROJECTION</h5>
@@ -162,6 +172,14 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 3080, quality: 100) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    damenImg: file(relativePath: { eq: "damenImg.jpeg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

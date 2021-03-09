@@ -26,7 +26,7 @@ const about = ({ data }) => {
           </p>
         </div>
       </HeroSection>
-      <section className="aboutFirstSection">
+      <section id="aboutFirstSection" className="aboutFirstSection">
         <div className="aboutSlide">
           <div className="slides">
             <AboutSlide />

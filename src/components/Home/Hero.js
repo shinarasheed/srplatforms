@@ -115,25 +115,6 @@ const Hero = () => {
         <Carousel.Item>
           <Image
             className="d-block w-100"
-            fluid={data.thirdSlide.childImageSharp.fluid}
-            alt="banner"
-          />
-          <Carousel.Caption style={{ paddingLeft: "80px" }}>
-            <div className="text">
-              <h3>
-                SEASONED <br /> PROFESSIONALS
-              </h3>
-              <p>
-                With Seasoned Customer Ethics, <br /> Customer Control and
-                Market Expert
-              </p>
-            </div>
-          </Carousel.Caption>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <Image
-            className="d-block w-100"
             fluid={data.bannerImg1.childImageSharp.fluid}
             alt="banner"
           />
@@ -181,6 +162,25 @@ const Hero = () => {
               <p>
                 We conduct a continuous review, <br /> internal audit and
                 development of our <br /> SHE-Q policies...
+              </p>
+            </div>
+          </Carousel.Caption>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <Image
+            className="d-block w-100"
+            fluid={data.thirdSlide.childImageSharp.fluid}
+            alt="banner"
+          />
+          <Carousel.Caption style={{ paddingLeft: "80px" }}>
+            <div className="text">
+              <h3>
+                SEASONED <br /> PROFESSIONALS
+              </h3>
+              <p>
+                With Seasoned Customer Ethics, <br /> Customer Control and
+                Market Expert
               </p>
             </div>
           </Carousel.Caption>

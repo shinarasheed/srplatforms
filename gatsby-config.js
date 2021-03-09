@@ -15,6 +15,9 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,11 +35,36 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/SRLogo.png`, // This path is relative to the root of the site.
+        icon: `src/images/SRLogocroped.png`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [
+          `/services/`,
+          `/marinesecurity/`,
+          `/about/`,
+          `/csr/*`,
+          `/hse/`,
+          `/contact/*`,
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Permanent Marker`,
+          },
+          {
+            family: `Open Sans`,
+            variants: [`300`, `400`, `600`, `700`],
+          },
+        ],
+      },
+    },
   ],
 }

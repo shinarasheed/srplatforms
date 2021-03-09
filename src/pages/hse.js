@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
 import SEO from "../components/seo"
@@ -16,7 +16,11 @@ import {
   gallery,
 } from "../data/index"
 
-const index = () => {
+const Hse = () => {
+  useEffect(() => {
+    const anchor = document.querySelector("#safety")
+    anchor.scrollIntoView({ behavior: "smooth", block: "center" })
+  }, [])
   return (
     <Layout>
       <SEO title="Home" description="this is the home page" />
@@ -129,7 +133,7 @@ const index = () => {
         </div>
       </section>
 
-      <section className="indexSixthSection">
+      <section id="safety" className="indexSixthSection">
         <div data-aos="fade-down-left">
           <h4 className="text-center">SAFETY</h4>
           <h5 className="text-center"> Our SHE-Q Policy</h5>
@@ -210,4 +214,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Hse
