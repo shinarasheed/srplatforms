@@ -12,14 +12,19 @@ export default class AboutSlide extends Component {
       speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1,
-      initialSlide: 0,
+      initialSlide: 1,
     }
     return (
       <div>
         <Slider {...settings}>
-          <div data-aos="fade-up-left" style={{ color: "white" }}>
-            <h5 style={{ textAlign: "center", marginBottom: "2rem" }}>
-              OUR MISSION
+          <div className="aboutSlideText" data-aos="fade-up-left">
+            <h5
+              style={{
+                textAlign: "center",
+              }}
+              className="vision"
+            >
+              OUR VISION
             </h5>
             <p
               style={{
@@ -38,7 +43,7 @@ export default class AboutSlide extends Component {
               law, <br /> corporate governance and <br /> Industry best pratices
             </p>
           </div>
-          <div data-aos="fade-up-left" style={{ color: "white" }}>
+          <div data-aos="fade-up-left" className="aboutSlideText">
             <h5 style={{ textAlign: "center", marginBottom: "2rem" }}>
               OUR MISSION
             </h5>

@@ -66,3 +66,16 @@
     z-index: 5;
   }
 }
+
+.aboutSlideText {
+  color: #fff;
+  height: 312px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+
+  .vision {
+    margin-top: 4rem;
+  }
+}
