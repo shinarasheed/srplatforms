@@ -38,30 +38,5 @@ module.exports = {
         icon: `src/images/SRLogocroped.png`,
       },
     },
-
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [
-          `/services/`,
-          `/marinesecurity/`,
-          `/about/`,
-          `/csr/*`,
-          `/hse/`,
-          `/contact/*`,
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Open Sans`,
-            variants: [`300`, `400`, `600`, `700`],
-          },
-        ],
-      },
-    },
   ],
 }
