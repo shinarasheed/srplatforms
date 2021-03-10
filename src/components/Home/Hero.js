@@ -101,7 +101,7 @@ const Hero = () => {
             fluid={data.secondSlide.childImageSharp.fluid}
             alt="banner"
           />
-          <Carousel.Caption style={{ paddingLeft: "80px" }}>
+          <Carousel.Caption>
             <div className="text">
               <h3>SAFETY FIRST</h3>
               <p>
@@ -118,7 +118,7 @@ const Hero = () => {
             fluid={data.bannerImg1.childImageSharp.fluid}
             alt="banner"
           />
-          <Carousel.Caption style={{ paddingLeft: "80px" }}>
+          <Carousel.Caption>
             <div className="text">
               <h3>
                 SEASONED <br /> PROFESSIONALS
@@ -137,7 +137,7 @@ const Hero = () => {
             fluid={data.bannerImg2.childImageSharp.fluid}
             alt="banner"
           />
-          <Carousel.Caption style={{ paddingLeft: "80px" }}>
+          <Carousel.Caption>
             <div className="text">
               <h3>
                 THROUGH <br /> INNOVATIVE IDEAS
@@ -156,7 +156,7 @@ const Hero = () => {
             fluid={data.bannerImg3.childImageSharp.fluid}
             alt="banner"
           />
-          <Carousel.Caption style={{ paddingLeft: "80px" }}>
+          <Carousel.Caption>
             <div className="text">
               <h3>SAFETY FIRST</h3>
               <p>
@@ -173,7 +173,7 @@ const Hero = () => {
             fluid={data.thirdSlide.childImageSharp.fluid}
             alt="banner"
           />
-          <Carousel.Caption style={{ paddingLeft: "80px" }}>
+          <Carousel.Caption>
             <div className="text">
               <h3>
                 SEASONED <br /> PROFESSIONALS

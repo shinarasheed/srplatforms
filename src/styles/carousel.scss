@@ -12,16 +12,19 @@
 
 .securityBannerText {
   position: absolute;
-  top: 0;
+  top: 11rem;
   right: 0;
-  bottom: 0;
-  left: 0;
+  left: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   @media screen and(max-width:768px) {
-    top: -20rem;
+    top: 4rem;
+  }
+
+  @media screen and(max-width:425px) {
+    top: 6rem;
   }
 
   p {
@@ -77,7 +80,7 @@
 
 .carousel-caption {
   position: absolute;
-  top: 2rem;
+  top: 20rem;
   right: 0;
   left: 0;
   z-index: 1;
@@ -85,6 +88,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-left: 145px;
   @media screen and(max-width:425px) {
     top: 0 !important;
     padding-top: 10px;

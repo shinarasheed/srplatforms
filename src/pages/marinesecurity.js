@@ -168,15 +168,13 @@ const security = ({ data }) => {
           <div className="testimonial">
             <div>
               <h6 className="testimonialText">
-                “SR Platforms has always been reliable, conscientious and <br />
-                competitive in regards other security vessel providers. <br />{" "}
-                They have always had the facility to provide vessels at <br />{" "}
-                short notice and ensured that security escorts for the river{" "}
-                <br /> and offshore operations are carried out in a safe and{" "}
-                <br /> secure manner.”
+                “Very professional service. Good communication and timely
+                delivery. <br /> Very efficient punctual. I am very happy with
+                the service provided. <br />
+                Performed well to date"
               </h6>
-              <p className="name">Steve Corlin</p>
-              <h6 className="client">Offshore Security Coordinator, Saipem</h6>
+              <p className="name">Rob McMahon</p>
+              <h6 className="client">LGS Global</h6>
             </div>
           </div>
         </div>

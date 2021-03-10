@@ -6,9 +6,17 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 5px 10rem;
+  position: fixed;
+  width: 100% !important;
+  z-index: 10000;
+
   @media screen and(max-width:768px) {
     padding: 2px 5rem;
     justify-content: space-between;
+  }
+
+  @media screen and(max-width:425px) {
+    position: static;
   }
 }
 

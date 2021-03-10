@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import "../styles/about.scss"
 import { valuesData, valuesData2 } from "../data/index"
-import HeroSection from "../components/Globals/MainHero"
+import HeroSection from "../components/Globals/OtherHero"
 import AboutSlide from "../components/slides/about"
 import ManagementSlides from "../components/slides/managementSlides"
 

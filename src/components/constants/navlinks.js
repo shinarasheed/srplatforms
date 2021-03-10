@@ -7,14 +7,14 @@ import { FaLinkedinIn } from "react-icons/fa"
 export const footerSocial = [
   {
     icon: <FaFacebookF />,
-    link: "https://www.facebook.com",
+    link: "/",
   },
   {
     icon: <FaTwitter />,
-    link: "https://www.twitter.com",
+    link: "/",
   },
   {
     icon: <FaLinkedinIn />,
-    link: "https://www.linkedin.com",
+    link: "https://ng.linkedin.com/company/sr-platforms-ltd",
   },
 ]

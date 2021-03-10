@@ -39,7 +39,7 @@ const index = () => {
             and gas industry in Nigeria and beyond..
           </p>
 
-          <Link to="/">Read More</Link>
+          <Link to="/about">Read More</Link>
         </article>
         <article>
           <img src={serviceImg} alt="service" />

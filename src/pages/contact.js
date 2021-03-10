@@ -117,7 +117,7 @@ const contact = () => {
                 <h5>Phones</h5>
                 <ul>
                   <li>+234 -1-4531960</li>
-                  <li>+2348022998451 ( Marine Security )</li>
+                  <li>+2348022998451 (Marine Security )</li>
                   <li>+2348066377819</li>
                   <li>+2348051492298</li>
                 </ul>

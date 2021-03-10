@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import "../styles/services.scss"
 import { offers } from "../data/index"
-import HeroSection from "../components/Globals/MainHero"
+import HeroSection from "../components/Globals/OtherHero"
 import OtherServiceSlide from "../components/slides/services"
 
 const services = ({ data }) => {

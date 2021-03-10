@@ -20,7 +20,7 @@ const Hse = () => {
   useEffect(() => {
     const anchor = document.querySelector("#safety")
     anchor.scrollIntoView({ behavior: "smooth", block: "center" })
-  }, [])
+  })
   return (
     <Layout>
       <SEO title="Home" description="this is the home page" />
@@ -43,7 +43,7 @@ const Hse = () => {
             and gas industry in Nigeria and beyond..
           </p>
 
-          <Link to="/">Read More</Link>
+          <Link to="/about">Read More</Link>
         </article>
         <article>
           <img src={serviceImg} alt="service" />
@@ -69,7 +69,7 @@ const Hse = () => {
         </div>
 
         <div className="readMore">
-          <Link className="text-center" to="/">
+          <Link className="text-center" to="/services">
             Read More
           </Link>
         </div>
