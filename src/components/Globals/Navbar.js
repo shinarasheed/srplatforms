@@ -1,10 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import { FaBars } from "react-icons/fa"
-// import Scroll from "react-scroll"
-// const ScrollLink = Scroll.ScrollLink
-
-// import Links from "../constants/links"
 
 import "../../styles/navbar.scss"
 import logo from "../../assets/img/SRLogocroped.png"
