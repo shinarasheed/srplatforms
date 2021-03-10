@@ -20,4 +20,8 @@ export default styled(MainHero)`
   justify-content: ${props => (props.csr ? "center" : "flex-end")};
   align-items: ${props => (props.csr ? "center" : "flex-start")};
   margin-top: ${props => (props.csr ? "-5px" : 0)};
+
+  @media (max-width: 425px) {
+    min-height: 20vh;
+  }
 `

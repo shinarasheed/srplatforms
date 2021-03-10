@@ -168,10 +168,10 @@ const security = ({ data }) => {
           <div className="testimonial">
             <div>
               <h6 className="testimonialText">
-                “Very professional service. Good communication and timely
-                delivery. <br /> Very efficient punctual. I am very happy with
-                the service provided. <br />
-                Performed well to date"
+                “Service was carried out in a very professional manner <br />{" "}
+                while also being efficient and punctual. Good communication{" "}
+                <br /> and timely delivery. I am very happy with the service
+                provided.{" "}
               </h6>
               <p className="name">Rob McMahon</p>
               <h6 className="client">LGS Global</h6>

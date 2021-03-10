@@ -19,4 +19,9 @@ export default styled(OtherHero)`
   flex-direction: column;
   justify-content: center;
   align-items: ${props => (props.csr ? "center" : "flex-start")};
+
+  @media (max-width: 425px) {
+    min-height: 30vh;
+    justify-content: flex-start;
+  }
 `

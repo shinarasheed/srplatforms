@@ -32,7 +32,7 @@ const services = ({ data }) => {
             <div data-aos="fade-right" className="serviceOffer" key={index}>
               <img loading="lazy" src={offer.img} alt="offer" />
               <div className="offerText">
-                <p sdata-aos="fade-up-right">{offer.text}</p>
+                <p data-aos="fade-up-right">{offer.text}</p>
               </div>
             </div>
           ))}
