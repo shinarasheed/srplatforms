@@ -74,7 +74,7 @@ import offer5 from "../assets/img/serv5.png"
 import offer6 from "../assets/img/serv6.png"
 
 //main services
-import mainservice1 from "../assets/img/mainservice4.jpg"
+import mainservice1 from "../assets/img/mainservice4.png"
 import mainservice2 from "../assets/img/mainservice2.jpg"
 import mainservice3 from "../assets/img/mainservice3.jpg"
 import mainservice4 from "../assets/img/training.jpg"
