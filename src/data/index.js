@@ -50,12 +50,12 @@ import client11 from "../assets/img/client11.png"
 //gallery
 import gallery1 from "../assets/img/ga1.png"
 import gallery2 from "../assets/img/ga2.jpg"
+import gallery6 from "../assets/img/gallery2.jpg"
 import gallery3 from "../assets/img/gallery1.jpg"
 import gallery4 from "../assets/img/ga4.jpg"
 import gallery5 from "../assets/img/ga5.jpg"
-import gallery6 from "../assets/img/gallery2.jpg"
 import gallery7 from "../assets/img/ga6.jpg"
-import gallery8 from "../assets/img/ga7.png"
+import gallery8 from "../assets/img/ga7.jpg"
 
 // about values
 
@@ -245,6 +245,9 @@ export const clients = [
 
 export const gallery = [
   {
+    gallery: gallery6,
+  },
+  {
     gallery: gallery1,
   },
   {
@@ -254,14 +257,12 @@ export const gallery = [
     gallery: gallery3,
   },
   {
-    gallery: gallery4,
-  },
-  {
     gallery: gallery5,
   },
   {
-    gallery: gallery6,
+    gallery: gallery4,
   },
+
   {
     gallery: gallery7,
   },

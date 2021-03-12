@@ -300,6 +300,9 @@
 
 .indexSeventhSection img {
   width: 100%;
+  object-fit: cover !important;
+  object-position: center;
+  height: 100%;
 }
 
 .indexSeventhSection .gallery__item {
