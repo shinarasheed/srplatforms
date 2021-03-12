@@ -37,6 +37,8 @@
 
   & .bannerText {
     position: relative;
+    top: 12rem;
+    z-index: -1;
 
     img {
       width: 100%;
@@ -89,6 +91,8 @@
   h5 {
     font-size: 3rem;
     color: $color-primary;
+    position: relative;
+    z-index: 2;
   }
 
   p {

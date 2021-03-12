@@ -5,6 +5,15 @@
   position: relative;
   left: -7rem;
 
+  @media screen and(max-width:1024px) {
+    bottom: 11rem;
+    left: -12rem;
+  }
+  @media screen and(max-width:425px) {
+    bottom: 5rem;
+    left: -12rem;
+  }
+
   img {
     width: 100%;
   }
@@ -20,7 +29,7 @@
   align-items: center;
   flex-direction: column;
   @media screen and(max-width:768px) {
-    top: 4rem;
+    top: 8rem;
   }
 
   @media screen and(max-width:425px) {
@@ -45,12 +54,10 @@
   p:nth-of-type(2) {
     font-weight: 600;
     margin-bottom: 15px;
-    line-height: 1.7;
     font-size: 1.4rem;
     text-align: center;
     @media screen and(max-width:768px) {
       font-size: 1.2rem;
-      display: none;
     }
   }
 
