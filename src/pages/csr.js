@@ -109,9 +109,7 @@ const csr = ({ data }) => {
       <StyledCsr home="true">
         <div className="text" style={{ background: "#ddd" }}>
           <div>
-            <h5>
-              Economic Empowerment and Capacity <br /> Building
-            </h5>
+            <h5>Economic Empowerment and Capacity Building</h5>
             <p>
               We have aggressively embarked on the creation and <br />{" "}
               multiplication of wealth in our host communities through <br />{" "}

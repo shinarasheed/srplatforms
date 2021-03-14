@@ -18,10 +18,11 @@ export default styled(MainHero)`
   display: flex;
   flex-direction: column;
   justify-content: ${props => (props.csr ? "center" : "flex-end")};
-  align-items: "flex-start";
+  align-items: flex-start;
   margin-top: ${props => (props.csr ? "-5px" : 0)};
 
   @media (max-width: 425px) {
     min-height: 20vh;
+    align-items: ${props => (props.home ? "center" : "flex-start")};
   }
 `

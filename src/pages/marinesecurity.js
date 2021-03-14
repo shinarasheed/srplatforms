@@ -17,7 +17,7 @@ const security = ({ data }) => {
         className="securitybanner"
         img={data.backgroundImg.childImageSharp.fluid}
       >
-        <div className="bannerText">
+        <div className="securitybannerText">
           <div>
             <img src={require("../assets/img/wheel.png")} alt="whell" />
           </div>
@@ -205,7 +205,7 @@ export const query = graphql`
     crewImg: file(relativePath: { eq: "newcrew.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1000) {
-          src
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

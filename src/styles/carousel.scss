@@ -19,6 +19,23 @@
   }
 }
 
+.securitybannerText {
+  position: relative;
+  left: -7rem;
+  top: 11rem;
+
+  @media screen and(max-width:1024px) {
+    // left: -12rem;
+  }
+  @media screen and(max-width:425px) {
+    // left: -12rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
 .securityBannerText {
   position: absolute;
   top: 11rem;
