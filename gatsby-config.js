@@ -16,7 +16,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-robots-txt`,
 
     {
@@ -39,5 +38,6 @@ module.exports = {
         icon: `src/images/SRLogocroped.png`,
       },
     },
+    `gatsby-plugin-offline`,
   ],
 }
