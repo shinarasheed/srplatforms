@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-// import { motion } from "framer-motion"
 
 import SEO from "../components/seo"
 import "../styles/index.scss"
