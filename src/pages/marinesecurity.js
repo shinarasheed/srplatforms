@@ -201,13 +201,7 @@ export const query = graphql`
         }
       }
     }
-    # statImg: file(relativePath: { eq: "statImg.png" }) {
-    #   childImageSharp {
-    #     fluid(quality: 90, maxWidth: 1000) {
-    #       ...GatsbyImageSharpFluid_withWebp
-    #     }
-    #   }
-    # }
+
     crewImg: file(relativePath: { eq: "newcrew.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1000) {

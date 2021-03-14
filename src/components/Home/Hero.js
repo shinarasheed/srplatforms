@@ -67,7 +67,7 @@ const Hero = () => {
 
   return (
     <>
-      <Carousel>
+      <Carousel indicators={false}>
         <Carousel.Item className="carouselItem">
           <Image
             className="d-block w-100"

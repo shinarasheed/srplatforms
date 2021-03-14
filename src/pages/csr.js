@@ -19,13 +19,11 @@ const csr = ({ data }) => {
         csr="true"
         img={data.backgroundImg.childImageSharp.fluid}
       >
-        <div className="text">
-          <h5>
-            Corporate <br /> Social <br /> Responsibility
-          </h5>
+        <div className="csrText">
+          <h3>Corporate Social Responsibility</h3>
           <p>
-            Contributing to the advancement and development of <br /> human kind
-            and society through best practices
+            Contributing to the advancement and development of human kind and
+            society through best practices
           </p>
         </div>
       </HeroSection>
@@ -167,7 +165,7 @@ const csr = ({ data }) => {
 
 export const query = graphql`
   {
-    backgroundImg: file(relativePath: { eq: "rr.jpg" }) {
+    backgroundImg: file(relativePath: { eq: "rr.png" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
