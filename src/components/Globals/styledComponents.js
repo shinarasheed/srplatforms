@@ -17,9 +17,10 @@ export const StyledCsr = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0 6rem;
 
     @media (max-width: 768px) {
-      padding: 4rem 1rem;
+      padding: 4rem 6rem;
     }
   }
 
@@ -31,12 +32,14 @@ export const StyledCsr = styled.section`
     font-size: 2.5rem;
     text-align: left;
     margin-bottom: 1rem;
+    font-weight: 400;
   }
 
   & p {
     font-size: 1.6rem;
-    font-weight: 400;
     line-height: 1.6;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
   }
 
   & p:not(:last-of-type) {

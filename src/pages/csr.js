@@ -50,28 +50,27 @@ const csr = ({ data }) => {
         </p>
       </section>
       <StyledCsr>
-        <div className="text" style={{ background: "#ddd" }}>
+        <div className="text" style={{ background: "#0f3057", color: "#fff" }}>
           <div>
             <h5>Education</h5>
             <p>
-              SR PLATFORMS places premium on the role of education <br /> in
-              sustainable development. It therefore encourages the <br />{" "}
-              execution of programmes and projects aimed at <br /> providing
-              access to quality education.
+              SR PLATFORMS places premium on the role of education sustainable
+              development. It therefore encourages the execution of programmes
+              and projects aimed atproviding access to quality education.
             </p>
             <p>
-              We recognize that a thriving and peaceful environment is <br />{" "}
-              critical to our success. Consequently, we have strategic <br />{" "}
-              partnerships to help expand educational, economic <br />{" "}
-              opportunities and sport activities. To this end, we <br />{" "}
-              collaborate with our strategic partners through <br />
-              sponsorships, donations and The Soji Aiyenuro <br /> Foundation
+              We recognize that a thriving and peaceful environment is critical
+              to our success. Consequently, we have strategic partnerships to
+              help expand educational, economic opportunities and sport
+              activities. To this end, we collaborate with our strategic
+              partners through sponsorships, donations and The Soji Aiyenuro
+              Foundation
             </p>
             <p>
-              The huge investments in the education sector has <br />{" "}
-              contributed immensely to manpower development. <br /> Hence, the
-              Nigerian labour market access quality human <br /> resource
-              through the various capacity building initiatives.
+              The huge investments in the education sector has contributed
+              immensely to manpower development. Hence, the Nigerian labour
+              market access quality human resource through the various capacity
+              building initiatives.
             </p>
           </div>
         </div>
@@ -85,18 +84,17 @@ const csr = ({ data }) => {
           <div>
             <h5>Health</h5>
             <p>
-              The health and overall well-being of the people in whose <br />{" "}
-              area we operate is one of cardinal CSR deliverables.
+              The health and overall well-being of the people in whose area we
+              operate is one of cardinal CSR deliverables.
             </p>
             <p>
-              We therefore execute projects that will improve their <br />{" "}
-              lifestyles through the provision of health care facilities and{" "}
-              <br /> programmes and this include: Construction and <br />{" "}
-              equipping of Maternal Referral Centres, Cottage <br /> hospitals,
-              Diagnostic Laboratories, HIV/ Malaria/Cancer <br /> Awareness and
-              Prevention programmes, Chest Clinics for <br /> the treatment of
-              tuberculosis and other chest related <br />
-              diseases, provision of drugs and specialized equipment <br /> for
+              We therefore execute projects that will improve their lifestyles
+              through the provision of health care facilities and programmes and
+              this include: Construction and equipping of Maternal Referral
+              Centres, Cottage hospitals, Diagnostic Laboratories, HIV/
+              Malaria/Cancer Awareness and Prevention programmes, Chest Clinics
+              for the treatment of tuberculosis and other chest related
+              diseases, provision of drugs and specialized equipment for
               Hospitals and Free Treatments.
             </p>
           </div>
@@ -107,21 +105,20 @@ const csr = ({ data }) => {
       </StyledCsr>
 
       <StyledCsr home="true">
-        <div className="text" style={{ background: "#ddd" }}>
+        <div className="text" style={{ background: "#0f3057", color: "#fff" }}>
           <div>
             <h5>Economic Empowerment and Capacity Building</h5>
             <p>
-              We have aggressively embarked on the creation and <br />{" "}
-              multiplication of wealth in our host communities through <br />{" "}
-              programmes that have contributed to the development of <br />{" "}
-              local economies in these areas.
+              We have aggressively embarked on the creation and multiplication
+              of wealth in our host communities through programmes that have
+              contributed to the development of local economies in these areas.
             </p>
             <p>
-              These enterprise development programmes have <br /> contributed
-              immensely to the elimination of youth <br /> unemployment by
-              equipping them with marketable skills, <br /> provide platforms
-              for income generating ventures and <br /> build capacity of the
-              beneficiaries to enable them meet <br /> their daily needs.
+              These enterprise development programmes have contributed immensely
+              to the elimination of youth unemployment by equipping them with
+              marketable skills, provide platforms for income generating
+              ventures and build capacity of the beneficiaries to enable them
+              meet their daily needs.
             </p>
           </div>
         </div>
@@ -138,18 +135,15 @@ const csr = ({ data }) => {
           <div>
             <h5>Corporate Philantropy</h5>
             <p>
-              Apart from our involvement in the provision of <br /> Sustainable
-              Community Development projects for the <br /> benefits of our host
-              communities, SR PLATFORMS <br /> provide supports and
-              contributions to charitable <br /> institutions and the
-              underprivileged in the society.
+              Apart from our involvement in the provision of Sustainable
+              Community Development projects for the benefits of our host
+              communities, SR PLATFORMS provide supports and contributions to
+              charitable institutions and the underprivileged in the society.
             </p>
             <p>
-              Professional bodies whose activities impact our core <br />{" "}
-              functions are also supported to realize their objectives for{" "}
-              <br /> the ultimate good of the Oil and Gas Industry and the{" "}
-              <br />
-              nation at large.
+              Professional bodies whose activities impact our core functions are
+              also supported to realize their objectives for the ultimate good
+              of the Oil and Gas Industry and the nation at large.
             </p>
           </div>
         </div>
