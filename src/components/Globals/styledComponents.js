@@ -17,7 +17,7 @@ export const StyledCsr = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 7rem;
+    padding: 0 6rem;
 
     @media (max-width: 768px) {
       padding: 4rem 6rem;
