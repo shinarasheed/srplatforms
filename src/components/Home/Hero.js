@@ -52,7 +52,7 @@ const Hero = () => {
           </Carousel.Caption>
         </Carousel.Item>
 
-        <Carousel.Item>
+        {/* <Carousel.Item>
           <StaticImage
             className="d-block w-100"
             src="../../images/banner1.jpg"
@@ -161,7 +161,7 @@ const Hero = () => {
               </p>
             </div>
           </Carousel.Caption>
-        </Carousel.Item>
+        </Carousel.Item> */}
       </Carousel>
     </>
   )
