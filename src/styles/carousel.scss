@@ -9,10 +9,6 @@
     bottom: 11rem;
     left: -12rem;
   }
-  @media screen and(max-width:425px) {
-    bottom: 5rem;
-    left: -12rem;
-  }
 
   img {
     width: 100%;
@@ -30,27 +26,20 @@
   @media screen and(max-width:425px) {
     // left: -12rem;
   }
-
-  img {
-    width: 100%;
-  }
 }
 
 .securityBannerText {
   position: absolute;
-  top: 11rem;
+  top: 15rem;
   right: 0;
   left: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  @media screen and(max-width:768px) {
-    top: 8rem;
-  }
 
   @media screen and(max-width:425px) {
-    top: 6rem;
+    top: 12rem;
   }
 
   p {

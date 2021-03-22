@@ -1,60 +1,10 @@
 import React, { useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { Carousel } from "react-bootstrap"
-import Image from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import AOS from "aos"
 import "aos/dist/aos.css"
 
 import "../../styles/carousel.scss"
-
-const getImage = graphql`
-  {
-    secondSlide: file(relativePath: { eq: "banner1.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    thirdSlide: file(relativePath: { eq: "fcs_4008.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    backgroundImg: file(relativePath: { eq: "banner3.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    bannerImg1: file(relativePath: { eq: "mediator_ii.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-
-    bannerImg2: file(relativePath: { eq: "mediator_iii.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-
-    bannerImg3: file(relativePath: { eq: "mediator_iv.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
 
 const Hero = () => {
   useEffect(() => {
@@ -63,21 +13,28 @@ const Hero = () => {
     })
   }, [])
 
-  const data = useStaticQuery(getImage)
-
   return (
     <>
       <Carousel indicators={false}>
         <Carousel.Item className="carouselItem">
-          <Image
+          <StaticImage
             className="d-block w-100"
-            fluid={data.backgroundImg.childImageSharp.fluid}
+            src="../../images/banner3.jpg"
             alt="banner"
+            placeholder="none"
+            // layout="fullWidth"
+            height={700}
+            width={1350}
           />
           <Carousel.Caption className="carouselCaption">
             <div className="bannerText">
               <div className="bannerImg">
-                <img src={require("../../assets/img/wheel.png")} alt="wheel" />
+                <StaticImage
+                  src="../../images/wheel.png"
+                  alt="sailor wheel"
+                  placeholder="none"
+                  layout="constrained"
+                />
               </div>
 
               <div className="securityBannerText">
@@ -96,10 +53,14 @@ const Hero = () => {
         </Carousel.Item>
 
         <Carousel.Item>
-          <Image
+          <StaticImage
             className="d-block w-100"
-            fluid={data.secondSlide.childImageSharp.fluid}
+            src="../../images/banner1.jpg"
             alt="banner"
+            placeholder="none"
+            // layout="fullWidth"
+            height={700}
+            width={1350}
           />
           <Carousel.Caption>
             <div className="text">
@@ -113,10 +74,14 @@ const Hero = () => {
         </Carousel.Item>
 
         <Carousel.Item>
-          <Image
+          <StaticImage
             className="d-block w-100"
-            fluid={data.bannerImg1.childImageSharp.fluid}
+            src="../../images/mediator_ii.jpg"
             alt="banner"
+            placeholder="none"
+            // layout="fullWidth"
+            height={700}
+            width={1350}
           />
           <Carousel.Caption>
             <div className="text">
@@ -132,10 +97,14 @@ const Hero = () => {
         </Carousel.Item>
 
         <Carousel.Item>
-          <Image
+          <StaticImage
             className="d-block w-100"
-            fluid={data.bannerImg2.childImageSharp.fluid}
+            src="../../images/mediator_iii.jpg"
             alt="banner"
+            placeholder="none"
+            // layout="fullWidth"
+            height={700}
+            width={1350}
           />
           <Carousel.Caption>
             <div className="text">
@@ -151,10 +120,14 @@ const Hero = () => {
         </Carousel.Item>
 
         <Carousel.Item>
-          <Image
+          <StaticImage
             className="d-block w-100"
-            fluid={data.bannerImg3.childImageSharp.fluid}
+            src="../../images/mediator_iv.jpg"
             alt="banner"
+            placeholder="none"
+            // layout="fullWidth"
+            height={700}
+            width={1350}
           />
           <Carousel.Caption>
             <div className="text">
@@ -168,10 +141,14 @@ const Hero = () => {
         </Carousel.Item>
 
         <Carousel.Item>
-          <Image
+          <StaticImage
             className="d-block w-100"
-            fluid={data.thirdSlide.childImageSharp.fluid}
+            src="../../images/fcs_4008.jpg"
             alt="banner"
+            placeholder="none"
+            // layout="fullWidth"
+            height={700}
+            width={1350}
           />
           <Carousel.Caption>
             <div className="text">
