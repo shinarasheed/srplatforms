@@ -19,7 +19,11 @@ const security = ({ data }) => {
       >
         <div className="securitybannerText">
           <div>
-            <img src={require("../assets/img/wheel.png")} alt="whell" />
+            <img
+              className="w-100"
+              src={require("../assets/img/wheel.png")}
+              alt="wheel"
+            />
           </div>
           <div className="text">
             <p>Innovative</p>
