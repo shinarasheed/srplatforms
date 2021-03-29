@@ -107,6 +107,12 @@
     text-transform: uppercase;
     padding: 5px 2rem;
     font-weight: 100;
+    transition: all 0.3s ease-in-out;
+  }
+
+  h2:hover {
+    background-color: #0d3a64;
+    color: #fff;
   }
 }
 
@@ -115,6 +121,7 @@
   width: 85vw;
   margin: auto;
   padding-bottom: 4rem;
+  animation-name: tabcontentAnimation;
 
   @media screen and(max-width:768px) {
     flex-direction: column;
@@ -156,4 +163,13 @@
 .active {
   background: #0d3a64;
   color: #fff;
+}
+
+@keyframes tabcontentAnimation {
+  from {
+    transform: translateY(-6em);
+  }
+  to {
+    transform: translateY(0em);
+  }
 }
