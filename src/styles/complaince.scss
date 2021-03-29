@@ -82,6 +82,9 @@
   justify-content: center;
   align-items: center;
   padding: 4rem 0;
+  @media screen and(max-width:768px) {
+    flex-direction: column;
+  }
 
   h2 {
     text-transform: uppercase;
@@ -95,6 +98,10 @@
   width: 85vw;
   margin: auto;
   padding-bottom: 4rem;
+
+  @media screen and(max-width:768px) {
+    flex-direction: column;
+  }
 
   .content-img {
     flex-basis: 40%;
