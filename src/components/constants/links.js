@@ -37,7 +37,7 @@ const Links = ({ styleClass }) => {
       </li>
       <li>
         <Link to="/compliance" className="nav__list-link">
-          Compliance
+          compliance
         </Link>
       </li>
       <li>
