@@ -49,6 +49,11 @@ const Navbar = ({ toggle }) => {
           </Link>
         </li>
         <li>
+          <Link to="/compliance" className="nav__list-link">
+            compliance
+          </Link>
+        </li>
+        <li>
           <Link to="/contact" className="nav__list-link">
             contact us
           </Link>
