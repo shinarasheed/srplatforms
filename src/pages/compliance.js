@@ -94,7 +94,7 @@ export const query = graphql`
     compliance: file(relativePath: { eq: "compliance2.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_withWebp
+          src
         }
       }
     }
