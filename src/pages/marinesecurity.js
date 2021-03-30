@@ -44,7 +44,7 @@ const security = ({ data }) => {
           <h5 className="text-center text-uppercase">What We do</h5>
         </div>
         <div className="body">
-          <p>
+          <p data-aos="fade-down" data-aos-duration="1000">
             SR PLATFORMS LIMITED is one of the leading private security
             companies providing high standard privately contracted security
             services. We offer security solutions for vessels sailing in
@@ -62,7 +62,7 @@ const security = ({ data }) => {
             <Img fluid={data.securityImg.childImageSharp.fluid} />
           </div>
           <div className="locations">
-            <div>
+            <div data-aos="fade-left" data-aos-duration="1000">
               <h4>Armed Security Escorts for Merchant vessel</h4>
               <h4>
                 Provision of Full Round the clock Marine Security Services
@@ -106,7 +106,7 @@ const security = ({ data }) => {
 
       <section className="securityFourthSection">
         <div className="stats">
-          <div>
+          <div data-aos="fade-right" data-aos-duration="1000">
             {stats.map((stat, index) => (
               <div key={index} className="stat">
                 <img src={stat.img} alt="statistics" />
@@ -170,7 +170,7 @@ const security = ({ data }) => {
             />
           </div>
           <div className="testimonial">
-            <div>
+            <div data-aos="fade-left" data-aos-duration="1000">
               <h6 className="testimonialText">
                 “Service was carried out in a very professional manner <br />{" "}
                 while also being efficient and punctual. Good communication{" "}
