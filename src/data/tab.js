@@ -88,7 +88,13 @@ const statement2 = (
         We are committed to providing high quality services to all our Clients.
         When something goes wrong, we need you to tell us about it. This will
         help us to meet your dissatisfaction and to improve our service to all
-        Clients. If you have a complaint, please email info@srplatforms.com.
+        Clients. If you have a complaint, please email{" "}
+        <a
+          style={{ color: "#0d3a64", fontWeight: "bold" }}
+          href="mailto:info@srplatforms.com?subject='Grievance'"
+        >
+          info@srplatforms.com
+        </a>
       </p>
     </li>
   </ul>
