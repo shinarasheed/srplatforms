@@ -38,7 +38,7 @@ const Compliance = ({ data }) => {
             compliant with all relevant government authority requirements and
             industry Codes of Practice including:
           </p>
-          <ul>
+          <ul data-aos="fade-left" data-aos-duration="1000">
             <li>Memorandum of Understanding (MOU) with Nigerian Navy</li>
             <li>Civil Defence (CD) license for security services in Nigeria</li>
             <li>
@@ -73,7 +73,11 @@ const Compliance = ({ data }) => {
             />
           ))}
         </article>
-        <article className="tab-content">
+        <article
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          className="tab-content"
+        >
           <div className="content-img">
             <img src={tabs[activeTab].banner} alt="banner" />
           </div>
