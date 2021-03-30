@@ -62,7 +62,7 @@ export default class CerticateSlide extends Component {
           <article className="d-flex slide">
             <div className="slideLeft">
               <h5>Mr. Babatunde Aiyenuro </h5>
-              <p> Managing Director</p>
+              <p> Managing Director/Chief Executive Officer</p>
             </div>
             <div className="slideRight">
               <p>
@@ -103,8 +103,8 @@ export default class CerticateSlide extends Component {
           </article>
           <article className="d-flex slide">
             <div className="slideLeft">
-              <h5>Ismail Owolabi Hamee</h5>
-              <p>hief Financial /Operating Officer</p>
+              <h5>Ismail Owolabi Hameed</h5>
+              <p>Chief financial /Operating officer</p>
             </div>
             <div className="slideRight">
               <p>
@@ -267,18 +267,20 @@ export default class CerticateSlide extends Component {
           </article>
           <article className="d-flex slide">
             <div className="slideLeft">
-              <h5>Jimmy Kehinde</h5>
+              <h5>Bukola Segunsola-Onakoya</h5>
               <p>Human Resources & Admin Manager</p>
             </div>
             <div className="slideRight">
               <p>
                 {" "}
-                She graduated from Lagos State University in 2003 and had her
-                Masters Degree at the University of Lagos in 2015. She joined
-                the company in 2010 as an Accountant before being seconded to
-                Human Resources & Admin Department. Mrs. Jimmy has undergone
-                some certificate courses in Human Resources & Administration and
-                attended several seminars in Human Relations and Psychology.
+                An experienced administrator and human resources professional
+                with a track record of increasing overall business
+                effectiveness. 10+ years of experience gained in a variety of
+                organizations, including advertising, oil and gas, retail, and,
+                most recently, maritime. I graduated with a B.A in Media Arts
+                from the University of Ibadan. A member of the Nigerian
+                Institute of Management, the Chartered Institute of Personnel
+                Management, and the Chartered Institute of Personnel Management.
               </p>
             </div>
           </article>

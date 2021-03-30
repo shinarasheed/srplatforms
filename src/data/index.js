@@ -1,7 +1,7 @@
 import React from "react"
 
 // services
-import service1 from "../assets/img/rr1.png"
+import service1 from "../images/securityvessel.jpg"
 import service2 from "../assets/img/supply1.png"
 import service3 from "../assets/img/Platform_Supply_Vessel_.jpg"
 import service4 from "../assets/img/crewsuppy.jpg"

@@ -17,7 +17,7 @@ export default class AboutSlide extends Component {
     return (
       <div>
         <Slider {...settings}>
-          <div className="aboutSlideText" data-aos="fade-up-left">
+          <div className="aboutSlideText vision" data-aos="fade-up-left">
             <h5
               style={{
                 textAlign: "center",

@@ -25,9 +25,10 @@ const statement1 = (
         Any armed security personnel inside of these countries’ territorial
         waters must be serving members of the National Armed Forces. The
         National Armed Forces of the respective countries will not carry
-        insurance for their personnel on-board commercial shipping tasks, LGS
-        take this responsibility instead and ensure that all personnel operate
-        professionally and efficiently in order to mitigate any risks.
+        insurance for their personnel on-board commercial shipping tasks,
+        SRPLATFORMS take this responsibility instead and ensure that all
+        personnel operate professionally and efficiently in order to mitigate
+        any risks.
       </p>
     </li>
   </ul>
@@ -173,7 +174,7 @@ export default [
     title: "Business Ethics Statement",
     banner: banner3,
     description:
-      "When transiting the Gulf of Guinea, it is critical that ship-owners and charterers firmly understand the following vital information when considering the use of armed security: It is illegal for Private Maritime Security Companies to carry firearms in any of the West African territorial waters, Nigeria, (Lagos & Port Harcourt), Togo, (Lome), Benin, (Cotonou) and Ghana, (Accra & Tema). It is also illegal for Private Maritime Security Companies to transit firearms through any of these countries. Any armed security personnel inside of these countries’ territorial waters must be serving members of the National Armed Forces. The National Armed Forces of the respective countries will not carry insurance for their personnel on-board commercial shipping tasks, LGS take this responsibility instead and ensure that all personnel operate professionally and efficiently in order to mitigate any risks.",
+      "When transiting the Gulf of Guinea, it is critical that ship-owners and charterers firmly understand the following vital information when considering the use of armed security: It is illegal for Private Maritime Security Companies to carry firearms in any of the West African territorial waters, Nigeria, (Lagos & Port Harcourt), Togo, (Lome), Benin, (Cotonou) and Ghana, (Accra & Tema). It is also illegal for Private Maritime Security Companies to transit firearms through any of these countries. Any armed security personnel inside of these countries’ territorial waters must be serving members of the National Armed Forces. The National Armed Forces of the respective countries will not carry insurance for their personnel on-board commercial shipping tasks, SRPLATFORMS take this responsibility instead and ensure that all personnel operate professionally and efficiently in order to mitigate any risks.",
   },
   {
     title: "Human Rights Statement",
