@@ -279,8 +279,7 @@ export default class CerticateSlide extends Component {
                 organizations, including advertising, oil and gas, retail, and,
                 most recently, maritime. I graduated with a B.A in Media Arts
                 from the University of Ibadan. A member of the Nigerian
-                Institute of Management, the Chartered Institute of Personnel
-                Management, and the Chartered Institute of Personnel Management.
+                Institute of Management and the Chartered Institute of Personnel Management.
               </p>
             </div>
           </article>

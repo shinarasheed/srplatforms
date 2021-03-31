@@ -164,10 +164,7 @@ const security = ({ data }) => {
         </div>
         <div className="testimonials">
           <div className="testimonialImg">
-            <img
-              src={require("../assets/img/Group 13.png")}
-              alt="testimonial"
-            />
+            <img src={require("../assets/img/lgs.jpeg")} alt="testimonial" />
           </div>
           <div className="testimonial">
             <div data-aos="fade-left" data-aos-duration="1000">

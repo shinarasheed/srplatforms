@@ -52,6 +52,11 @@ const Compliance = ({ data }) => {
             </li>
             <li>NipeX (Nigerian Petroleum Exchange) member</li>
             <li>Maritime Industry Guidance from the IMO</li>
+            <li> Npa - Nigerian Port Authority </li>
+            <li> Bv - Bureau Veritas</li>
+            <li>
+              Local content - Nigerian Content Developement and Monitoring Board
+            </li>
             <li>
               Flag State and Port / Government Authority Requirements (ISPS)
             </li>
