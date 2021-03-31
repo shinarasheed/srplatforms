@@ -277,9 +277,9 @@ export default class CerticateSlide extends Component {
                 with a track record of increasing overall business
                 effectiveness. 10+ years of experience gained in a variety of
                 organizations, including advertising, oil and gas, retail, and,
-                most recently, maritime. I graduated with a B.A in Media Arts
-                from the University of Ibadan. A member of the Nigerian
-                Institute of Management and the Chartered Institute of Personnel Management.
+                most recently, maritime. Holds a B.A in Media Arts from the
+                University of Ibadan. A member of the Nigerian Institute of
+                Management and the Chartered Institute of Personnel Management.
               </p>
             </div>
           </article>
