@@ -4,7 +4,7 @@ import React from "react"
 import service1 from "../images/securityvessel.jpg"
 import service2 from "../assets/img/supply1.png"
 import service3 from "../assets/img/Platform_Supply_Vessel_.jpg"
-import service4 from "../assets/img/crewsuppy.jpg"
+import service4 from "../assets/img/crewsupply2.jpg"
 import service5 from "../assets/img/securityvessel.jpg"
 import service6 from "../assets/img/barges.jpg"
 
