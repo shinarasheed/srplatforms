@@ -217,11 +217,14 @@
 
 .securityFourthSection {
   display: flex;
+  @media screen and(max-width:960px) {
+    flex-direction: column;
+  }
 }
 
 .securityFourthSection .stats {
   background-color: $color-primary;
-  flex: 3;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -232,7 +235,7 @@
     place-items: center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    column-gap: 30rem;
+    column-gap: 10rem;
     row-gap: 4rem;
 
     @media screen and(max-width:768px) {
@@ -244,9 +247,6 @@
 
 .securityFourthSection .statsImg {
   flex: 2;
-  @media screen and(max-width:960px) {
-    display: none;
-  }
 
   .statimg {
     width: 100%;
