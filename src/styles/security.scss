@@ -258,10 +258,15 @@
 
 .securityFourthSection .stat {
   position: relative;
+  width: 174px;
+  height: 174px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  align-items: center;
 
   & > div {
     position: absolute;
-    inset: 0px;
     display: flex;
     justify-content: center;
     align-items: center;

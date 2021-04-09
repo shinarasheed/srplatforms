@@ -71,7 +71,7 @@ const services = ({ data }) => {
                 <div data-aos="fade-right">
                   <h5>MT SR Trader</h5>
                   <p>
-                    SR PLATFORMS acquired her first vessel, Bunkery Vessel (MT
+                    SR PLATFORMS acquired her first vessel, Bunkerine Vessel (MT
                     SR Trader) a bunkers self-propelled barge in February 2007{" "}
                     for bunkering operations.
                   </p>
@@ -79,8 +79,8 @@ const services = ({ data }) => {
                 <div>
                   <h5 data-aos="fade-right">Marine Assets</h5>
                   <p>
-                    We also have several third payment charters of <br />{" "}
-                    various marine assets under our operations.
+                    We also have several third party charters of <br /> various
+                    marine assets under our operations.
                   </p>
                 </div>
                 <div data-aos="fade-left">
