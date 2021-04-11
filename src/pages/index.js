@@ -19,7 +19,7 @@ import {
 const index = () => {
   return (
     <Layout>
-      <SEO title="Home" description="this is the home page" />
+      <SEO title="Home" description=" Efficiency Through Service Delivery" />
       <IndexHero />
       <section className="indexSecondSection">
         <article>

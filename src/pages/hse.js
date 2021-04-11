@@ -23,7 +23,7 @@ const Hse = () => {
   })
   return (
     <Layout>
-      <SEO title="Home" description="this is the home page" />
+      <SEO title="HSE" description="Efficiency Through Service Delivery" />
       <IndexHero />
       <section className="indexSecondSection">
         <article>

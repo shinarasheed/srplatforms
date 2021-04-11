@@ -12,7 +12,11 @@ import ManagementSlides from "../components/slides/managementSlides"
 const about = ({ data }) => {
   return (
     <Layout>
-      <SEO title="About" description="this is the about page" />
+      <SEO
+        title="About Us"
+        description="Epitome
+                of professionalism"
+      />
       <HeroSection
         className="aboutBanner"
         img={data.backgroundImg.childImageSharp.fluid}

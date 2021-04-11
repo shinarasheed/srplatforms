@@ -12,7 +12,7 @@ import OtherServiceSlide from "../components/slides/services"
 const services = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Services" description="this is the services page" />
+      <SEO title="Services" description="Value Adding Services" />
       <HeroSection
         className="servicesBanner"
         img={data.backgroundImg.childImageSharp.fluid}

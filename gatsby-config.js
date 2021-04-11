@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `srplatforms`,
+    title: `SRPLATFORMS`,
     description: `Foremost Indigenous Company with Expertise in Marine/Offshore Support Services to the oil & Gas Industry Using Innovative service Delivery`,
     author: `gravitytech`,
     keywords: `

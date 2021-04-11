@@ -8,7 +8,7 @@ import { FiClock } from "react-icons/fi"
 const contact = () => {
   return (
     <Layout>
-      <SEO title="Contact" description="this is the contact page" />
+      <SEO title="Contact" description="Contact Us" />
       <section className="contactbanner"></section>
       <section className="contact">
         <section className="contactFirstSection">

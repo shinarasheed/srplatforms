@@ -10,10 +10,7 @@ import HeroSection from "../components/Globals/MainHero"
 const csr = ({ data }) => {
   return (
     <Layout>
-      <SEO
-        title="CSR"
-        description="this is the coorporate social responsibility page"
-      />
+      <SEO title="CSR" description="Corporate Social Responsibility" />
       <HeroSection
         className="csrBanner"
         csr="true"

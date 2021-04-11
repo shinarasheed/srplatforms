@@ -11,7 +11,10 @@ import { mainService, stats } from "../data/index"
 const security = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Security" description="this is the security page" />
+      <SEO
+        title="Marine Security"
+        description="Innovative Armed Escort Services in Nigeria"
+      />
       <HeroSection
         home="true"
         className="securitybanner"

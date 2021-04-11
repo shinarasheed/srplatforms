@@ -13,7 +13,7 @@ const Compliance = ({ data }) => {
   const [activeTab, setActiveTab] = useState(0)
   return (
     <Layout>
-      <SEO title="complaince" description="compliance" />
+      <SEO title="Complaince" description="Nigerian Marine security company" />
       <HeroSection csr="true" img={data.compliance.childImageSharp.fluid}>
         <div className="compliancebanner-title">
           <h1>COMPLIANCE</h1>
