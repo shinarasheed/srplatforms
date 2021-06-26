@@ -67,7 +67,6 @@ const Footer = () => {
       </section>
       <p className="footer__copy">
         &copy; {new Date().getFullYear()} SRPLATFORMS. All rights reserved.
-        Designed by ECSCORP
       </p>
       <section className="footer__overlay"></section>
     </footer>
