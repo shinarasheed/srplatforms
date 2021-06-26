@@ -38,7 +38,8 @@ const contact = () => {
           >
             Contact Form
           </h5>
-          <form>
+
+          <form action="https://formspree.io/f/xoqydndz" method="POST">
             <div
               data-aos="fade-down-left"
               data-aos-delay="1000"
@@ -49,11 +50,13 @@ const contact = () => {
                 className="formControl"
                 type="text"
                 placeholder="Your First Name"
+                name="firstName"
               />
               <input
                 className="formControl"
                 type="text"
                 placeholder="Your Last Name"
+                name="lastName"
               />
             </div>
             <div
@@ -65,7 +68,8 @@ const contact = () => {
               <input
                 className="formControl"
                 type="text"
-                placeholder="Your First Name"
+                placeholder="Your Need"
+                name="need"
               />
             </div>
             <div
@@ -77,6 +81,7 @@ const contact = () => {
               <textarea
                 placeholder="Message"
                 className="formControl"
+                name="message"
                 cols="30"
                 rows="10"
               ></textarea>

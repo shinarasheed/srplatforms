@@ -90,7 +90,7 @@ const Compliance = ({ data }) => {
             <h1 className="text-uppercase title">{tabs[activeTab].title}</h1>
 
             <div className="line"></div>
-            <p className="description">{tabs[activeTab].description}</p>
+            <div className="description">{tabs[activeTab].description}</div>
           </div>
         </article>
       </section>

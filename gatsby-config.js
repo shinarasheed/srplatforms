@@ -39,6 +39,6 @@ module.exports = {
         icon: `src/images/SRLogocroped.png`,
       },
     },
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
   ],
 }
