@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import { otherService } from "../../data/index"
 
@@ -62,23 +63,23 @@ export default class OtherServiceSlide extends Component {
     return (
       <div>
         <Slider {...settings}>
-          {otherService.map((service, index) => (
-            <div
-              data-aos="fade-right"
-              style={{ border: "none" }}
-              key={index}
-              className="service"
-            >
-              <img
-                style={{ width: "100%", border: "none" }}
-                src={service.img}
-                alt="service"
-              />
-              <div style={{ border: "none" }} className="serviceText">
-                <p>{service.text}</p>
+          {this.props.otherServices.map((service, index) => {
+            const { description, banner } = service
+            const image = getImage(banner)
+            return (
+              <div
+                data-aos="fade-right"
+                style={{ border: "none" }}
+                key={index}
+                className="service"
+              >
+                <GatsbyImage image={image} alt={description} />
+                <div style={{ border: "none" }} className="serviceText">
+                  <p>{description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </Slider>
       </div>
     )

@@ -8,41 +8,67 @@ import "../styles/services.scss"
 import { offers } from "../data/index"
 import HeroSection from "../components/Globals/OtherHero"
 import OtherServiceSlide from "../components/slides/services"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
 
 const services = ({ data }) => {
+  const {
+    contentfulServicesPageHeroImage: { heroImage, title, description },
+    allContentfulServiceOffers,
+    contentfulServiceBanner: { image: serviceBanner },
+    allContentfulOtherServices,
+  } = data
+
+  const servicePageBanner = getImage(serviceBanner)
+
+  const otherServices = allContentfulOtherServices.nodes
+
+  const theHeroImage = getImage(heroImage)
+  const bgImage = convertToBgImage(theHeroImage)
+
+  //  console.log(theHeroImage, "heroImage")
+
   return (
     <Layout>
       <SEO title="Services" description="Value Adding Services" />
       <HeroSection
         className="servicesBanner"
-        img={data.backgroundImg.childImageSharp.fluid}
+        img={theHeroImage}
+        bgImage={bgImage}
       >
-        <h5 data-aos="fade-up-right">DYNAMIC RESOURCEFUL CREW</h5>
-        <p data-aos="fade-up-right">
-          Adding value to the upstream sector of oil and gas and ensuring the
-          safe delivery of Petroleum services.
-        </p>
+        <h5 data-aos="fade-up-right">{title}</h5>
+        <p data-aos="fade-up-right">{description}</p>
       </HeroSection>
+
       <section className="servicesSecondSection">
         <div className="statement">
           <h5 data-aos="fade-up-right">WHAT WE OFFER</h5>
         </div>
         <div className="offers">
-          {offers.map((offer, index) => (
-            <div data-aos="fade-right" className="serviceOffer" key={index}>
-              <img loading="lazy" src={offer.img} alt="offer" />
-              <div className="offerText">
-                <p data-aos="fade-up-right">{offer.text}</p>
+          {allContentfulServiceOffers.nodes.map((offer, index) => {
+            const {
+              title: { title },
+              description,
+              image,
+            } = offer
+
+            const banner = getImage(image)
+            return (
+              <div data-aos="fade-right" className="serviceOffer" key={index}>
+                <GatsbyImage image={banner} alt={description} />
+                <div className="offerText">
+                  <p data-aos="fade-up-right">{title}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </section>
       <section data-aos="fade-right" className="servicesThirdSection">
         <h5>We also undertake other services as follows:</h5>
       </section>
       <section className="servicesSlideSection">
-        <OtherServiceSlide />
+        <OtherServiceSlide otherServices={otherServices} />
       </section>
       <section className="servicesFourthSection">
         <article>
@@ -128,7 +154,8 @@ const services = ({ data }) => {
         className="damenblog"
         style={{ marginBottom: "4rem", marginTop: "4rem" }}
       >
-        <Img fluid={data.damenImg.childImageSharp.fluid} />
+        {/*<Img fluid={data.damenImg.childImageSharp.fluid} />*/}
+        <GatsbyImage image={servicePageBanner} />
       </section>
       <section className="servicesFifthSection">
         <div className="projection">
@@ -166,6 +193,8 @@ const services = ({ data }) => {
   )
 }
 
+export default services
+
 export const query = graphql`
   {
     backgroundImg: file(relativePath: { eq: "bg5.png" }) {
@@ -183,7 +212,48 @@ export const query = graphql`
         }
       }
     }
+
+    contentfulServicesPageHeroImage {
+      title
+      description
+      heroImage {
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+
+    allContentfulServiceOffers {
+      nodes {
+        title {
+          title
+        }
+        description
+        image {
+          gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        }
+      }
+    }
+
+    contentfulServiceBanner {
+      image {
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+
+    allContentfulOtherServices {
+      nodes {
+        description
+        banner {
+          gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        }
+      }
+    }
   }
 `
-
-export default services

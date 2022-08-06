@@ -4,7 +4,7 @@ import BackgroundImage from "gatsby-background-image"
 
 const MainHero = ({ home, csr, img, className, children }) => {
   return (
-    <BackgroundImage className={className} fluid={img} home={home}>
+    <BackgroundImage className={className} home={home} {...img}>
       {children}
     </BackgroundImage>
   )

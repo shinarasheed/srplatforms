@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
 export default class CerticateSlide extends Component {
   render() {
@@ -59,15 +60,19 @@ export default class CerticateSlide extends Component {
     return (
       <div>
         <Slider {...settings}>
-          {this.props.slides.map((item, index) => (
-            <div className="item" key={index}>
-              <img
-                style={{ margin: " 0 auto" }}
-                src={item.img}
-                alt="sliding item"
-              />
-            </div>
-          ))}
+          {this.props.slides.map((item, index) => {
+            const { title, image } = item
+            const certificate = getImage(image)
+            return (
+              <div className="item" key={index}>
+                <GatsbyImage
+                  image={certificate}
+                  alt={title}
+                  style={{ margin: " 0 auto" }}
+                />
+              </div>
+            )
+          })}
         </Slider>
       </div>
     )

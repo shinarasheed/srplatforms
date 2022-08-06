@@ -2,24 +2,35 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
 
 import HeroSection from "../components/Globals/MainHero"
 import SEO from "../components/seo"
 import "../styles/security.scss"
-import { mainService, stats } from "../data/index"
+import { stats } from "../data/index"
 
 const security = ({ data }) => {
+  const {
+    contentfulWhatWeDo,
+    allContentfulMarineSecurityServices,
+    contentfulMarineSecurityHeroImage,
+  } = data
+  const { description, banner } = contentfulWhatWeDo
+
+  const mainService = allContentfulMarineSecurityServices.nodes
+
+  const { heroImage } = contentfulMarineSecurityHeroImage
+
+  const theHeroImage = getImage(heroImage)
+  const bgImage = convertToBgImage(theHeroImage)
   return (
     <Layout>
       <SEO
         title="Marine Security"
         description="Innovative Armed Escort Services in Nigeria"
       />
-      <HeroSection
-        home="true"
-        className="securitybanner"
-        img={data.backgroundImg.childImageSharp.fluid}
-      >
+      <HeroSection home className="securitybanner" img={bgImage}>
         <div className="securitybannerText">
           <div>
             <img
@@ -48,10 +59,7 @@ const security = ({ data }) => {
         </div>
         <div className="body">
           <p data-aos="fade-down" data-aos-duration="1000">
-            SR PLATFORMS LIMITED is one of the leading private security
-            companies providing high standard privately contracted security
-            services. We offer security solutions for vessels sailing in
-            high-risk areas around the Indian Ocean Region and West Africa
+            {description?.description}
           </p>
         </div>
       </section>
@@ -96,14 +104,18 @@ const security = ({ data }) => {
           </h5>
         </div>
         <div className="services">
-          {mainService.map((service, index) => (
-            <div className="service" key={index}>
-              <img src={service.img} alt={service.text} />
-              <div className="serviceText">
-                <p className="text">{service.text}</p>
+          {mainService.map((service, index) => {
+            const { image, description } = service
+            const banner = getImage(image)
+            return (
+              <div className="service" key={index}>
+                <GatsbyImage image={banner} alt={description} />
+                <div className="serviceText">
+                  <p className="text">{description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </section>
 
@@ -226,6 +238,38 @@ export const query = graphql`
         fluid(quality: 90, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
         }
+      }
+    }
+
+    contentfulWhatWeDo {
+      description {
+        description
+      }
+      banner {
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+
+    allContentfulMarineSecurityServices {
+      nodes {
+        description
+        image {
+          gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        }
+      }
+    }
+
+    contentfulMarineSecurityHeroImage {
+      heroImage {
+        gatsbyImageData(
+          #  layout: FULL_WIDTH
+          #  placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }

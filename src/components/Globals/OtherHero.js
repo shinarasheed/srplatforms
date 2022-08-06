@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const OtherHero = ({ home, csr, img, className, children }) => {
+const OtherHero = ({ home, csr, img, className, children, bgImage }) => {
   return (
-    <BackgroundImage className={className} fluid={img} home={home}>
+    <BackgroundImage className={className} home={home} {...bgImage}>
       {children}
     </BackgroundImage>
   )
