@@ -10,6 +10,8 @@ import AboutSlide from "../components/slides/about"
 import ManagementSlides from "../components/slides/managementSlides"
 
 const about = ({ data }) => {
+  const { allContentfulManagementTeam } = data
+  const managementTeam = allContentfulManagementTeam.nodes
   return (
     <Layout>
       <SEO
@@ -101,7 +103,7 @@ const about = ({ data }) => {
       <section data-aos="fade-up-left" className="aboutSixthSection">
         <h6>THE MANAGEMENT TEAM</h6>
         <div className="slides">
-          <ManagementSlides />
+          <ManagementSlides managementTeam={managementTeam} />
         </div>
       </section>
 
@@ -134,6 +136,16 @@ export const query = graphql`
       childImageSharp {
         fluid(quality: 90, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+
+    allContentfulManagementTeam {
+      nodes {
+        name
+        title
+        biography {
+          biography
         }
       }
     }

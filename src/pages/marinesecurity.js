@@ -15,15 +15,26 @@ const security = ({ data }) => {
     contentfulWhatWeDo,
     allContentfulMarineSecurityServices,
     contentfulMarineSecurityHeroImage,
+    allContentfulTestimonies,
+    allContentfulSecurityStatistics,
+    contentfulPartnership,
   } = data
+
+  const { image } = contentfulPartnership
   const { description, banner } = contentfulWhatWeDo
 
   const mainService = allContentfulMarineSecurityServices.nodes
+
+  const testimonies = allContentfulTestimonies.nodes
+
+  const statistics = allContentfulSecurityStatistics.nodes
 
   const { heroImage } = contentfulMarineSecurityHeroImage
 
   const theHeroImage = getImage(heroImage)
   const bgImage = convertToBgImage(theHeroImage)
+
+  const partnershipImage = getImage(image)
   return (
     <Layout>
       <SEO
@@ -122,15 +133,19 @@ const security = ({ data }) => {
       <section className="securityFourthSection">
         <div className="stats">
           <div data-aos="fade-right" data-aos-duration="1000">
-            {stats.map((stat, index) => (
-              <div key={index} className="stat">
-                <img src={stat.img} alt="statistics" />
-                <div>
-                  <span>{stat.number}</span>
+            {statistics.map((stat, index) => {
+              const { description, number, progress } = stat
+              const image = getImage(progress)
+              return (
+                <div key={index} className="stat">
+                  <GatsbyImage image={image} alt={description} />
+                  <div>
+                    <span>{number}</span>
+                  </div>
+                  <p>{description}</p>
                 </div>
-                <p>{stat.text}</p>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
         <div className="statsImg">
@@ -178,30 +193,35 @@ const security = ({ data }) => {
           <h5>TESTIMONIALS</h5>
         </div>
         <div className="testimonials">
-          <div className="testimonialImg">
-            <img src={require("../assets/img/lgs.jpeg")} alt="testimonial" />
-          </div>
-          <div className="testimonial">
-            <div data-aos="fade-left" data-aos-duration="1000">
-              <h6 className="testimonialText">
-                “Service was carried out in a very professional manner <br />{" "}
-                while also being efficient and punctual. Good communication{" "}
-                <br /> and timely delivery. I am very happy with the service
-                provided.{" "}
-              </h6>
-              <p className="name">Rob McMahon</p>
-              <h6 className="client">LGS Global</h6>
-            </div>
-          </div>
+          {testimonies.map((item, index) => {
+            const {
+              testimony: { testimony },
+              company,
+              personel,
+              banner,
+            } = item
+            const image = getImage(banner)
+            return (
+              <>
+                <div className="testimonialImg">
+                  <GatsbyImage image={image} alt={company} />
+                </div>
+                <div className="testimonial">
+                  <div data-aos="fade-left" data-aos-duration="1000">
+                    <h6 className="testimonialText">{testimony}</h6>
+                    <p className="name">{personel}</p>
+                    <h6 className="client">{company}</h6>
+                  </div>
+                </div>
+              </>
+            )
+          })}
         </div>
       </section>
       <section className="securitySeventhSection">
         <div className="partnership">
           <h5 className="title">Partnership</h5>
-          <img
-            src={require("../assets/img/accreditation1.png")}
-            alt="accrediation"
-          />
+          <GatsbyImage image={partnershipImage} alt="partnership" />
         </div>
       </section>
     </Layout>
@@ -270,6 +290,35 @@ export const query = graphql`
           #  placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
+      }
+    }
+
+    allContentfulTestimonies {
+      nodes {
+        testimony {
+          testimony
+        }
+        company
+        personel
+        banner {
+          gatsbyImageData(formats: [AUTO, WEBP, AVIF])
+        }
+      }
+    }
+
+    allContentfulSecurityStatistics {
+      nodes {
+        description
+        number
+        progress {
+          gatsbyImageData(formats: [AUTO, WEBP, AVIF])
+        }
+      }
+    }
+
+    contentfulPartnership {
+      image {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF])
       }
     }
   }
