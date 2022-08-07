@@ -13,7 +13,11 @@ import { convertToBgImage } from "gbimage-bridge"
 
 const services = ({ data }) => {
   const {
-    contentfulServicesPageHeroImage: { heroImage, title, description },
+    contentfulHeroImages: {
+      titleservicepage,
+      descriptionservicepage,
+      heroImageservice,
+    },
     allContentfulServiceOffers,
     contentfulServiceBanner: { image: serviceBanner },
     allContentfulOtherServices,
@@ -23,10 +27,8 @@ const services = ({ data }) => {
 
   const otherServices = allContentfulOtherServices.nodes
 
-  const theHeroImage = getImage(heroImage)
+  const theHeroImage = getImage(heroImageservice)
   const bgImage = convertToBgImage(theHeroImage)
-
-  //  console.log(theHeroImage, "heroImage")
 
   return (
     <Layout>
@@ -36,8 +38,8 @@ const services = ({ data }) => {
         img={theHeroImage}
         bgImage={bgImage}
       >
-        <h5 data-aos="fade-up-right">{title}</h5>
-        <p data-aos="fade-up-right">{description}</p>
+        <h5 data-aos="fade-up-right">{titleservicepage}</h5>
+        <p data-aos="fade-up-right">{descriptionservicepage}</p>
       </HeroSection>
 
       <section className="servicesSecondSection">
@@ -213,15 +215,11 @@ export const query = graphql`
       }
     }
 
-    contentfulServicesPageHeroImage {
-      title
-      description
-      heroImage {
-        gatsbyImageData(
-          layout: FULL_WIDTH
-          placeholder: BLURRED
-          formats: [AUTO, WEBP, AVIF]
-        )
+    contentfulHeroImages {
+      titleservicepage
+      descriptionservicepage
+      heroImageservice {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF])
       }
     }
 

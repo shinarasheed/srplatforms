@@ -9,9 +9,18 @@ import HeroSection from "../components/Globals/OtherHero"
 import AboutSlide from "../components/slides/about"
 import ManagementSlides from "../components/slides/managementSlides"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
 
 const about = ({ data }) => {
-  const { allContentfulManagementTeam, contentfulPartnership } = data
+  const {
+    allContentfulManagementTeam,
+    contentfulPartnership,
+    contentfulHeroImages: {
+      titleaboutpage,
+      descriptionaboutpage,
+      heroImageaboutpage,
+    },
+  } = data
   const managementTeam = allContentfulManagementTeam.nodes
 
   const { membership1, membership3, partnership2 } = contentfulPartnership
@@ -19,25 +28,24 @@ const about = ({ data }) => {
   const membershipImage1 = getImage(membership1)
   const membershipImage2 = getImage(membership3)
 
+  const theHeroImage = getImage(heroImageaboutpage)
+  const bgImage = convertToBgImage(theHeroImage)
+
   return (
     <Layout>
       <SEO
         title="About Us"
         description="Epitome
-                of professionalism"
+        of professionalism"
       />
+
       <HeroSection
-        className="aboutBanner"
-        img={data.backgroundImg.childImageSharp.fluid}
+        className="servicesBanner"
+        img={theHeroImage}
+        bgImage={bgImage}
       >
-        <div data-aos="fade-up-left">
-          <h5>ECOLOGICAL FRIENDLY ENVIRONMENT</h5>
-          <p>
-            To Conduct our business with the highest standard of ethics <br />{" "}
-            adherance to the law, Corporate governance and Industry <br /> best
-            pratices
-          </p>
-        </div>
+        <h5 data-aos="fade-up-right">{titleaboutpage}</h5>
+        <p data-aos="fade-up-right">{descriptionaboutpage}</p>
       </HeroSection>
       <section id="aboutFirstSection" className="aboutFirstSection">
         <div className="aboutSlide">
@@ -162,6 +170,14 @@ export const query = graphql`
         gatsbyImageData(formats: [AUTO, WEBP, AVIF])
       }
       partnership2 {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF])
+      }
+    }
+
+    contentfulHeroImages {
+      titleaboutpage
+      descriptionaboutpage
+      heroImageaboutpage {
         gatsbyImageData(formats: [AUTO, WEBP, AVIF])
       }
     }

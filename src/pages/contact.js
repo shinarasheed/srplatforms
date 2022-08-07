@@ -3,13 +3,28 @@ import React from "react"
 import SEO from "../components/seo"
 import "../styles/contact.scss"
 import Layout from "../components/layout"
+import HeroSection from "../components/Globals/OtherHero"
 import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa"
 import { FiClock } from "react-icons/fi"
-const contact = () => {
+import { graphql } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
+
+const contact = ({ data }) => {
+  const { contentfulHeroImages } = data
+  const { heroImageContact } = contentfulHeroImages
+
+  const theHeroImage = getImage(heroImageContact)
+  const bgImage = convertToBgImage(theHeroImage)
   return (
     <Layout>
       <SEO title="Contact" description="Contact Us" />
-      <section className="contactbanner"></section>
+      {/*<section className="contactbanner"></section>*/}
+      <HeroSection
+        className="servicesBanner"
+        img={theHeroImage}
+        bgImage={bgImage}
+      ></HeroSection>
       <section className="contact">
         <section className="contactFirstSection">
           <div className="mb-4 d-flex">
@@ -149,3 +164,13 @@ const contact = () => {
 }
 
 export default contact
+
+export const query = graphql`
+  {
+    contentfulHeroImages {
+      heroImageContact {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF])
+      }
+    }
+  }
+`

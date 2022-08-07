@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import SEO from "../components/seo"
 import "../styles/index.scss"
@@ -16,15 +16,21 @@ import {
   gallery,
 } from "../data/index"
 
-const Hse = () => {
+const Hse = ({ data }) => {
   useEffect(() => {
     const anchor = document.querySelector("#safety")
     anchor.scrollIntoView({ behavior: "smooth", block: "center" })
   })
+
+  const { allContentfulHomepageHero } = data
+
+  const HomepageHero = allContentfulHomepageHero.nodes
+
   return (
     <Layout>
       <SEO title="HSE" description="Efficiency Through Service Delivery" />
-      <IndexHero />
+      {/*<IndexHero />*/}
+      <IndexHero HomepageHero={HomepageHero} />
       <section className="indexSecondSection">
         <article>
           <h5>
@@ -215,3 +221,23 @@ const Hse = () => {
 }
 
 export default Hse
+
+export const query = graphql`
+  {
+    allContentfulHomepageHero {
+      nodes {
+        title
+        description {
+          description
+        }
+        heroImage {
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
+    }
+  }
+`

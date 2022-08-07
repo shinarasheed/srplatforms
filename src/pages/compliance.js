@@ -1,9 +1,12 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
+import { convertToBgImage } from "gbimage-bridge"
+import { getImage } from "gatsby-plugin-image"
 
 import Tab from "../components/Tab"
 import Layout from "../components/layout"
-import HeroSection from "../components/Globals/MainHero"
+//import HeroSection from "../components/Globals/MainHero"
+import HeroSection from "../components/Globals/OtherHero"
 import SEO from "../components/seo"
 
 import tabs from "../data/tab"
@@ -11,10 +14,17 @@ import "../styles/complaince.scss"
 
 const Compliance = ({ data }) => {
   const [activeTab, setActiveTab] = useState(0)
+
+  const { contentfulHeroImages } = data
+  const { titleCompliance, descriptionCompliance, heroImageCompliance } =
+    contentfulHeroImages
+
+  const theHeroImage = getImage(heroImageCompliance)
+  const bgImage = convertToBgImage(theHeroImage)
   return (
     <Layout>
       <SEO title="Complaince" description="Nigerian Marine security company" />
-      <HeroSection csr="true" img={data.compliance.childImageSharp.fluid}>
+      {/*<HeroSection csr="true" img={data.compliance.childImageSharp.fluid}>
         <div className="compliancebanner-title">
           <h1>COMPLIANCE</h1>
           <p>
@@ -23,6 +33,15 @@ const Compliance = ({ data }) => {
           </p>
           <p>successful operational background since 2015</p>
         </div>
+      </HeroSection>*/}
+
+      <HeroSection
+        className="servicesBanner"
+        img={theHeroImage}
+        bgImage={bgImage}
+      >
+        <h5 data-aos="fade-up-right">{titleCompliance}</h5>
+        <p data-aos="fade-up-right">{descriptionCompliance}</p>
       </HeroSection>
 
       <section className="complianceFirstSection">
@@ -98,6 +117,8 @@ const Compliance = ({ data }) => {
   )
 }
 
+export default Compliance
+
 export const query = graphql`
   {
     compliance: file(relativePath: { eq: "compliance2.jpg" }) {
@@ -107,7 +128,13 @@ export const query = graphql`
         }
       }
     }
+
+    contentfulHeroImages {
+      titleCompliance
+      descriptionCompliance
+      heroImageCompliance {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF])
+      }
+    }
   }
 `
-
-export default Compliance

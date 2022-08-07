@@ -1,17 +1,26 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
 
 import SEO from "../components/seo"
 import "../styles/csr.scss"
 import Layout from "../components/layout"
 import { StyledCsr } from "../components/Globals/styledComponents"
-import HeroSection from "../components/Globals/MainHero"
+//import HeroSection from "../components/Globals/MainHero"
+import HeroSection from "../components/Globals/OtherHero"
 
 const csr = ({ data }) => {
+  const { contentfulHeroImages } = data
+  const { titlecsr, descriptioncsr, heroImagecsr } = contentfulHeroImages
+
+  const theHeroImage = getImage(heroImagecsr)
+  const bgImage = convertToBgImage(theHeroImage)
+
   return (
     <Layout>
       <SEO title="CSR" description="Corporate Social Responsibility" />
-      <HeroSection
+      {/*<HeroSection
         className="csrBanner"
         csr="true"
         img={data.backgroundImg.childImageSharp.fluid}
@@ -23,6 +32,15 @@ const csr = ({ data }) => {
             society through best practices
           </p>
         </div>
+      </HeroSection>*/}
+
+      <HeroSection
+        className="servicesBanner"
+        img={theHeroImage}
+        bgImage={bgImage}
+      >
+        <h5 data-aos="fade-up-right">{titlecsr}</h5>
+        <p data-aos="fade-up-right">{descriptioncsr}</p>
       </HeroSection>
       <section className="csrFirstSection">
         <h5>Our Objective</h5>
@@ -159,6 +177,14 @@ export const query = graphql`
         fluid(quality: 90, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
         }
+      }
+    }
+
+    contentfulHeroImages {
+      titlecsr
+      descriptioncsr
+      heroImagecsr {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF])
       }
     }
   }
