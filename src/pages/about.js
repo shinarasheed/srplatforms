@@ -8,10 +8,17 @@ import { valuesData, valuesData2 } from "../data/index"
 import HeroSection from "../components/Globals/OtherHero"
 import AboutSlide from "../components/slides/about"
 import ManagementSlides from "../components/slides/managementSlides"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const about = ({ data }) => {
-  const { allContentfulManagementTeam } = data
+  const { allContentfulManagementTeam, contentfulPartnership } = data
   const managementTeam = allContentfulManagementTeam.nodes
+
+  const { membership1, membership3, partnership2 } = contentfulPartnership
+  const partnershipImage = getImage(partnership2)
+  const membershipImage1 = getImage(membership1)
+  const membershipImage2 = getImage(membership3)
+
   return (
     <Layout>
       <SEO
@@ -111,18 +118,15 @@ const about = ({ data }) => {
         <div className="partners">
           <h5>Partners</h5>
           <p>SR Platforms is affiliated to other partners such as :</p>
-          <img src={require("../assets/img/partner1.jpeg")} alt="partner" />
+
+          <GatsbyImage image={partnershipImage} alt="partnerships" />
         </div>
         <div className="membership">
           <h5>Membership</h5>
           <p>We are members of bodies such as:</p>
           <div className="members">
-            <img src={require("../assets/img/member1.png")} alt="member" />
-            <img
-              loading="lazy"
-              src={require("../assets/img/member2.png")}
-              alt="member"
-            />
+            <GatsbyImage image={membershipImage1} alt="membership" />
+            <GatsbyImage image={membershipImage2} alt="membership" />
           </div>
         </div>
       </section>
@@ -147,6 +151,18 @@ export const query = graphql`
         biography {
           biography
         }
+      }
+    }
+
+    contentfulPartnership {
+      membership1 {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF])
+      }
+      membership3 {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF])
+      }
+      partnership2 {
+        gatsbyImageData(formats: [AUTO, WEBP, AVIF])
       }
     }
   }
