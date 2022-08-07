@@ -20,6 +20,7 @@ import {
 
 const index = ({ data }) => {
   const {
+    allContentfulHomepageHero,
     allContentfulGallery,
     allContentfulHomeServicesSection,
     allContentfulCertifications,
@@ -28,10 +29,12 @@ const index = ({ data }) => {
 
   const certificates = allContentfulCertifications.nodes
   const clients = allContentfulClients.nodes
+
+  const HomepageHero = allContentfulHomepageHero.nodes
   return (
     <Layout>
       <SEO title="Home" description=" Efficiency Through Service Delivery" />
-      <IndexHero />
+      <IndexHero HomepageHero={HomepageHero} />
       <section className="indexSecondSection">
         <article>
           <h5>
@@ -236,6 +239,22 @@ export default index
 
 export const query = graphql`
   {
+    allContentfulHomepageHero {
+      nodes {
+        title
+        description {
+          description
+        }
+        heroImage {
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
+    }
+
     allContentfulGallery {
       nodes {
         title
