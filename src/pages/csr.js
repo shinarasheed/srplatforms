@@ -11,11 +11,13 @@ import { StyledCsr } from "../components/Globals/styledComponents"
 import HeroSection from "../components/Globals/OtherHero"
 
 const csr = ({ data }) => {
-  const { contentfulHeroImages } = data
+  const { contentfulHeroImages, allContentfulCompanyCsr } = data
   const { titlecsr, descriptioncsr, heroImagecsr } = contentfulHeroImages
 
   const theHeroImage = getImage(heroImagecsr)
   const bgImage = convertToBgImage(theHeroImage)
+
+  const CompanyCsr = allContentfulCompanyCsr.nodes
 
   return (
     <Layout>
@@ -64,108 +66,43 @@ const csr = ({ data }) => {
           of the local <br /> economies in all our areas of operation.
         </p>
       </section>
-      <StyledCsr>
-        <div className="text" style={{ background: "#0f3057", color: "#fff" }}>
-          <div>
-            <h5>Education</h5>
-            <p>
-              SR PLATFORMS places premium on the role of education sustainable
-              development. It therefore encourages the execution of programmes
-              and projects aimed atproviding access to quality education.
-            </p>
-            <p>
-              We recognize that a thriving and peaceful environment is critical
-              to our success. Consequently, we have strategic partnerships to
-              help expand educational, economic opportunities and sport
-              activities. To this end, we collaborate with our strategic
-              partners through sponsorships, donations and The Soji Aiyenuro
-              Foundation
-            </p>
-            <p>
-              The huge investments in the education sector has contributed
-              immensely to manpower development. Hence, the Nigerian labour
-              market access quality human resource through the various capacity
-              building initiatives.
-            </p>
-          </div>
-        </div>
-        <div className="banner">
-          <img src={require("../assets/img/srs1.jpg")} alt="education" />
-        </div>
-      </StyledCsr>
 
-      <StyledCsr>
-        <div className="text" style={{ background: "#292929", color: "#fff" }}>
-          <div>
-            <h5>Health</h5>
-            <p>
-              The health and overall well-being of the people in whose area we
-              operate is one of cardinal CSR deliverables.
-            </p>
-            <p>
-              We therefore execute projects that will improve their lifestyles
-              through the provision of health care facilities and programmes and
-              this include: Construction and equipping of Maternal Referral
-              Centres, Cottage hospitals, Diagnostic Laboratories, HIV/
-              Malaria/Cancer Awareness and Prevention programmes, Chest Clinics
-              for the treatment of tuberculosis and other chest related
-              diseases, provision of drugs and specialized equipment for
-              Hospitals and Free Treatments.
-            </p>
-          </div>
-        </div>
-        <div className="banner">
-          <img src={require("../assets/img/srs2.jpg")} alt="health" />
-        </div>
-      </StyledCsr>
-
-      <StyledCsr home="true">
-        <div className="text" style={{ background: "#0f3057", color: "#fff" }}>
-          <div>
-            <h5>Economic Empowerment and Capacity Building</h5>
-            <p>
-              We have aggressively embarked on the creation and multiplication
-              of wealth in our host communities through programmes that have
-              contributed to the development of local economies in these areas.
-            </p>
-            <p>
-              These enterprise development programmes have contributed immensely
-              to the elimination of youth unemployment by equipping them with
-              marketable skills, provide platforms for income generating
-              ventures and build capacity of the beneficiaries to enable them
-              meet their daily needs.
-            </p>
-          </div>
-        </div>
-        <div className="banner">
-          <img
-            src={require("../assets/img/srs3.jpg")}
-            alt="economic empowerment"
-          />
-        </div>
-      </StyledCsr>
-
-      <StyledCsr>
-        <div className="text" style={{ background: "#292929", color: "#fff" }}>
-          <div>
-            <h5>Corporate Philantropy</h5>
-            <p>
-              Apart from our involvement in the provision of Sustainable
-              Community Development projects for the benefits of our host
-              communities, SR PLATFORMS provide supports and contributions to
-              charitable institutions and the underprivileged in the society.
-            </p>
-            <p>
-              Professional bodies whose activities impact our core functions are
-              also supported to realize their objectives for the ultimate good
-              of the Oil and Gas Industry and the nation at large.
-            </p>
-          </div>
-        </div>
-        <div className="banner">
-          <img src={require("../assets/img/srs4.jpg")} alt="giving" />
-        </div>
-      </StyledCsr>
+      <section>
+        {CompanyCsr.map((item, index) => {
+          const {
+            description1: { description1 },
+            description2: { description2 },
+            //description3: { description3 },
+            title,
+            banner,
+          } = item
+          const image = getImage(banner)
+          return (
+            <StyledCsr>
+              <div
+                className="text"
+                style={{
+                  background:
+                    title === "Education" ||
+                    title === "Economic Empowerment and Capacity Building"
+                      ? "#0f3057"
+                      : "#292929",
+                  color: "#fff",
+                }}
+              >
+                <div>
+                  <h5>{title}</h5>
+                  <p>{description1}</p>
+                  <p>{description2}</p>
+                </div>
+              </div>
+              <div className="banner">
+                <GatsbyImage image={image} alt={title} />
+              </div>
+            </StyledCsr>
+          )
+        })}
+      </section>
     </Layout>
   )
 }
@@ -185,6 +122,24 @@ export const query = graphql`
       descriptioncsr
       heroImagecsr {
         gatsbyImageData(formats: [AUTO, WEBP, AVIF])
+      }
+    }
+
+    allContentfulCompanyCsr {
+      nodes {
+        title
+        description1 {
+          description1
+        }
+        description2 {
+          description2
+        }
+        description3 {
+          description3
+        }
+        banner {
+          gatsbyImageData(formats: [AUTO, WEBP, AVIF])
+        }
       }
     }
   }
