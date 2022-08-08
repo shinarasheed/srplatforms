@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { convertToBgImage } from "gbimage-bridge"
-import { getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Tab from "../components/Tab"
 import Layout from "../components/layout"
@@ -9,18 +9,27 @@ import Layout from "../components/layout"
 import HeroSection from "../components/Globals/OtherHero"
 import SEO from "../components/seo"
 
-import tabs from "../data/tab"
+//import tabs from "../data/tab"
 import "../styles/complaince.scss"
 
 const Compliance = ({ data }) => {
   const [activeTab, setActiveTab] = useState(0)
 
-  const { contentfulHeroImages } = data
+  const {
+    contentfulHeroImages,
+    allContentfulPolicyAndProcedure,
+    allContentfulPolicyStatements,
+  } = data
+  const policiesAndProcedures = allContentfulPolicyAndProcedure.nodes
+  const tabs = allContentfulPolicyStatements.nodes
+
   const { titleCompliance, descriptionCompliance, heroImageCompliance } =
     contentfulHeroImages
 
   const theHeroImage = getImage(heroImageCompliance)
   const bgImage = convertToBgImage(theHeroImage)
+
+  const tabImage = getImage(tabs[activeTab].banner)
   return (
     <Layout>
       <SEO title="Complaince" description="Nigerian Marine security company" />
@@ -58,44 +67,30 @@ const Compliance = ({ data }) => {
             industry Codes of Practice including:
           </p>
           <ul data-aos="fade-left" data-aos-duration="1000">
-            <li>Memorandum of Understanding (MOU) with Nigerian Navy</li>
-            <li>Civil Defence (CD) license for security services in Nigeria</li>
-            <li>
-              Nigerian Maritime Administration and Safety Agency (NIMASA)
-              registered
-            </li>
-            <li>DPR certificates (Department of Petroleum Resources)</li>
-            <li>
-              International Code of Conduct Association for Private Security
-              Service Providers (ICoCA) – Member Company of ICoCA
-            </li>
-            <li>NipeX (Nigerian Petroleum Exchange) member</li>
-            <li>Maritime Industry Guidance from the IMO</li>
-            <li> Npa - Nigerian Port Authority </li>
-            <li> Bv - Bureau Veritas</li>
-            <li>
-              Local content - Nigerian Content Developement and Monitoring Board
-            </li>
-            <li>
-              Flag State and Port / Government Authority Requirements (ISPS)
-            </li>
-            <li>BIMCO Guardcon and Rules for the Use of Force</li>
-            <li>
-              Liability Insurances in accordance with BIMCO GUARDCON contract
-            </li>
+            {policiesAndProcedures.map((policy, index) => {
+              const { item } = policy
+              return <li key={index}>{item}</li>
+            })}
           </ul>
         </div>
       </section>
       <section className="complianceSecondSection">
         <article className="compliancetabs">
-          {tabs.map((tab, index) => (
-            <Tab
-              key={index}
-              index={index}
-              tab={tab}
-              setActiveTab={setActiveTab}
-            />
-          ))}
+          {tabs.map((tab, index) => {
+            const {
+              title,
+              banner,
+              description: { description },
+            } = tab
+            return (
+              <Tab
+                key={index}
+                index={index}
+                tab={tab}
+                setActiveTab={setActiveTab}
+              />
+            )
+          })}
         </article>
         <article
           data-aos="fade-down"
@@ -103,13 +98,15 @@ const Compliance = ({ data }) => {
           className="tab-content"
         >
           <div className="content-img">
-            <img src={tabs[activeTab].banner} alt="banner" />
+            <GatsbyImage image={tabImage} alt={tabs[activeTab].title} />
           </div>
           <div className="content-text">
             <h1 className="text-uppercase title">{tabs[activeTab].title}</h1>
 
             <div className="line"></div>
-            <div className="description">{tabs[activeTab].description}</div>
+            <div className="description">
+              <p> {tabs[activeTab].description?.description}</p>
+            </div>
           </div>
         </article>
       </section>
@@ -134,6 +131,24 @@ export const query = graphql`
       descriptionCompliance
       heroImageCompliance {
         gatsbyImageData(formats: [AUTO, WEBP, AVIF])
+      }
+    }
+
+    allContentfulPolicyAndProcedure {
+      nodes {
+        item
+      }
+    }
+
+    allContentfulPolicyStatements {
+      nodes {
+        title
+        description {
+          description
+        }
+        banner {
+          gatsbyImageData(formats: [AUTO, WEBP, AVIF])
+        }
       }
     }
   }

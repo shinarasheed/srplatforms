@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 
 import SEO from "../components/seo"
 import "../styles/index.scss"
@@ -146,7 +146,7 @@ const index = ({ data }) => {
         </div>
       </section>
 
-      {/*<section className="indexSixthSection">
+      <section className="indexSixthSection">
         <div data-aos="fade-down-left">
           <h4 className="text-center">SAFETY</h4>
           <h5 className="text-center"> Our SHE-Q Policy</h5>
@@ -199,12 +199,16 @@ const index = ({ data }) => {
           </div>
         </article>
         <div data-aos="fade-down-left" className="safety__section">
-          <img src={require("../assets/img/safetyimage.png")} alt="safety" />
+          <StaticImage
+            src="../assets/img/safetyimage.png"
+            alt="safety"
+            placeholder="none"
+          />
           <h5 data-aos="fade-down-left">
             SAFETY FIRST BECAUSE INJURY LASTS!!!.
           </h5>
         </div>
-      </section>*/}
+      </section>
 
       <section data-aos="fade-down-left" className="indexSeventhSection">
         {allContentfulGallery.nodes.map((node, index) => {

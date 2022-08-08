@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { Link, graphql } from "gatsby"
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import SEO from "../components/seo"
 import "../styles/index.scss"
@@ -22,9 +23,18 @@ const Hse = ({ data }) => {
     anchor.scrollIntoView({ behavior: "smooth", block: "center" })
   })
 
-  const { allContentfulHomepageHero } = data
+  const {
+    allContentfulHomepageHero,
+    allContentfulGallery,
+    allContentfulHomeServicesSection,
+    allContentfulCertifications,
+    allContentfulClients,
+  } = data
 
   const HomepageHero = allContentfulHomepageHero.nodes
+
+  const certificates = allContentfulCertifications.nodes
+  const clients = allContentfulClients.nodes
 
   return (
     <Layout>
@@ -64,14 +74,19 @@ const Hse = ({ data }) => {
           </h5>
         </div>
         <div className="servicesImages">
-          {servicesData.map((service, index) => (
-            <div key={index} className="service">
-              <img src={service.img} alt="service" />
-              <div className="serviceText">
-                <p>{service.text}</p>
+          {allContentfulHomeServicesSection.nodes.map((service, index) => {
+            const { description, image } = service
+            const banner = getImage(image)
+
+            return (
+              <div key={index} className="service">
+                <GatsbyImage image={banner} alt={service.description} />
+                <div className="serviceText">
+                  <p>{description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         <div className="readMore">
@@ -132,10 +147,11 @@ const Hse = ({ data }) => {
         </article>
         <article className="overlay"></article>
       </section>
+
       <section className="indexFifthSection">
         <h5 className="text-center">Certifications and Licenses</h5>
         <div className="certificates">
-          <CerticateSlide slides={certification} />
+          <CerticateSlide slides={certificates} />
         </div>
       </section>
 
@@ -192,7 +208,11 @@ const Hse = ({ data }) => {
           </div>
         </article>
         <div data-aos="fade-down-left" className="safety__section">
-          <img src={require("../assets/img/safetyimage.png")} alt="safety" />
+          <StaticImage
+            src="../assets/img/safetyimage.png"
+            alt="safety"
+            placeholder="none"
+          />
           <h5 data-aos="fade-down-left">
             SAFETY FIRST BECAUSE INJURY LASTS!!!.
           </h5>
@@ -200,12 +220,20 @@ const Hse = ({ data }) => {
       </section>
 
       <section data-aos="fade-down-left" className="indexSeventhSection">
-        {gallery.map((item, index) => (
-          <div className="gallery__item" key={index}>
-            <img src={item.gallery} alt="gallery" />
-            <div className="overlay"></div>
-          </div>
-        ))}
+        {allContentfulGallery.nodes.map((node, index) => {
+          const image = getImage(node.image)
+
+          return (
+            <div className="gallery__item" key={index}>
+              <GatsbyImage
+                image={image}
+                alt={node.title}
+                imgStyle={{ height: "100%" }}
+              />
+              <div className="overlay"></div>
+            </div>
+          )
+        })}
       </section>
 
       <section className="indexEightSection">
@@ -231,6 +259,58 @@ export const query = graphql`
           description
         }
         heroImage {
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
+    }
+
+    allContentfulGallery {
+      nodes {
+        title
+        image {
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
+    }
+
+    allContentfulHomeServicesSection {
+      nodes {
+        description
+        image {
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
+    }
+
+    allContentfulCertifications {
+      nodes {
+        title
+        image {
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
+      }
+    }
+
+    allContentfulClients {
+      nodes {
+        title
+        image {
           gatsbyImageData(
             layout: FULL_WIDTH
             placeholder: BLURRED
