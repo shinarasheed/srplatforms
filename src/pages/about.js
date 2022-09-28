@@ -10,11 +10,14 @@ import AboutSlide from "../components/slides/about"
 import ManagementSlides from "../components/slides/managementSlides"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const about = ({ data }) => {
   const {
     allContentfulManagementTeam,
     contentfulPartnership,
+    contentfulVisionAndMission,
+    contentfulOurCompany,
     contentfulHeroImages: {
       titleaboutpage,
       descriptionaboutpage,
@@ -22,6 +25,7 @@ const about = ({ data }) => {
     },
   } = data
   const managementTeam = allContentfulManagementTeam.nodes
+  const { companyDescription } = contentfulOurCompany
 
   const { membership1, membership3, partnership2 } = contentfulPartnership
   const partnershipImage = getImage(partnership2)
@@ -50,35 +54,14 @@ const about = ({ data }) => {
       <section id="aboutFirstSection" className="aboutFirstSection">
         <div className="aboutSlide">
           <div className="slides">
-            <AboutSlide />
+            <AboutSlide VisionAndMission={contentfulVisionAndMission} />
           </div>
         </div>
         <div className="text">
           <div>
             <h5 className="text-center">OUR COMPANY</h5>
             <div data-aos="fade-up-left">
-              <p>
-                SR Platforms Ltd is a wholly owned Nigerian Company, engaged in
-                marine and <br /> offshore support services. We are the epitome
-                of professionalism in the provision <br /> of marine vessel
-                services. SR Platforms will help to add value to the upstream{" "}
-                <br /> sector of the oil and gas industry in Nigeria and beyond
-                through ensuring the safe <br />
-                delivery of petroleum products and services ranging from
-                Completions and Sub-Sea <br /> Services to Vessel Chartering
-                services.
-              </p>
-              <p>
-                As we continue the quest of building our own world class fleet
-                of vessels, we offer <br /> a variety of vessels for shallow and
-                deep water operations such as Security Vessels, <br /> Offshore
-                Support Vessels Supply Vessels, Multi-Purpose Construction
-                Vessels, <br /> Anchor Handling Tugs.
-              </p>
-              <p>
-                We also provide manpower services including Naval Architecture,
-                Sea Fastening <br /> Design, Installation and Wreck Removal.
-              </p>
+              <p>{renderRichText(companyDescription)}</p>
             </div>
           </div>
         </div>
@@ -179,6 +162,21 @@ export const query = graphql`
       descriptionaboutpage
       heroImageaboutpage {
         gatsbyImageData(formats: [AUTO, WEBP, AVIF])
+      }
+    }
+
+    contentfulVisionAndMission {
+      vison {
+        raw
+      }
+      mission {
+        raw
+      }
+    }
+
+    contentfulOurCompany {
+      companyDescription {
+        raw
       }
     }
   }

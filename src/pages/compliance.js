@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { convertToBgImage } from "gbimage-bridge"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 import Tab from "../components/Tab"
 import Layout from "../components/layout"
@@ -33,24 +34,24 @@ const Compliance = ({ data }) => {
   return (
     <Layout>
       <SEO title="Complaince" description="Nigerian Marine security company" />
-      {/*<HeroSection csr="true" img={data.compliance.childImageSharp.fluid}>
-        <div className="compliancebanner-title">
-          <h1>COMPLIANCE</h1>
-          <p>
-            SRPLATFORMS is a fully licensed, accredited, insured and registered
-            Nigerian security company; with a
-          </p>
-          <p>successful operational background since 2015</p>
-        </div>
-      </HeroSection>*/}
+      <HeroSection
+        csr="true"
+        img={data.compliance.childImageSharp.fluid}
+      ></HeroSection>
 
       <HeroSection
         className="servicesBanner"
         img={theHeroImage}
         bgImage={bgImage}
       >
-        <h5 data-aos="fade-up-right">{titleCompliance}</h5>
-        <p data-aos="fade-up-right">{descriptionCompliance}</p>
+        <div className="compliancebanner-title">
+          <h5 className="text-center" data-aos="fade-up-right">
+            {titleCompliance}
+          </h5>
+          <p className="text-center" data-aos="fade-up-right">
+            {renderRichText(descriptionCompliance)}
+          </p>
+        </div>
       </HeroSection>
 
       <section className="complianceFirstSection">
@@ -77,11 +78,7 @@ const Compliance = ({ data }) => {
       <section className="complianceSecondSection">
         <article className="compliancetabs">
           {tabs.map((tab, index) => {
-            const {
-              title,
-              banner,
-              description: { description },
-            } = tab
+            const { title, banner, description } = tab
             return (
               <Tab
                 key={index}
@@ -105,7 +102,7 @@ const Compliance = ({ data }) => {
 
             <div className="line"></div>
             <div className="description">
-              <p> {tabs[activeTab].description?.description}</p>
+              <p> {renderRichText(tabs[activeTab]?.description)}</p>
             </div>
           </div>
         </article>
@@ -128,7 +125,9 @@ export const query = graphql`
 
     contentfulHeroImages {
       titleCompliance
-      descriptionCompliance
+      descriptionCompliance {
+        raw
+      }
       heroImageCompliance {
         gatsbyImageData(formats: [AUTO, WEBP, AVIF])
       }
@@ -143,11 +142,11 @@ export const query = graphql`
     allContentfulPolicyStatements {
       nodes {
         title
-        description {
-          description
-        }
         banner {
           gatsbyImageData(formats: [AUTO, WEBP, AVIF])
+        }
+        description {
+          raw
         }
       }
     }

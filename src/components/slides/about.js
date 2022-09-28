@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 export default class AboutSlide extends Component {
   render() {
@@ -14,6 +15,9 @@ export default class AboutSlide extends Component {
       slidesToScroll: 1,
       initialSlide: 1,
     }
+
+    const { vison, mission } = this.props.VisionAndMission
+
     return (
       <div>
         <Slider {...settings}>
@@ -33,14 +37,7 @@ export default class AboutSlide extends Component {
                 marginBottom: "3rem",
               }}
             >
-              To be the leading provider of World <br /> Class Marine/Offshore
-              Support <br /> Services to the Oil and Gas Industry <br /> through
-              innovative ideas
-            </p>
-            <p style={{ padding: "0 3rem", lineHeight: "1.8" }}>
-              Quality services, optimum <br /> utilization of resources with the{" "}
-              <br /> highest standards of business <br /> ethics, loyalty to the
-              law, <br /> corporate governance and <br /> Industry best pratices
+              {renderRichText(vison)}
             </p>
           </div>
           <div data-aos="fade-up-left" className="aboutSlideText">
@@ -48,9 +45,7 @@ export default class AboutSlide extends Component {
               OUR MISSION
             </h5>
             <p style={{ padding: "0 3rem", lineHeight: "1.8" }}>
-              Our mission is to provide work tools for professional service
-              delivery and operational excellence that ensures our client
-              satisfaction and value for our shareholders.
+              {renderRichText(mission)}
             </p>
           </div>
         </Slider>

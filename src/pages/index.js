@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 import SEO from "../components/seo"
 import "../styles/index.scss"
@@ -21,51 +22,52 @@ import {
 const index = ({ data }) => {
   const {
     allContentfulHomepageHero,
+    contentfulHomeServiceDeliverySection,
     allContentfulGallery,
     allContentfulHomeServicesSection,
     allContentfulCertifications,
     allContentfulClients,
+    contentfulSheqPolicy,
+    contentfulServicesSectionDescription,
   } = data
 
   const certificates = allContentfulCertifications.nodes
   const clients = allContentfulClients.nodes
 
+  const { policydescription1, policydescription2, shqImage } =
+    contentfulSheqPolicy
+
+  const { title, title2, banner, description } =
+    contentfulHomeServiceDeliverySection
+
   const HomepageHero = allContentfulHomepageHero.nodes
+
+  const serviceDeliveryImage = getImage(banner)
+  const ShqImage = getImage(shqImage)
+  const { description: servicesDescription } =
+    contentfulServicesSectionDescription
+
   return (
     <Layout>
       <SEO title="Home" description=" Efficiency Through Service Delivery" />
       <IndexHero HomepageHero={HomepageHero} />
       <section className="indexSecondSection">
         <article>
-          <h5>
-            Efficiency Through <br /> Service Delivery
-          </h5>
+          <h5>{title}</h5>
+          <h5>{title2}</h5>
           <p data-aos="fade-up" data-aos-duration="500">
-            SR Platforms Ltd is a wholly owned Nigerian Company, engaged in
-            marine and offshore support services.
-          </p>
-          <p data-aos="fade-up" data-aos-duration="500">
-            We are the epitome of professionalism in the provision of marine
-            vessel services.
-          </p>
-          <p data-aos="fade-up" data-aos-duration="500">
-            SR Platforms helps to add value to the upstream sector of the oil
-            and gas industry in Nigeria and beyond..
+            {renderRichText(description)}
           </p>
 
           <Link to="/about">Read More</Link>
         </article>
         <article>
-          <img src={serviceImg} alt="service" />
+          <GatsbyImage image={serviceDeliveryImage} alt="service delivery " />
         </article>
       </section>
       <section className="indexThirdSection">
         <div className="title">
-          <h5 data-aos="fade-down">
-            Foremost Indigenous Company with Expertise in Marine/Offshore
-            Support Services to the oil & Gas Industry Using Innovative service
-            Delivery
-          </h5>
+          <h5 data-aos="fade-down">{renderRichText(servicesDescription)}</h5>
         </div>
         <div className="servicesImages">
           {allContentfulHomeServicesSection.nodes.map((service, index) => {
@@ -153,57 +155,14 @@ const index = ({ data }) => {
         </div>
         <article data-aos="fade-down-left" className="safety__policy">
           <div className="safety__policy-text">
-            <p>
-              Our Safety, Health, Environment and Quality (SHE-Q) culture aims
-              for an incident-free working environment because safety management
-              is a priority to us.
-            </p>
-            <p>
-              We conduct a continuous review, internal audit and development of
-              our SHE-Q policies and procedures to ensure that the highest
-              standards are met at all times.
-            </p>
-            <p>
-              We have implemented several in-house safety policies in line with
-              our Safety Management Systems which includes; our safety policy,
-              security policy, alcohol and drug policy to mention a few.
-            </p>
-            <p>
-              Our seasoned in-house safety officers/managers have increased the
-              safety awareness and inculcated a safety culture in all staff and
-              contractors of SR PLATFORMS LIMITED.
-            </p>
+            <p>{renderRichText(policydescription1)}</p>
           </div>
           <div className="safety__policy-text">
-            <p>
-              Our safety leadership campaigns are based on sound safety values
-              and rules designed to make people aware of their own
-              responsibilities regarding safety.
-            </p>
-            <p>
-              We encourage them to take action if operations appear unsafe and
-              to approach others if they feel at risk.
-            </p>
-            <p>
-              Health and safety risks differ from project to project and from
-              location to location, so it is essential to have the right tools
-              at hand to assess them, take appropriate measures and communicate
-              the solutions to all involved.
-            </p>
-            <p>
-              Our Management Systems set clear standards that emphasize exactly
-              what we expect from our Team with regard to safety, health,
-              consideration for the environment and the quality of what we
-              deliver as a team.
-            </p>
+            <p>{renderRichText(policydescription2)}</p>
           </div>
         </article>
         <div data-aos="fade-down-left" className="safety__section">
-          <StaticImage
-            src="../assets/img/safetyimage.png"
-            alt="safety"
-            placeholder="none"
-          />
+          <GatsbyImage image={ShqImage} alt="shqimage" />
           <h5 data-aos="fade-down-left">
             SAFETY FIRST BECAUSE INJURY LASTS!!!.
           </h5>
@@ -259,6 +218,29 @@ export const query = graphql`
       }
     }
 
+    contentfulSheqPolicy {
+      policydescription1 {
+        raw
+      }
+      policydescription2 {
+        raw
+      }
+      shqImage {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+
+    contentfulHomeServiceDeliverySection {
+      description {
+        raw
+      }
+      title
+      title2
+      banner {
+        gatsbyImageData(layout: FIXED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+
     allContentfulGallery {
       nodes {
         title
@@ -308,6 +290,12 @@ export const query = graphql`
             formats: [AUTO, WEBP, AVIF]
           )
         }
+      }
+    }
+
+    contentfulServicesSectionDescription {
+      description {
+        raw
       }
     }
   }

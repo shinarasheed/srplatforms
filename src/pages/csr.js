@@ -9,15 +9,23 @@ import Layout from "../components/layout"
 import { StyledCsr } from "../components/Globals/styledComponents"
 //import HeroSection from "../components/Globals/MainHero"
 import HeroSection from "../components/Globals/OtherHero"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const csr = ({ data }) => {
-  const { contentfulHeroImages, allContentfulCompanyCsr } = data
+  const {
+    contentfulHeroImages,
+    allContentfulCompanyCsr,
+    contentfulCsrobjective,
+  } = data
   const { titlecsr, descriptioncsr, heroImagecsr } = contentfulHeroImages
 
   const theHeroImage = getImage(heroImagecsr)
   const bgImage = convertToBgImage(theHeroImage)
 
   const CompanyCsr = allContentfulCompanyCsr.nodes
+
+  const { objectiveTitle, objectiveDescription, objectiveBody } =
+    contentfulCsrobjective
 
   return (
     <Layout>
@@ -45,26 +53,9 @@ const csr = ({ data }) => {
         <p data-aos="fade-up-right">{descriptioncsr}</p>
       </HeroSection>
       <section className="csrFirstSection">
-        <h5>Our Objective</h5>
-        <h5>
-          SR PLATFORMS delivers its Corporate Social Responsibility <br /> (CSR)
-          objectives in line with global best practices.
-        </h5>
-        <p>
-          The Corporation therefore, guided by social, environmental and safety
-          standards as obtained <br /> in the Oil and Gas industry, operates
-          safely and deals ethically with all our stakeholders.
-        </p>
-        <p>
-          Our Corporate Social Responsibility (CSR) objectives are hinged on
-          improving the overall <br /> well-being of our stakeholders and
-          members of the host communities, through the <br /> provision of
-          sustainable projects and programmes in all spheres of life namely;
-          Health, <br /> Education, Economic Empowerment, Sports/Culture and
-          Charitable/Professional <br />
-          donations. We also engage in CSR activites to support the development
-          of the local <br /> economies in all our areas of operation.
-        </p>
+        <h5>{objectiveTitle}</h5>
+        <h5>{renderRichText(objectiveDescription)}</h5>
+        <p>{renderRichText(objectiveBody)}</p>
       </section>
 
       <section>
@@ -140,6 +131,16 @@ export const query = graphql`
         banner {
           gatsbyImageData(formats: [AUTO, WEBP, AVIF])
         }
+      }
+    }
+
+    contentfulCsrobjective {
+      objectiveTitle
+      objectiveDescription {
+        raw
+      }
+      objectiveBody {
+        raw
       }
     }
   }
