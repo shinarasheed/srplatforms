@@ -1,5 +1,6 @@
 {
   "name": "srplatformswebsite",
+  "engines": { "node": ">=14.x" },
   "private": true,
   "description": "A website for srplatforms",
   "version": "0.1.0",
