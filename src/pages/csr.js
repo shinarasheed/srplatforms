@@ -49,8 +49,8 @@ const csr = ({ data }) => {
         img={theHeroImage}
         bgImage={bgImage}
       >
-        <h5 data-aos="fade-up-right">{titlecsr}</h5>
-        <p data-aos="fade-up-right">{descriptioncsr}</p>
+        <h5 data-aos="fade-up-right">{renderRichText(titlecsr)}</h5>
+        <p data-aos="fade-up-right">{renderRichText(descriptioncsr)}</p>
       </HeroSection>
       <section className="csrFirstSection">
         <h5>{objectiveTitle}</h5>
@@ -109,8 +109,12 @@ export const query = graphql`
     }
 
     contentfulHeroImages {
-      titlecsr
-      descriptioncsr
+      titlecsr {
+        raw
+      }
+      descriptioncsr {
+        raw
+      }
       heroImagecsr {
         gatsbyImageData(formats: [AUTO, WEBP, AVIF])
       }

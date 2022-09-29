@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -14,21 +15,28 @@ import { convertToBgImage } from "gbimage-bridge"
 const services = ({ data }) => {
   const {
     contentfulHeroImages: {
-      titleservicepage,
-      descriptionservicepage,
+      titleServicePage,
+      descriptionServicepage,
       heroImageservice,
     },
     allContentfulServiceOffers,
     contentfulServiceBanner: { image: serviceBanner },
     allContentfulOtherServices,
+    contentfulProjections,
+    allContentfulMarineAssets,
+    allContentfulMarineVessels,
   } = data
 
   const servicePageBanner = getImage(serviceBanner)
 
   const otherServices = allContentfulOtherServices.nodes
+  const marineAssets = allContentfulMarineAssets.nodes
+  const marineVessels = allContentfulMarineVessels.nodes
 
   const theHeroImage = getImage(heroImageservice)
   const bgImage = convertToBgImage(theHeroImage)
+
+  const { projection1, projection2, projection3 } = contentfulProjections
 
   return (
     <Layout>
@@ -38,8 +46,8 @@ const services = ({ data }) => {
         img={theHeroImage}
         bgImage={bgImage}
       >
-        <h5 data-aos="fade-up-right">{titleservicepage}</h5>
-        <p data-aos="fade-up-right">{descriptionservicepage}</p>
+        <h5 data-aos="fade-up-right">{renderRichText(titleServicePage)}</h5>
+        <p data-aos="fade-up-right">{renderRichText(descriptionServicepage)}</p>
       </HeroSection>
 
       <section className="servicesSecondSection">
@@ -96,56 +104,31 @@ const services = ({ data }) => {
             </div>
             <div className="right">
               <div className="upperRight">
-                <div data-aos="fade-right">
-                  <h5>MT SR Trader</h5>
-                  <p>
-                    SR PLATFORMS acquired her first vessel, Bunkerine Vessel (MT
-                    SR Trader) a bunkers self-propelled barge in February 2007{" "}
-                    for bunkering operations.
-                  </p>
-                </div>
-                <div>
-                  <h5 data-aos="fade-right">Marine Assets</h5>
-                  <p>
-                    We also have several third party charters of <br /> various
-                    marine assets under our operations.
-                  </p>
-                </div>
-                <div data-aos="fade-left">
-                  <h5>MT Royal Priesthood</h5>
-                  <p>
-                    MT ROYAL PRIESTHOOD a 12,450DWT tanker vessel <br /> was
-                    procured in November 2007. It was used for <br /> coastal
-                    operations.
-                  </p>
-                </div>
-                <div data-aos="fade-left">
-                  <h5>MV Mediator</h5>
-                  <p>
-                    In 2015, SR PLATFORMS took delivery of MV <br /> MEDIATOR, a
-                    DAMEN FCS 3307 security vessel <br /> built from keel.
-                  </p>
-                </div>
+                {marineAssets.map(asset => {
+                  const { title, assetDescription } = asset
+                  return (
+                    <div data-aos="fade-right">
+                      <h5>{title}</h5>
+                      <p>{renderRichText(assetDescription)}</p>
+                    </div>
+                  )
+                })}
               </div>
               <div className="downRight">
                 <p>In 2019, SR PLATFORMS added to her fleet;</p>
                 <div className="vessels">
-                  <div data-aos="fade-left">
-                    <h5>Mediator II</h5>
-                    <h6>A DAMEN FCS 3307 security vessel built from keel.</h6>
-                  </div>
-                  <div data-aos="fade-left">
-                    <h5>Mediator IV</h5>
-                    <h6>A DAMEN FCS 4008 security vessel.</h6>
-                  </div>
-                  <div data-aos="fade-left">
-                    <h5>Mediator III</h5>
-                    <h6>A DAMEN FCS 4008 security vessel.</h6>
-                  </div>
-                  <div data-aos="fade-left">
-                    <h5>Mediator V and Mediator VI</h5>
-                    <h6>New Addition</h6>
-                  </div>
+                  {marineVessels.map(vessel => {
+                    const {
+                      vesselTitle,
+                      vesselDescription: { vesselDescription },
+                    } = vessel
+                    return (
+                      <div data-aos="fade-left">
+                        <h5>{vesselTitle}</h5>
+                        <h6>{vesselDescription}</h6>
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -167,26 +150,15 @@ const services = ({ data }) => {
           <div className="overlay"></div>
           <div className="textContent">
             <div className="leftContent">
-              <h6 data-aos="fade-left">
-                To own a world class dry-dock facility <br /> for ship repair ,
-                maintenance and <br /> spares fabrication in Nigeria.
-              </h6>
+              <h6 data-aos="fade-left">{renderRichText(projection1)}</h6>
             </div>
 
             <div className="middleContent">
-              <h6 data-aos="fade-left">
-                To build our own world class fleet of <br /> Vessels comprising
-                of Support vessels & <br /> Supply Vessels, Multi purpose
-                vessels and <br /> Main Installation vessels.
-              </h6>
+              <h6 data-aos="fade-left">{renderRichText(projection1)}</h6>
             </div>
 
             <div className="rightContent">
-              <h6 data-aos="fade-left">
-                To enable true local content development <br /> in the Nigerian
-                oil and Gas Sector, through <br /> technology transfer, training
-                and tutelage.
-              </h6>
+              <h6 data-aos="fade-left">{renderRichText(projection3)}</h6>
             </div>
           </div>
         </div>
@@ -216,8 +188,12 @@ export const query = graphql`
     }
 
     contentfulHeroImages {
-      titleservicepage
-      descriptionservicepage
+      titleServicePage {
+        raw
+      }
+      descriptionServicepage {
+        raw
+      }
       heroImageservice {
         gatsbyImageData(formats: [AUTO, WEBP, AVIF])
       }
@@ -250,6 +226,36 @@ export const query = graphql`
         description
         banner {
           gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+        }
+      }
+    }
+
+    contentfulProjections {
+      projection1 {
+        raw
+      }
+      projection2 {
+        raw
+      }
+      projection3 {
+        raw
+      }
+    }
+
+    allContentfulMarineAssets {
+      nodes {
+        title
+        assetDescription {
+          raw
+        }
+      }
+    }
+
+    allContentfulMarineVessels {
+      nodes {
+        vesselTitle
+        vesselDescription {
+          vesselDescription
         }
       }
     }

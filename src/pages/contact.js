@@ -9,10 +9,11 @@ import { FiClock } from "react-icons/fi"
 import { graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 const contact = ({ data }) => {
   const { contentfulHeroImages } = data
-  const { heroImageContact } = contentfulHeroImages
+  const { heroImageContact, descriptionContact } = contentfulHeroImages
 
   const theHeroImage = getImage(heroImageContact)
   const bgImage = convertToBgImage(theHeroImage)
@@ -35,13 +36,7 @@ const contact = ({ data }) => {
             <span className="ml-2">inTouch</span>
           </div>
           <div className="text">
-            <p>
-              You can contact us any way that is convenient for you. We are
-              available 24/7 via fax or email. You can also use a quick contact
-              form below or visit our office personally. Email us with any
-              questions or inquires or use our contact data. We would be happy
-              to answer your questions.
-            </p>
+            <p>{renderRichText(descriptionContact)}</p>
           </div>
         </section>
 
@@ -168,6 +163,9 @@ export default contact
 export const query = graphql`
   {
     contentfulHeroImages {
+      descriptionContact {
+        raw
+      }
       heroImageContact {
         gatsbyImageData(formats: [AUTO, WEBP, AVIF])
       }

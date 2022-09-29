@@ -20,7 +20,7 @@ const about = ({ data }) => {
     contentfulOurCompany,
     contentfulHeroImages: {
       titleaboutpage,
-      descriptionaboutpage,
+      descriptionAboutPage,
       heroImageaboutpage,
     },
   } = data
@@ -49,7 +49,7 @@ const about = ({ data }) => {
         bgImage={bgImage}
       >
         <h5 data-aos="fade-up-right">{titleaboutpage}</h5>
-        <p data-aos="fade-up-right">{descriptionaboutpage}</p>
+        <p data-aos="fade-up-right">{renderRichText(descriptionAboutPage)}</p>
       </HeroSection>
       <section id="aboutFirstSection" className="aboutFirstSection">
         <div className="aboutSlide">
@@ -159,7 +159,9 @@ export const query = graphql`
 
     contentfulHeroImages {
       titleaboutpage
-      descriptionaboutpage
+      descriptionAboutPage {
+        raw
+      }
       heroImageaboutpage {
         gatsbyImageData(formats: [AUTO, WEBP, AVIF])
       }

@@ -204,9 +204,11 @@ export const query = graphql`
   {
     allContentfulHomepageHero {
       nodes {
-        title
-        description {
-          description
+        heroDesciption1 {
+          raw
+        }
+        heroTitle {
+          raw
         }
         heroImage {
           gatsbyImageData(
