@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Img from "gatsby-image"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 import HeroSection from "../components/Globals/MainHero"
 import SEO from "../components/seo"
@@ -41,28 +42,7 @@ const security = ({ data }) => {
         title="Marine Security"
         description="Innovative Armed Escort Services in Nigeria"
       />
-      <HeroSection home className="securitybanner" img={bgImage}>
-        <div className="securitybannerText">
-          <div>
-            <img
-              className="w-100"
-              src={require("../assets/img/wheel.png")}
-              alt="wheel"
-            />
-          </div>
-          <div className="text">
-            <p>Innovative</p>
-            <h5>
-              Armed Escort Services in <br /> Nigeria
-            </h5>
-            <p>
-              SR Platforms Ltd is one of the leading <br /> private security
-              companies providing high <br /> standard and privately contracted{" "}
-              <br /> security services.
-            </p>
-          </div>
-        </div>
-      </HeroSection>
+      <HeroSection home className="securitybanner" img={bgImage}></HeroSection>
 
       <section className="securityFirstSection">
         <div className="title">
@@ -120,7 +100,13 @@ const security = ({ data }) => {
             const banner = getImage(image)
             return (
               <div className="service" key={index}>
-                <GatsbyImage image={banner} alt={description} />
+                <GatsbyImage
+                  style={{
+                    width: "100%",
+                  }}
+                  image={banner}
+                  alt={description}
+                />
                 <div className="serviceText">
                   <p className="text">{description}</p>
                 </div>
@@ -130,22 +116,48 @@ const security = ({ data }) => {
         </div>
       </section>
 
-      <section className="securityFourthSection">
+      {/*<section className="securityFourthSection">
         <div className="stats">
           <div data-aos="fade-right" data-aos-duration="1000">
             {statistics.map((stat, index) => {
               const { description, number, progress } = stat
               const image = getImage(progress)
               return (
-                <div key={index} className="stat">
-                  <GatsbyImage image={image} alt={description} />
-                  <div>
-                    <span>{number}</span>
+                <>
+                  <div key={index} className="stat">
+                    <GatsbyImage image={image} alt={description} />
+                    <div>
+                      <span>{number}</span>
+                    </div>
+                    <p>hello</p>
                   </div>
-                  <p>{description}</p>
-                </div>
+                </>
               )
             })}
+          </div>
+        </div>
+        <div className="statsImg">
+          <Img className="statimg" fluid={data.crewImg.childImageSharp.fluid} />
+        </div>
+      </section>*/}
+
+      <section className="securityFourthSection">
+        <div className="stats">
+          <div data-aos="fade-right" data-aos-duration="1000">
+            {statistics.map((stat, index) => (
+              <div key={index} className="stat">
+                {/*<img src={stat.img} alt="statistics" />*/}
+                <GatsbyImage
+                  image={getImage(stat.progress)}
+                  alt={description}
+                />
+
+                <div>
+                  <span>{stat.number}</span>
+                </div>
+                <p>{stat.description}</p>
+              </div>
+            ))}
           </div>
         </div>
         <div className="statsImg">
@@ -194,12 +206,7 @@ const security = ({ data }) => {
         </div>
         <div className="testimonials">
           {testimonies.map((item, index) => {
-            const {
-              testimony: { testimony },
-              company,
-              personel,
-              banner,
-            } = item
+            const { testimony, company, personel, banner } = item
             const image = getImage(banner)
             return (
               <>
@@ -208,7 +215,9 @@ const security = ({ data }) => {
                 </div>
                 <div className="testimonial">
                   <div data-aos="fade-left" data-aos-duration="1000">
-                    <h6 className="testimonialText">{testimony}</h6>
+                    <h6 className="testimonialText">
+                      {renderRichText(testimony)}
+                    </h6>
                     <p className="name">{personel}</p>
                     <h6 className="client">{company}</h6>
                   </div>
@@ -296,7 +305,7 @@ export const query = graphql`
     allContentfulTestimonies {
       nodes {
         testimony {
-          testimony
+          raw
         }
         company
         personel

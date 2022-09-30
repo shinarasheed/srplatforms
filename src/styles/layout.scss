@@ -9,6 +9,7 @@
 .service {
   position: relative;
   cursor: pointer;
+  width: 100%;
 
   &:hover .serviceText {
     top: 0;

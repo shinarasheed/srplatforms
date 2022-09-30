@@ -73,7 +73,13 @@ export default class OtherServiceSlide extends Component {
                 key={index}
                 className="service"
               >
-                <GatsbyImage image={image} alt={description} />
+                <GatsbyImage
+                  style={{
+                    width: "100%",
+                  }}
+                  image={image}
+                  alt={description}
+                />
                 <div style={{ border: "none" }} className="serviceText">
                   <p>{description}</p>
                 </div>
