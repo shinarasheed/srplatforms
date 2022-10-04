@@ -133,7 +133,7 @@ export const query = graphql`
           description3
         }
         banner {
-          gatsbyImageData(formats: [AUTO, WEBP, AVIF])
+          gatsbyImageData(formats: [AUTO, WEBP, AVIF], layout: FULL_WIDTH)
         }
       }
     }

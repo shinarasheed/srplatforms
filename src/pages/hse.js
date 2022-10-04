@@ -301,7 +301,7 @@ export const query = graphql`
         title
         image {
           gatsbyImageData(
-            layout: FULL_WIDTH
+            layout: CONSTRAINED
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
           )
@@ -314,7 +314,7 @@ export const query = graphql`
         title
         image {
           gatsbyImageData(
-            layout: FULL_WIDTH
+            layout: CONSTRAINED
             placeholder: BLURRED
             formats: [AUTO, WEBP, AVIF]
           )
