@@ -42,7 +42,28 @@ const security = ({ data }) => {
         title="Marine Security"
         description="Innovative Armed Escort Services in Nigeria"
       />
-      <HeroSection home className="securitybanner" img={bgImage}></HeroSection>
+      <HeroSection home className="securitybanner" img={bgImage}>
+        {/*<div className="securitybannerText">
+          <div>
+            <img
+              className="w-100"
+              src={require("../assets/img/wheel.png")}
+              alt="wheel"
+            />
+          </div>
+          <div className="text">
+            <p>Innovative</p>
+            <h5>
+              Armed Escort Services in <br /> Nigeria
+            </h5>
+            <p>
+              SR Platforms Ltd is one of the leading <br /> private security
+              companies providing high <br /> standard and privately contracted{" "}
+              <br /> security services.
+            </p>
+          </div>
+        </div>*/}
+      </HeroSection>
 
       <section className="securityFirstSection">
         <div className="title">
@@ -146,15 +167,14 @@ const security = ({ data }) => {
           <div data-aos="fade-right" data-aos-duration="1000">
             {statistics.map((stat, index) => (
               <div key={index} className="stat">
-                {/*<img src={stat.img} alt="statistics" />*/}
-                <GatsbyImage
-                  image={getImage(stat.progress)}
-                  alt={description}
-                />
-
-                <div>
+                <div className="image-wrapper">
+                  <GatsbyImage
+                    image={getImage(stat.progress)}
+                    alt={description}
+                  />
                   <span>{stat.number}</span>
                 </div>
+
                 <p>{stat.description}</p>
               </div>
             ))}
@@ -164,6 +184,7 @@ const security = ({ data }) => {
           <Img className="statimg" fluid={data.crewImg.childImageSharp.fluid} />
         </div>
       </section>
+
       <section className="securityFifthSection">
         <div className="title">
           <h5>WHY WORK WITH SRPLATFORMS</h5>

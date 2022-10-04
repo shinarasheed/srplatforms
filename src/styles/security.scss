@@ -257,22 +257,26 @@
 }
 
 .securityFourthSection .stat {
-  position: relative;
-  width: 174px;
-  height: 174px;
+  //  position: relative;
+  //  width: 174px;
+  //  height: 174px;
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
   align-items: center;
 
-  & > div {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    width: 174px;
-    height: 174px;
+  //  & > div {
+  //    position: absolute;
+  //    display: flex;
+  //    justify-content: center;
+  //    align-items: center;
+  //    border-radius: 50%;
+  //    width: 174px;
+  //    height: 174px;
+  //  }
+
+  & .image-wrapper {
+    position: relative;
   }
 
   span {
