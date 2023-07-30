@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import SEO from "../components/seo"
+import SeoComponent from "../components/seo"
 import "../styles/index.scss"
 import Layout from "../components/layout"
 import IndexHero from "../components/Home/Hero"
@@ -14,12 +14,17 @@ import {
   certification,
   clients,
   gallery,
+  gallery_new,
 } from "../data/index"
+import SafetyImage from "../assets/img/safetyimage.png"
 
 const index = () => {
   return (
     <Layout>
-      <SEO title="Home" description=" Efficiency Through Service Delivery" />
+      <SeoComponent
+        title="Home"
+        description=" Efficiency Through Service Delivery"
+      />
       <IndexHero />
       <section className="indexSecondSection">
         <article>
@@ -70,6 +75,7 @@ const index = () => {
           </Link>
         </div>
       </section>
+
       <section className="indexFourthSection">
         <article className="description">
           <div className="nicheServices">
@@ -127,6 +133,19 @@ const index = () => {
         </div>
       </section>
 
+      {/* events  */}
+
+      <div>
+        <h5 className="eventsCta">Recent Events</h5>
+        <section data-aos="fade-down-left" className="indexEventsSection">
+          {gallery_new.map((item, index) => (
+            <div className="gallery__item" key={index}>
+              <img src={item.gallery} alt="gallery" />
+              <div className="overlay"></div>
+            </div>
+          ))}
+        </section>
+      </div>
       <section className="indexSixthSection">
         <div data-aos="fade-down-left">
           <h4 className="text-center">SAFETY</h4>
@@ -180,7 +199,7 @@ const index = () => {
           </div>
         </article>
         <div data-aos="fade-down-left" className="safety__section">
-          <img src={require("../assets/img/safetyimage.png")} alt="safety" />
+          <img src={SafetyImage} alt="safety" />
           <h5 data-aos="fade-down-left">
             SAFETY FIRST BECAUSE INJURY LASTS!!!.
           </h5>

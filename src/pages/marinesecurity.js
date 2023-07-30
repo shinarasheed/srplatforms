@@ -7,6 +7,9 @@ import HeroSection from "../components/Globals/MainHero"
 import SEO from "../components/seo"
 import "../styles/security.scss"
 import { mainService, stats } from "../data/index"
+import Wheel from "../assets/img/wheel.png"
+import LSG from "../assets/img/lgs.jpeg"
+import Accreditation from "../assets/img/accreditation1.png"
 
 const security = ({ data }) => {
   return (
@@ -22,11 +25,7 @@ const security = ({ data }) => {
       >
         <div className="securitybannerText">
           <div>
-            <img
-              className="w-100"
-              src={require("../assets/img/wheel.png")}
-              alt="wheel"
-            />
+            <img className="w-100" src={Wheel} alt="wheel" />
           </div>
           <div className="text">
             <p>Innovative</p>
@@ -167,7 +166,7 @@ const security = ({ data }) => {
         </div>
         <div className="testimonials">
           <div className="testimonialImg">
-            <img src={require("../assets/img/lgs.jpeg")} alt="testimonial" />
+            <img src={LSG} alt="testimonial" />
           </div>
           <div className="testimonial">
             <div data-aos="fade-left" data-aos-duration="1000">
@@ -186,10 +185,7 @@ const security = ({ data }) => {
       <section className="securitySeventhSection">
         <div className="partnership">
           <h5 className="title">Partnership</h5>
-          <img
-            src={require("../assets/img/accreditation1.png")}
-            alt="accrediation"
-          />
+          <img src={Accreditation} alt="accrediation" />
         </div>
       </section>
     </Layout>

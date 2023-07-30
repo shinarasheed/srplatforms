@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Tab from "../components/Tab"
 import Layout from "../components/layout"
 import HeroSection from "../components/Globals/MainHero"
-import SEO from "../components/seo"
+import SeoComponent from "../components/seo"
 
 import tabs from "../data/tab"
 import "../styles/complaince.scss"
@@ -13,7 +13,10 @@ const Compliance = ({ data }) => {
   const [activeTab, setActiveTab] = useState(0)
   return (
     <Layout>
-      <SEO title="Complaince" description="Nigerian Marine security company" />
+      <SeoComponent
+        title="Complaince"
+        description="Nigerian Marine security company"
+      />
       <HeroSection csr="true" img={data.compliance.childImageSharp.fluid}>
         <div className="compliancebanner-title">
           <h1>COMPLIANCE</h1>

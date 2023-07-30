@@ -6,7 +6,7 @@
   left: -7rem;
   animation: slideInFromLeft 0.8s ease-in;
 
-  @media screen and(max-width:1024px) {
+  @media screen and (max-width: 1024px) {
     bottom: 11rem;
     left: -12rem;
   }
@@ -21,10 +21,10 @@
   left: -7rem;
   top: 11rem;
 
-  @media screen and(max-width:1024px) {
+  @media screen and (max-width: 1024px) {
     // left: -12rem;
   }
-  @media screen and(max-width:425px) {
+  @media screen and (max-width: 425px) {
     // left: -12rem;
   }
 }
@@ -39,7 +39,7 @@
   align-items: center;
   flex-direction: column;
 
-  @media screen and(max-width:425px) {
+  @media screen and (max-width: 425px) {
     top: 75px;
   }
 
@@ -51,7 +51,7 @@
     margin-bottom: 1rem;
     font-size: 4rem;
     font-weight: 600;
-    @media screen and(max-width:768px) {
+    @media screen and (max-width: 768px) {
       font-size: 3rem;
       margin-bottom: 0;
       margin-top: 4rem;
@@ -63,7 +63,7 @@
     margin-bottom: 15px;
     font-size: 1.4rem;
     text-align: center;
-    @media screen and(max-width:768px) {
+    @media screen and (max-width: 768px) {
       font-size: 1.2rem;
     }
   }
@@ -74,11 +74,11 @@
     font-weight: bolder;
     line-height: 1.4;
 
-    @media screen and(max-width:768px) {
+    @media screen and (max-width: 768px) {
       text-align: center;
     }
 
-    @media screen and(max-width:425px) {
+    @media screen and (max-width: 425px) {
       font-size: 1.5rem;
     }
   }
@@ -103,7 +103,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding-left: 145px;
-  @media screen and(max-width:425px) {
+  @media screen and (max-width: 425px) {
     top: 0 !important;
     padding-top: 10px;
     padding-left: 20px !important;
@@ -113,7 +113,7 @@
     font-size: 2.5rem;
     font-weight: 800;
 
-    @media screen and(max-width:425px) {
+    @media screen and (max-width: 425px) {
       font-size: 1.5rem;
       margin-bottom: 0;
     }
@@ -123,7 +123,7 @@
     font-size: 1.5rem;
     font-weight: 400;
 
-    @media screen and(max-width:425px) {
+    @media screen and (max-width: 425px) {
       font-size: 1rem;
     }
   }
@@ -140,7 +140,7 @@
     padding: 2rem;
     animation: slideInFromLeft 0.8s ease-in;
 
-    @media screen and(max-width:425px) {
+    @media screen and (max-width: 425px) {
       padding: 1rem;
     }
   }

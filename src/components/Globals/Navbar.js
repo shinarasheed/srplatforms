@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa"
 
 import "../../styles/navbar.scss"
 import logo from "../../assets/img/SRLogocroped.png"
+import newsLetter from "../../assets/img/srplatformsNewsletter.pdf"
 
 const Navbar = ({ toggle }) => {
   return (

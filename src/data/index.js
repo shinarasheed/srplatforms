@@ -57,6 +57,15 @@ import gallery5 from "../assets/img/ga5.jpg"
 import gallery7 from "../assets/img/ga6.jpg"
 import gallery8 from "../assets/img/ga7.jpg"
 
+import event1 from "../assets/img/srp17.jpeg"
+import event2 from "../assets/img/srp15.jpeg"
+import event3 from "../assets/img/srp3.jpeg"
+import event4 from "../assets/img/srp4.jpeg"
+import event5 from "../assets/img/srp5.jpeg"
+import event6 from "../assets/img/srp6.jpeg"
+import event7 from "../assets/img/srp7.jpeg"
+import event8 from "../assets/img/srp9.jpeg"
+
 // about values
 
 import value1 from "../assets/img/int &ACCNT.png"
@@ -302,13 +311,11 @@ export const valuesData2 = [
 export const offers = [
   {
     img: offer1,
-    text:
-      "With Specialized Security patrol Vessels we provide uninterrupted services with great precision and expertise. This area is one of our core- expertise as majority of the vessels in our Fleet constitutes Fast Support Intervention Vessel (FSIV) . We have been able to innovate and develop ways to effectively deploy , monitor and manage this range of vessels .",
+    text: "With Specialized Security patrol Vessels we provide uninterrupted services with great precision and expertise. This area is one of our core- expertise as majority of the vessels in our Fleet constitutes Fast Support Intervention Vessel (FSIV) . We have been able to innovate and develop ways to effectively deploy , monitor and manage this range of vessels .",
   },
   {
     img: offer2,
-    text:
-      "A fast, efficient crew transfer vessel that acts as cost efficient alternative to aviation transport advances the modern offshore support vessel model and offers a more cost efficient, comfortable, flexible, and safe option to helicopter transportation. Or Crew Boats' passenger lounge features spacious reclining seating in privacy pods (similar to first class airlines) along with full internet connectivity, a well-equipped snack bar area and feature LED lighting.",
+    text: "A fast, efficient crew transfer vessel that acts as cost efficient alternative to aviation transport advances the modern offshore support vessel model and offers a more cost efficient, comfortable, flexible, and safe option to helicopter transportation. Or Crew Boats' passenger lounge features spacious reclining seating in privacy pods (similar to first class airlines) along with full internet connectivity, a well-equipped snack bar area and feature LED lighting.",
   },
   {
     img: offer3,
@@ -316,18 +323,15 @@ export const offers = [
   },
   {
     img: offer4,
-    text:
-      "Our Selection of PSVs provides great opportunity for a stable and long term charter. Regular supply functions and cargo transport for the oil industry with stand-by functions. Well deck for maximum protection of cargo and crew. Our Capacity include mid-sized and large-sized PSVs. Experiencing a complete indulgence with the harmonising design and saving in fuel consumption from the Diesel Electric to the Diesel new built engines.",
+    text: "Our Selection of PSVs provides great opportunity for a stable and long term charter. Regular supply functions and cargo transport for the oil industry with stand-by functions. Well deck for maximum protection of cargo and crew. Our Capacity include mid-sized and large-sized PSVs. Experiencing a complete indulgence with the harmonising design and saving in fuel consumption from the Diesel Electric to the Diesel new built engines.",
   },
   {
     img: offer5,
-    text:
-      "We do various supply of Petroleum products to both coastal and deep offshore platforms. Our competent technical team have successfully conducted different supplies to several offshore/onshore locations.",
+    text: "We do various supply of Petroleum products to both coastal and deep offshore platforms. Our competent technical team have successfully conducted different supplies to several offshore/onshore locations.",
   },
   {
     img: offer6,
-    text:
-      "We offer our clients not only a complete range of AHTS in terms of Bollard Pull tonnage and design, but we also offer Anchor Handling and Towing System solution. Each component in the AHTS system is optimally designed and ,matched, throughout the conception of the project and the installation, commissioning and even making sure of the system reliability and durability during its life span.",
+    text: "We offer our clients not only a complete range of AHTS in terms of Bollard Pull tonnage and design, but we also offer Anchor Handling and Towing System solution. Each component in the AHTS system is optimally designed and ,matched, throughout the conception of the project and the installation, commissioning and even making sure of the system reliability and durability during its life span.",
   },
 ]
 
@@ -394,5 +398,33 @@ export const otherService = [
   {
     img: otherservice5,
     text: "Technical Manpower Services",
+  },
+]
+
+export const gallery_new = [
+  {
+    gallery: event1,
+  },
+  {
+    gallery: event2,
+  },
+  {
+    gallery: event3,
+  },
+  {
+    gallery: event4,
+  },
+  {
+    gallery: event5,
+  },
+  {
+    gallery: event6,
+  },
+
+  {
+    gallery: event7,
+  },
+  {
+    gallery: event8,
   },
 ]

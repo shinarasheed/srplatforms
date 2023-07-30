@@ -1,18 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import SEO from "../components/seo"
+import SeoComponent from "../components/seo"
 import Layout from "../components/layout"
 import "../styles/about.scss"
 import { valuesData, valuesData2 } from "../data/index"
 import HeroSection from "../components/Globals/OtherHero"
 import AboutSlide from "../components/slides/about"
 import ManagementSlides from "../components/slides/managementSlides"
+import PartnerI from "../assets/img/partner1.jpeg"
+import MemberI from "../assets/img/member1.png"
+import MemberII from "../assets/img/member2.png"
 
 const about = ({ data }) => {
   return (
     <Layout>
-      <SEO
+      <SeoComponent
         title="About Us"
         description="Epitome
                 of professionalism"
@@ -109,18 +112,14 @@ const about = ({ data }) => {
         <div className="partners">
           <h5>Partners</h5>
           <p>SR Platforms is affiliated to other partners such as :</p>
-          <img src={require("../assets/img/partner1.jpeg")} alt="partner" />
+          <img src={PartnerI} alt="partner" />
         </div>
         <div className="membership">
           <h5>Membership</h5>
           <p>We are members of bodies such as:</p>
           <div className="members">
-            <img src={require("../assets/img/member1.png")} alt="member" />
-            <img
-              loading="lazy"
-              src={require("../assets/img/member2.png")}
-              alt="member"
-            />
+            <img src={MemberI} alt="member" />
+            <img loading="lazy" src={MemberII} alt="member" />
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
-import SEO from "../components/seo"
+import SeoComponent from "../components/seo"
 import "../styles/index.scss"
 import Layout from "../components/layout"
 import IndexHero from "../components/Home/Hero"
@@ -14,7 +14,9 @@ import {
   certification,
   clients,
   gallery,
+  gallery_new,
 } from "../data/index"
+import SafetyImage from "../assets/img/safetyimage.png"
 
 const Hse = () => {
   useEffect(() => {
@@ -23,7 +25,10 @@ const Hse = () => {
   })
   return (
     <Layout>
-      <SEO title="HSE" description="Efficiency Through Service Delivery" />
+      <SeoComponent
+        title="HSE"
+        description="Efficiency Through Service Delivery"
+      />
       <IndexHero />
       <section className="indexSecondSection">
         <article>
@@ -186,7 +191,7 @@ const Hse = () => {
           </div>
         </article>
         <div data-aos="fade-down-left" className="safety__section">
-          <img src={require("../assets/img/safetyimage.png")} alt="safety" />
+          <img src={SafetyImage} alt="safety" />
           <h5 data-aos="fade-down-left">
             SAFETY FIRST BECAUSE INJURY LASTS!!!.
           </h5>

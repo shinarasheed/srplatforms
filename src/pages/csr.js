@@ -1,16 +1,20 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import SEO from "../components/seo"
+import SeoComponent from "../components/seo"
 import "../styles/csr.scss"
 import Layout from "../components/layout"
 import { StyledCsr } from "../components/Globals/styledComponents"
 import HeroSection from "../components/Globals/MainHero"
+import ImgI from "../assets/img/srs1.jpg"
+import ImgII from "../assets/img/srs2.jpg"
+import ImgIII from "../assets/img/srs3.jpg"
+import ImgIV from "../assets/img/srs4.jpg"
 
 const csr = ({ data }) => {
   return (
     <Layout>
-      <SEO title="CSR" description="Corporate Social Responsibility" />
+      <SeoComponent title="CSR" description="Corporate Social Responsibility" />
       <HeroSection
         className="csrBanner"
         csr="true"
@@ -72,7 +76,7 @@ const csr = ({ data }) => {
           </div>
         </div>
         <div className="banner">
-          <img src={require("../assets/img/srs1.jpg")} alt="education" />
+          <img src={ImgI} alt="education" />
         </div>
       </StyledCsr>
 
@@ -97,7 +101,7 @@ const csr = ({ data }) => {
           </div>
         </div>
         <div className="banner">
-          <img src={require("../assets/img/srs2.jpg")} alt="health" />
+          <img src={ImgII} alt="health" />
         </div>
       </StyledCsr>
 
@@ -120,10 +124,7 @@ const csr = ({ data }) => {
           </div>
         </div>
         <div className="banner">
-          <img
-            src={require("../assets/img/srs3.jpg")}
-            alt="economic empowerment"
-          />
+          <img src={ImgIII} alt="economic empowerment" />
         </div>
       </StyledCsr>
 
@@ -145,7 +146,7 @@ const csr = ({ data }) => {
           </div>
         </div>
         <div className="banner">
-          <img src={require("../assets/img/srs4.jpg")} alt="giving" />
+          <img src={ImgIV} alt="giving" />
         </div>
       </StyledCsr>
     </Layout>

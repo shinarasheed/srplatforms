@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
-import SEO from "../components/seo"
+import SeoComponent from "../components/seo"
 import Layout from "../components/layout"
 import "../styles/services.scss"
 import { offers } from "../data/index"
@@ -12,7 +12,7 @@ import OtherServiceSlide from "../components/slides/services"
 const services = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Services" description="Value Adding Services" />
+      <SeoComponent title="Services" description="Value Adding Services" />
       <HeroSection
         className="servicesBanner"
         img={data.backgroundImg.childImageSharp.fluid}
@@ -128,7 +128,7 @@ const services = ({ data }) => {
         className="damenblog"
         style={{ marginBottom: "4rem", marginTop: "4rem" }}
       >
-        <Img fluid={data.damenImg.childImageSharp.fluid} />
+        {/* <Img fluid={data.damenImg.childImageSharp.fluid} /> */}
       </section>
       <section className="servicesFifthSection">
         <div className="projection">

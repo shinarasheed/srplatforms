@@ -10,12 +10,12 @@
   width: 100% !important;
   z-index: 10000;
 
-  @media screen and(max-width:768px) {
+  @media screen and (max-width: 768px) {
     padding: 2px 5rem;
     justify-content: space-between;
   }
 
-  @media screen and(max-width:425px) {
+  @media screen and (max-width: 425px) {
     position: static;
   }
 }
@@ -73,7 +73,7 @@
   }
 }
 
-@media screen and(min-width: 768px) {
+@media screen and (min-width: 768px) {
   .sidebar {
     transform: translateX(-100%);
   }
@@ -120,4 +120,8 @@
     justify-content: space-evenly;
     margin-left: 15rem;
   }
+}
+
+.newsletter {
+  cursor: pointer;
 }
