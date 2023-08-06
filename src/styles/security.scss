@@ -1,0 +1,466 @@
+@import "./colors.scss";
+@import "../styles/base.scss";
+
+.securitybanner {
+  background-image: url("../images/banner3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 50rem;
+
+  p {
+    color: #5b5b5b;
+  }
+
+  p:nth-of-type(1) {
+    font-size: 4rem;
+    font-weight: 600;
+    @media screen and (max-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+
+  p:nth-of-type(2) {
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.7;
+    font-size: 1.4rem;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  h5 {
+    color: $color-primary;
+    font-size: 2rem;
+    font-weight: bolder;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  & .bannerText {
+    position: relative;
+    top: 12rem;
+    z-index: -1;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.securityFirstSection {
+  & .body {
+    background-image: url("../assets/img/marineservice.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      display: block;
+      content: "";
+      background-color: #000;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+  & .title {
+    padding: 4rem;
+  }
+
+  h5 {
+    font-size: 3rem;
+    color: $color-primary;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  p {
+    font-size: 2.5rem;
+    color: #fff;
+    width: 50%;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      width: 80%;
+    }
+  }
+}
+
+.securitySecondSection {
+  & .title {
+    padding: 4rem;
+  }
+
+  h5 {
+    font-size: 3rem;
+    color: $color-primary;
+  }
+}
+
+.securitySecondSection .body {
+  display: flex;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.securitySecondSection .securityImg {
+  flex: 2;
+}
+
+.securitySecondSection .securityImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.securitySecondSection .locations {
+  display: flex;
+  align-items: center;
+  background-color: $color-primary;
+  flex: 3;
+  color: $color-white;
+  padding: 4rem 10rem;
+  @media screen and (max-width: 768px) {
+    padding: 4rem 5rem;
+  }
+
+  & > div {
+    @media screen and (max-width: 768px) {
+      margin: 0 auto;
+    }
+  }
+}
+
+.securitySecondSection .locations h4 {
+  margin-bottom: 3rem;
+}
+
+.securitySecondSection .locations ul {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 3rem;
+  font-size: 1.3rem;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.securitySecondSection .locations ul li::before {
+  display: inline-block;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-right: 7px;
+  color: #fff;
+  background-color: #fff;
+}
+
+.securityThirdSection {
+  margin-bottom: 7rem;
+  & .title {
+    padding: 4rem;
+  }
+
+  h5 {
+    font-size: 3rem;
+    color: $color-primary;
+    text-align: center;
+  }
+}
+
+.securityThirdSection .services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 2rem;
+  column-gap: 3rem;
+  //   I have not been using vw much
+  margin: 0 2rem;
+
+  @media screen and (max-width: 960px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 520px) {
+    grid-template-columns: 1fr;
+  }
+
+  & img {
+    width: 100%;
+    height: 202px;
+    border-radius: 5px;
+  }
+}
+
+.securityFourthSection {
+  display: flex;
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+  }
+}
+
+.securityFourthSection .stats {
+  background-color: $color-primary;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 5rem;
+
+  & > div {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 10rem;
+    row-gap: 4rem;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+}
+
+.securityFourthSection .statsImg {
+  flex: 2;
+
+  .statimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.securityFourthSection .stat {
+  position: relative;
+  width: 174px;
+  height: 174px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  align-items: center;
+
+  & > div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 174px;
+    height: 174px;
+  }
+
+  span {
+    font-size: 5rem;
+    color: $color-white;
+    font-weight: 600;
+  }
+
+  p {
+    color: $color-white;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    text-transform: capitalize;
+  }
+}
+
+.securityFifthSection {
+  & .title {
+    padding: 4rem;
+  }
+
+  h5 {
+    font-size: 3rem;
+    color: $color-primary;
+    text-align: center;
+  }
+}
+
+.securityFifthSection .text {
+  display: flex;
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.securityFifthSection .textImg {
+  flex: 2;
+  display: flex;
+
+  .textimg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.securityFifthSection .textStatement {
+  background-color: $color-primary;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  padding: 4rem 10rem;
+  @media screen and (max-width: 768px) {
+    padding: 4rem 5rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  p:not(:last-of-type) {
+    margin-bottom: 5rem;
+  }
+}
+
+.securitySixthSection {
+  margin-bottom: 4rem;
+  & .title {
+    padding: 4rem;
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 3rem;
+    color: $color-primary;
+  }
+
+  h6 {
+    font-size: 1.5rem;
+    color: #747474;
+  }
+
+  & .testimonialImg {
+    flex: 2;
+  }
+
+  & .testimonialImg img {
+    width: 100%;
+  }
+
+  & .testimonials {
+    display: flex;
+    width: 85vw;
+    margin: auto;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  & .testimonial {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 3rem;
+    }
+  }
+
+  & .testimonialText {
+    margin-bottom: 4rem;
+    line-height: 1.5;
+  }
+
+  & p {
+    color: #14577c;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+
+.securitySeventhSection {
+  background-color: #f8f8f8;
+  padding: 4rem 0;
+
+  & .title {
+    text-align: center;
+    color: #14577c;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+  }
+
+  & .accreditation {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20rem 6rem 20rem;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      row-gap: 4rem;
+      padding: 0;
+    }
+  }
+
+  & .partnership {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      margin-top: 4rem;
+    }
+  }
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

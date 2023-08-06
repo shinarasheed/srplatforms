@@ -1,0 +1,158 @@
+@import "../styles/colors.scss";
+@import "../styles/base.scss";
+
+.bannerText {
+  position: relative;
+  left: -7rem;
+  animation: slideInFromLeft 0.8s ease-in;
+
+  @media screen and (max-width: 1024px) {
+    bottom: 11rem;
+    left: -12rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.securitybannerText {
+  position: relative;
+  left: -7rem;
+  top: 11rem;
+
+  @media screen and (max-width: 1024px) {
+    // left: -12rem;
+  }
+  @media screen and (max-width: 425px) {
+    // left: -12rem;
+  }
+}
+
+.securityBannerText {
+  position: absolute;
+  top: 15rem;
+  right: 0;
+  left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media screen and (max-width: 425px) {
+    top: 75px;
+  }
+
+  p {
+    color: #5b5b5b;
+  }
+
+  p:nth-of-type(1) {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: 600;
+    @media screen and (max-width: 768px) {
+      font-size: 3rem;
+      margin-bottom: 0;
+      margin-top: 4rem;
+    }
+  }
+
+  p:nth-of-type(2) {
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  h5 {
+    color: $color-primary;
+    font-size: 2rem;
+    font-weight: bolder;
+    line-height: 1.4;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  &:hover {
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 20rem;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 145px;
+  @media screen and (max-width: 425px) {
+    top: 0 !important;
+    padding-top: 10px;
+    padding-left: 20px !important;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+
+    @media screen and (max-width: 425px) {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    @media screen and (max-width: 425px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.carousel-caption {
+  .text {
+    background: rgb(145, 162, 172);
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    animation: slideInFromLeft 0.8s ease-in;
+
+    @media screen and (max-width: 425px) {
+      padding: 1rem;
+    }
+  }
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

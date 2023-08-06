@@ -1,0 +1,79 @@
+@import "./base.scss";
+@import "./colors.scss";
+
+.layout {
+  //to get rid of the horizontal whitespace
+  overflow-x: hidden;
+}
+
+.service {
+  position: relative;
+  cursor: pointer;
+
+  &:hover .serviceText {
+    top: 0;
+  }
+}
+
+.serviceText {
+  position: absolute;
+  top: 78%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-primary;
+  opacity: 0.8;
+  color: $color-white;
+  font-size: 15px;
+  transition: top 0.3s ease-in-out;
+
+  p {
+    text-transform: capitalize;
+  }
+}
+
+.serviceOffer {
+  position: relative;
+  cursor: pointer;
+
+  &:hover .offerText {
+    display: block;
+  }
+}
+
+.offerText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 2rem;
+  background-color: $color-primary;
+  color: $color-white;
+  font-size: 12px;
+  display: flex;
+  align-items: flex-start;
+  display: none;
+  z-index: 3;
+  opacity: 0.7;
+
+  p {
+    font-size: 1.34rem;
+  }
+}
+
+.aboutSlideText {
+  color: #fff;
+  height: 312px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+
+  .vision {
+    margin-top: 4rem;
+  }
+}
