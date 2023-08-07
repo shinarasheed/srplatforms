@@ -46,6 +46,7 @@ const Section = styled.article`
     font-size: 2rem;
     margin-top: 4rem;
     margin-bottom: 1rem;
+    text-align: justify;
   }
 
   h4 {
@@ -62,12 +63,14 @@ const Section = styled.article`
     margin-right: 10rem;
     margin-left: 10rem;
     font-family: "Raleway", sans-serif;
-    @media (max-width: 768px) {
+    @media (max-width: 860px) {
       flex-direction: column-reverse;
       gap: 2rem;
       font-size: 2rem;
       margin-top: 3rem;
       padding-bottom: 2rem;
+      margin-right: 3rem;
+      margin-left: 3rem;
     }
 
     h6 {

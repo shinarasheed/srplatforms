@@ -87,6 +87,8 @@
 
   p {
     margin-bottom: 1rem;
+    text-align: justify;
+    word-break: break-all;
   }
 
   ul li,
@@ -101,6 +103,8 @@
     color: #767780;
     font-size: 16px;
     line-height: 1.8;
+    text-align: justify;
+    word-break: break-all;
   }
 }
 
@@ -160,6 +164,7 @@
       font-size: 17px;
       line-height: 1.7;
       font-family: "Raleway", sans-serif;
+      text-align: justify;
     }
   }
 }

@@ -7,7 +7,7 @@ import logo from "../../assets/img/SRLogocroped.png";
 
 const Navbar = ({ toggle }) => {
   return (
-    <nav className="nav">
+    <nav className="nav_bar">
       <div className="nav-header">
         <Link to="/" className="nav__brand">
           <img src={logo} alt="srplatforms logo" />

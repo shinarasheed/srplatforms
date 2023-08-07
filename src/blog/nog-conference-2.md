@@ -4,7 +4,7 @@ description: Our indepth experience in the stock market analysis over the past p
 featuredImage: ../images/srp17.jpeg
 ---
 
-##### For SR Platforms , participating in the Nigerian oil and gas conference 2023 was an integral step forward at achieveing a key strategic goal for the company which is the promotion of our ballistic security escort vessel services. Alongside this goal are 5 other major aspects of our business development strategy.
+##### For SR Platforms, participating in the Nigerian oil and gas conference 2023 was an integral step forward at achieveing a key strategic goal for the company which is the promotion of our ballistic security escort vessel services. Alongside this goal are 5 other major aspects of our business development strategy.
 
 1. Networking: The conference provided a platform to connect with industry professionals, potential clients, and partners. We at SRP strongly believe that networking opportunities can lead to new business relationships and collaborations with major IOC and services provides in the Nigerian Oil and Gas industry.
 

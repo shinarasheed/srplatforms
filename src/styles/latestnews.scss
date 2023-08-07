@@ -31,9 +31,10 @@
   &__description {
     font-size: 1.5rem;
     color: #ccc;
+    text-align: justify;
+    word-break: break-all;
     @media screen and (max-width: 768px) {
       font-size: 2rem;
-      text-align: center;
     }
   }
 }
