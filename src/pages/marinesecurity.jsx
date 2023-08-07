@@ -1,8 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import Img from "gatsby-image";
-
+import { GatsbyImage } from "gatsby-plugin-image";
 // import HeroSection from "../components/Globals/MainHero";
 import SeoComponent from "../components/SeoComponent";
 import "../styles/security.scss";
@@ -10,6 +9,9 @@ import { mainService, stats } from "../data/index";
 import Wheel from "../assets/img/wheel.png";
 import LSG from "../assets/img/lgs.jpeg";
 import Accreditation from "../assets/img/accreditation1.png";
+import securityImg from "../assets/img/securityImg.jpg";
+import workImg from "../assets/img/workImg.png";
+import crewImg from "../images/newcrew.jpg";
 
 const security = ({ data }) => {
   return (
@@ -58,7 +60,8 @@ const security = ({ data }) => {
         </div>
         <div className="body">
           <div className="securityImg">
-            <Img fluid={data.securityImg.childImageSharp.fluid} />
+            {/* <Img fluid={data.securityImg.childImageSharp.fluid} /> */}
+            <img src={securityImg} />
           </div>
           <div className="locations">
             <div data-aos="fade-left" data-aos-duration="1000">
@@ -118,7 +121,8 @@ const security = ({ data }) => {
           </div>
         </div>
         <div className="statsImg">
-          <Img className="statimg" fluid={data.crewImg.childImageSharp.fluid} />
+          {/* <Img className="statimg" fluid={data.crewImg.childImageSharp.fluid} /> */}
+          <img width="100%" src={crewImg} alt="statistics" />
         </div>
       </section>
       <section className="securityFifthSection">
@@ -127,10 +131,7 @@ const security = ({ data }) => {
         </div>
         <div className="text">
           <div className="textImg">
-            <Img
-              className="textimg"
-              fluid={data.workImg.childImageSharp.fluid}
-            />
+            <img src={workImg} />
           </div>
           <div className="textStatement">
             <div>
